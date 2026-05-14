@@ -3560,3 +3560,26 @@ body, #page-wrapper {
     display: block !important;
     margin-top: 0.2em !important; /* Ajoute un tout petit espace entre les deux lignes */
 }
+
+/* ========================================== */
+/* FIX ULTIME BARRE BLANCHE MOBILE            */
+/* ========================================== */
+@media (max-width: 980px) {
+    /* 1. On supprime les marges fantômes générées par le script */
+    body, html, #page-wrapper {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+    
+    /* 2. On rend la barre de menu totalement transparente */
+    #navButton, #titleBar {
+        background-color: transparent !important;
+        background: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* 3. On s'assure que le bandeau vert colle bien tout en haut */
+    #banner {
+        margin-top: 0 !important;
+    }
+}
