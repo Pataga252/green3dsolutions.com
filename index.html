@@ -1,0 +1,1097 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Green D Solutions - Déshydratation de Biodéchets</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+        <style>
+            /* 1. FOND GLOBAL */
+            #main {
+                background-color: #ffffff !important;
+                background-image: none !important;
+                padding-top: 0 !important;
+            }
+
+            /* ========================================== */
+            /* CORRECTION ALIGNEMENT HEADER (MENU + LOGO) */
+            /* ========================================== */
+            @media (min-width: 841px) {
+                #header {
+                    display: flex !important;
+                    align-items: center !important; 
+                    justify-content: space-between !important; 
+                    padding: 0 4em !important;
+                    height: 5em !important; 
+                }
+                #header h1 {
+                    position: static !important; 
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    line-height: 1 !important;
+                }
+                #header nav {
+                    position: static !important; 
+                }
+                #header nav > ul {
+                    display: flex !important;
+                    align-items: center !important;
+                    margin: 0 !important;
+                }
+            }
+
+            /* ========================================== */
+            /* BOUTON CONTACT (MENU EN HAUT À DROITE)     */
+            /* ========================================== */
+            #header nav ul li a.button.primary {
+                background-color: #27ae60 !important;
+                color: #ffffff !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+            #header nav ul li a.button.primary:hover {
+                background-color: #219653 !important;
+            }
+
+            /* ========================================== */
+            /* VIDÉO EN ARRIÈRE-PLAN (BANNER)             */
+            /* ========================================== */
+            #banner {
+                background-image: none !important;
+                background-color: #27ae60;
+                padding-top: 8em !important;
+                padding-bottom: 12em !important; 
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+            #bg-video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 0;
+            }
+            .video-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, rgba(39, 174, 96, 0.75), rgba(41, 128, 185, 0.75));
+                z-index: 1;
+            }
+            #banner .inner {
+                position: relative;
+                z-index: 2;
+            }
+
+            /* ========================================== */
+            /* 2. SYSTÈME DE TYPOGRAPHIE UNIFIÉ           */
+            /* ========================================== */
+            .titre-parfait h2,
+            .benefices-texte h2, 
+            .legis-header h2,
+            #partenaires h2,
+            #cta-contact h2 {
+                font-size: 2.8em !important;
+                font-weight: 800 !important;
+                color: #2b3138 !important;
+                text-transform: none !important;
+                letter-spacing: -1px !important;
+                line-height: 1.2 !important;
+                border: none !important;
+                margin-bottom: 0.5em !important;
+            }
+            #cta-contact h2 { color: #ffffff !important; }
+
+            .colonne-texte h3,
+            .legis-banner h3,
+            .partenaires-banner h3 {
+                font-size: 1.6em !important;
+                font-weight: 800 !important;
+                text-transform: none !important;
+                letter-spacing: -0.5px !important;
+                margin-bottom: 0.6em !important;
+                border: none !important;
+            }
+            .colonne-texte h3 { color: #1a1a1a !important; }
+            .legis-banner h3, .partenaires-banner h3 { color: #1a6b3b !important; }
+
+            .benefice-card h4,
+            .legis-card h4,
+            .partenaires-card h4 {
+                font-size: 1.25em !important;
+                font-weight: 800 !important;
+                color: #1a1a1a !important;
+                text-transform: none !important;
+                margin-bottom: 12px !important;
+            }
+
+            .titre-parfait p, 
+            .legis-header p, 
+            .benefices-texte p.lead,
+            #cta-contact p {
+                font-size: 1.15em !important;
+                color: #555 !important;
+                line-height: 1.8 !important;
+                margin-bottom: 1.5em !important;
+            }
+            .titre-parfait p, 
+            .legis-header p,
+            #cta-contact p {
+                max-width: 800px;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            #cta-contact p { color: rgba(255, 255, 255, 0.9) !important; margin-bottom: 2.5em !important; }
+
+            .colonne-texte p, 
+            .benefices-texte p, 
+            .legis-banner p,
+            .partenaires-banner p {
+                font-size: 1em !important;
+                color: #666 !important;
+                line-height: 1.7 !important;
+                margin-bottom: 1.5em !important;
+            }
+            .benefices-texte p:last-child { margin-bottom: 0 !important; }
+            .legis-banner p, .partenaires-banner p { color: #2b6142 !important; margin-bottom: 0 !important; line-height: 1.5 !important; }
+            
+            .benefice-card p, 
+            .legis-card p,
+            .partenaires-card p {
+                font-size: 0.95em !important;
+                color: #777 !important;
+                line-height: 1.5 !important;
+                margin: 0 !important;
+            }
+
+            /* ========================================== */
+            /* 3. SECTION COMMENT ÇA MARCHE               */
+            /* ========================================== */
+            #comment-ca-marche {
+                padding-top: 6em !important;
+                padding-bottom: 4em !important;
+                background-color: #ffffff !important;
+            }
+            .titre-parfait { text-align: center; margin-bottom: 4em; }
+            .ligne-parfaite {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                max-width: 1150px !important;
+                margin: 0 auto 5em auto !important;
+                gap: 60px !important;
+            }
+            .colonne-img, .colonne-texte {
+                flex: 1 !important;
+                width: 48% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .colonne-texte { text-align: left !important; }
+            .colonne-img img {
+                width: 100% !important;
+                height: auto !important;
+                aspect-ratio: 4/3 !important;
+                object-fit: cover !important;
+                border-radius: 15px !important;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+                display: block !important;
+            }
+            .custom-check-list {
+                list-style: none !important;
+                padding-left: 0 !important;
+                margin: 0 !important;
+            }
+            .custom-check-list li {
+                color: #2b3138 !important;
+                font-weight: 500 !important;
+                margin-bottom: 1em !important;
+                display: flex !important;
+                align-items: flex-start !important;
+            }
+            .custom-check-list li i {
+                margin-top: 3px !important;
+                color: #27ae60 !important;
+                font-size: 1.4em !important;
+                margin-right: 15px !important;
+            }
+            .stat-boxes { display: flex !important; gap: 20px !important; }
+            .stat-box {
+                background-color: #e8f7ee !important; 
+                border-radius: 12px !important;
+                padding: 25px 20px !important;
+                flex: 1 !important;
+            }
+            .stat-box h4 {
+                color: #27ae60 !important;
+                font-size: 1.8em !important; 
+                font-weight: 800 !important;
+                margin-bottom: 0.3em !important;
+                letter-spacing: -0.5px !important;
+                text-transform: none !important;
+            }
+
+            /* ========================================== */
+            /* SECTION MACHINES                           */
+            /* ========================================== */
+            .section-machines {
+                background-color: #f9fbfb !important;
+                padding: 6em 2em !important;
+                text-align: center;
+            }
+            .container-machines { max-width: 1150px; margin: 0 auto; }
+            .machines-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                margin-top: 4em;
+            }
+            .machine-card {
+                background: #ffffff;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                padding-top: 30px; 
+            }
+            .machine-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            }
+            .machine-img {
+                width: 85%; 
+                height: 220px;
+                object-fit: contain; 
+                margin: 0 auto; 
+                display: block;
+            }
+            .machine-content {
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+            }
+            .machine-content h4 {
+                color: #27ae60 !important;
+                font-size: 1.5em !important;
+                font-weight: 800 !important;
+                margin-bottom: 15px !important;
+                text-transform: none !important;
+            }
+            .machine-specs {
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 0 25px 0 !important;
+                flex-grow: 1;
+            }
+            .machine-specs li {
+                font-size: 0.95em !important;
+                color: #555 !important;
+                margin-bottom: 10px !important;
+                display: flex !important;
+                align-items: center !important;
+            }
+            .machine-specs li i {
+                color: #27ae60;
+                width: 25px;
+                font-size: 1.1em;
+            }
+            .machine-btn {
+                text-align: center;
+                margin-top: auto;
+            }
+            .machine-btn a {
+                display: inline-block;
+                width: 100%;
+                padding: 12px 15px;
+                background-color: #e8f7ee;
+                color: #27ae60;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 700;
+                border: none !important;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+            .machine-btn a:hover {
+                background-color: #27ae60;
+                color: #ffffff;
+            }
+
+            @media (max-width: 980px) {
+                .machines-grid { grid-template-columns: repeat(2, 1fr); }
+            }
+            @media (max-width: 840px) {
+                .machines-grid { grid-template-columns: 1fr; }
+            }
+
+            /* ========================================== */
+            /* 4. SECTION BÉNÉFICES                       */
+            /* ========================================== */
+            .section-benefices {
+                background-color: #f4f7f6 !important;
+                padding: 6em 2em !important;
+            }
+            .container-benefices { max-width: 1150px; margin: 0 auto; }
+            .benefices-intro {
+                display: flex !important;
+                align-items: stretch !important;
+                gap: 60px !important;
+                margin-bottom: 5em !important;
+            }
+            .benefices-texte {
+                flex: 1 !important;
+                text-align: left !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+            }
+            .benefices-img {
+                flex: 1 !important;
+                display: flex !important;
+            }
+            .benefices-img img {
+                width: 100% !important;
+                height: 100% !important;
+                aspect-ratio: auto !important;
+                object-fit: cover !important;
+                object-position: center !important;
+                border-radius: 20px !important;
+                box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+                display: block !important;
+            }
+            .benefices-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            .benefice-card {
+                background: #ffffff;
+                border-radius: 15px;
+                padding: 25px 30px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+                text-align: left;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .benefice-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            }
+            .icon-box {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                background-color: #e8f7ee;
+                border-radius: 10px;
+                margin-bottom: 15px;
+            }
+            .icon-box i { font-size: 1.3em; color: #27ae60; }
+
+            /* ========================================== */
+            /* 5. SECTIONS LÉGISLATION ET PARTENAIRES     */
+            /* ========================================== */
+            .section-legislation, .section-standard {
+                background-color: #ffffff !important;
+                padding: 6em 2em !important;
+                text-align: center;
+            }
+            
+            /* Ajustement spécifique de l'espace blanc en bas des actualités */
+            #actualites {
+                padding-bottom: 3em !important; 
+            }
+            
+            .container-legislation, .container-partenaires { max-width: 1150px; margin: 0 auto; }
+            .legis-header { margin-bottom: 4em; }
+            .legis-grid, .partenaires-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                margin-bottom: 4em;
+            }
+            .legis-card, .partenaires-card {
+                background: #ffffff;
+                border-radius: 15px;
+                padding: 40px 20px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+                border: 1px solid rgba(0,0,0,0.02);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .legis-card:hover, .partenaires-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            }
+            .legis-icon, .partenaires-icon {
+                font-size: 2.5em;
+                color: #27ae60;
+                margin-bottom: 15px;
+                display: block;
+            }
+            .legis-banner, .partenaires-banner {
+                background-color: #d1efe0 !important;
+                border-radius: 15px !important; 
+                padding: 2em 3em !important; 
+                text-align: left;
+            }
+            .legis-banner h3, .partenaires-banner h3 { margin-bottom: 0.2em !important; }
+            .legis-banner .legis-subtitle, .partenaires-banner .legis-subtitle {
+                color: #27ae60 !important;
+                font-size: 1.05em !important; 
+                font-weight: 600 !important;
+                margin-bottom: 0.8em !important; 
+                text-transform: none !important;
+            }
+            .section-partenaires { background-color: #f4f7f6 !important; padding: 6em 2em !important; text-align: center; }
+            .partenaires-grid-2 {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                max-width: 800px; 
+                margin: 0 auto;
+            }
+            .partenaire-card {
+                background: #ffffff;
+                border-radius: 15px;
+                padding: 2.5em 2em !important; 
+                flex: 1; 
+                box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+                border: 1px solid rgba(0,0,0,0.02);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                text-align: center;
+            }
+            .partenaire-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            }
+            .partenaire-card h4 {
+                font-size: 1.6em !important; 
+                font-weight: 800 !important;
+                color: #1a1a1a !important;
+                margin-bottom: 0.3em !important; 
+                text-transform: none !important;
+                line-height: 1.3 !important;
+            }
+            .partenaire-card p {
+                font-size: 1.05em !important;
+                color: #777 !important;
+                margin: 0 !important;
+            }
+
+            /* ========================================== */
+            /* 6. DESIGN DU WIDGET ACTUALITÉS             */
+            /* ========================================== */
+            .mock-widget-container {
+                max-width: 1000px;
+                margin: 0 auto;
+                background: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+                border: 1px solid #eaeaea;
+                overflow: hidden;
+                text-align: left;
+            }
+            .mock-widget-header {
+                padding: 20px;
+                border-bottom: 1px solid #eaeaea;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #fcfcfc;
+            }
+            .mock-widget-title {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 700;
+                color: #0a66c2;
+                font-size: 1.1em;
+            }
+            .mock-widget-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                padding: 20px;
+            }
+            .mock-post {
+                border: 1px solid #eaeaea;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #fff;
+                display: flex;
+                flex-direction: column;
+            }
+            .mock-post-header {
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                gap: 12px;
+            }
+            .mock-post-header img {
+                width: 45px;
+                height: 45px;
+                border-radius: 4px;
+            }
+            .mock-post-meta {
+                display: flex;
+                flex-direction: column;
+            }
+            .mock-author {
+                font-size: 0.95em;
+                font-weight: 700;
+                color: #1a1a1a;
+                margin-bottom: 2px;
+            }
+            .mock-date {
+                font-size: 0.8em;
+                color: #666;
+            }
+            .mock-post-content {
+                padding: 0 15px 15px;
+                font-size: 0.95em;
+                color: #333;
+                line-height: 1.5;
+                flex-grow: 1;
+            }
+            .mock-post-img {
+                width: 100%;
+                height: 160px;
+                object-fit: cover;
+                border-top: 1px solid #eaeaea;
+                border-bottom: 1px solid #eaeaea;
+            }
+            .mock-post-footer {
+                padding: 12px 15px;
+                display: flex;
+                gap: 15px;
+                color: #666;
+                font-size: 0.9em;
+                font-weight: 600;
+                background-color: #fafafa;
+            }
+
+            /* ========================================== */
+            /* 7. CTA CONTACT                             */
+            /* ========================================== */
+            #cta-contact {
+                background-color: #27ae60 !important;
+                padding: 5em 2em 4em 2em !important; /* Ajout d'espace vert en haut */
+                text-align: center;
+                margin: 0 !important;
+            }
+            #cta-contact .custom-btn {
+                background-color: #ffffff !important;
+                color: #27ae60 !important;
+                border: none !important;
+                border-radius: 50px !important;
+                font-weight: 700 !important;
+                display: inline-block !important;
+                padding: 1em 2.5em !important;
+                font-size: 1.1em !important;
+                text-transform: none !important;
+                text-decoration: none !important;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+                transition: all 0.3s ease !important;
+            }
+            #cta-contact .custom-btn:hover {
+                transform: translateY(-3px) !important;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+                background-color: #f8f8f8 !important;
+            }
+
+            /* ========================================== */
+            /* 8. FOOTER SUR-MESURE RÉORGANISÉ ET CENTRÉ  */
+            /* ========================================== */
+            #footer {
+                background-color: #27ae60 !important;
+                color: #ffffff !important;
+                padding: 2em 2em 4em 2em !important;
+            }
+            #footer a { color: #ffffff !important; text-decoration: none !important; border-bottom: none !important; }
+            #footer a:hover { color: #d1efe0 !important; }
+            
+            .footer-container {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                max-width: 1200px !important;
+                margin: 0 auto !important;
+                gap: 20px !important;
+            }
+            
+            .footer-col { 
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+
+            .footer-col h4 {
+                color: #ffffff !important; 
+                font-size: 1.2em !important; 
+                font-weight: 700 !important; 
+                margin-bottom: 1.5em !important; 
+                border: none !important;
+                text-transform: none !important;
+            }
+            
+            /* GAUCHE : Liens Rapides */
+            .links-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+            .links-col li { margin-bottom: 0.8em !important; padding: 0 !important; border: none !important; }
+            
+            /* CENTRE : Marque + Réseaux Sociaux */
+            .footer-logo-brand-block {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 15px !important;
+                margin-bottom: 2em !important;
+            }
+            .footer-logo-icon { font-size: 2em !important; color: #ffffff !important; }
+            .footer-brand-text-container { text-align: left !important; }
+            .footer-brand-text-container h3 { 
+                color: #ffffff !important; font-size: 1.4em !important; font-weight: 800 !important; 
+                margin: 0 !important; border: none !important; text-transform: none !important; line-height: 1.1 !important;
+            }
+            .footer-brand-text-container p { font-size: 0.85em !important; color: #e8f7ee !important; margin: 0 !important; }
+
+            .social-icons { list-style: none !important; padding: 0 !important; margin: 0 !important; display: flex !important; gap: 15px !important; }
+            .social-icons li { padding: 0 !important; border: none !important; }
+            .social-icons li a {
+                display: flex !important; align-items: center !important; justify-content: center !important;
+                width: 40px !important; height: 40px !important;
+                background-color: rgba(255,255,255,0.1) !important;
+                border-radius: 50% !important; transition: all 0.3s ease !important;
+            }
+            .social-icons li a:hover { background-color: #ffffff !important; color: #27ae60 !important; }
+            
+            /* DROITE : Contact */
+            .contact-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; text-align: left !important; display: inline-block !important; }
+            .contact-col li { 
+                margin-bottom: 1em !important; 
+                display: flex !important; 
+                align-items: center !important; 
+                font-size: 0.95em !important; 
+                padding: 0 !important; 
+                border: none !important; 
+            }
+            .contact-col li i { 
+                width: 30px !important; 
+                font-size: 1.1em !important; 
+                color: #d1efe0 !important; 
+                margin-right: 10px !important;
+                display: flex !important;
+                justify-content: center !important;
+            }
+            
+            .footer-bottom {
+                text-align: center !important;
+                margin-top: 3em !important;
+                padding-top: 2em !important;
+                border-top: 1px solid rgba(255,255,255,0.2) !important;
+                font-size: 0.85em !important;
+                color: #d1efe0 !important;
+            }
+            
+            @media (max-width: 840px) {
+                .footer-container { grid-template-columns: 1fr !important; gap: 50px !important; }
+                .footer-logo-brand-block { flex-direction: column !important; gap: 10px !important; }
+                .footer-brand-text-container { align-items: center !important; text-align: center !important; }
+                .contact-col ul { text-align: center !important; }
+                .contact-col li { flex-direction: column !important; text-align: center !important; }
+                .contact-col li i { margin-right: 0 !important; margin-bottom: 5px !important; }
+            }
+        </style>
+    </head>
+    <body class="index is-preload">
+        <div id="page-wrapper">
+
+            <header id="header" class="alt">
+                <h1 id="logo"><a href="#page-wrapper" class="scrolly"><span class="icon solid fa-leaf"></span> GREEN D SOLUTIONS</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li class="current"><a href="#page-wrapper" class="scrolly">Accueil</a></li>
+                        <li class="submenu">
+                            <a href="#">En savoir plus</a>
+                            <ul>
+                                <li><a href="#comment-ca-marche">Comment ça marche ?</a></li>
+                                <li><a href="#nos-machines">Nos Machines</a></li>
+                                <li><a href="#benefices">Bénéfices</a></li>
+                                <li><a href="#legislation">Législation</a></li>
+                                <li><a href="#partenaires">Partenaires</a></li>
+                                <li><a href="#actualites">Actualités</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#cta-contact" class="button primary scrolly">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="banner">
+                <video autoplay loop muted playsinline id="bg-video">
+                    <source src="images/background.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+                <div class="inner">
+                    <header>
+                        <h2>Déshydratation de Biodéchets<br><span class="accent">Solution Écologique</span></h2>
+                    </header>
+                    <p>Transformez vos déchets organiques en ressources valorisables avec notre technologie innovante de déshydratation. Réduisez vos coûts, votre empreinte carbone et respectez les nouvelles réglementations environnementales.</p>
+                    <footer>
+                        <ul class="buttons stacked">
+                            <li><a href="#nos-machines" class="button fit scrolly">Découvrez nos déshydratateurs professionnels de 2,5 kg à 1400 kg</a></li>
+                        </ul>
+                    </footer>
+                </div>
+            </section>
+
+            <article id="main">
+
+                <section id="comment-ca-marche">
+                    <div class="titre-parfait">
+                        <h2>Comment ça marche?</h2>
+                        <p>Notre processus de déshydratation innovant transforme vos biodéchets en matière sèche valorisable, réduisant drastiquement leur volume et leur poids tout en préservant leurs propriétés nutritives.</p>
+                    </div>
+                    <div class="ligne-parfaite">
+                        <div class="colonne-img">
+                            <img src="images/image_2.jpg" alt="Biodéchets avant traitement" />
+                        </div>
+                        <div class="colonne-texte">
+                            <h3>Un processus simple et efficace</h3>
+                            <p>Notre technologie utilise un processus thermique contrôlé qui élimine l'eau contenue dans les biodéchets sans altérer leur composition organique. Le résultat : une réduction de volume jusqu'à 80 à 90% et une matière stabilisée, facile à stocker et à transporter.</p>
+                            <ul class="custom-check-list">
+                                <li><i class="icon regular fa-check-circle"></i> Collecte et tri automatisé des biodéchets</li>
+                                <li><i class="icon regular fa-check-circle"></i> Déshydratation thermique à basse température</li>
+                                <li><i class="icon regular fa-check-circle"></i> Récupération de la matière sèche valorisable</li>
+                                <li><i class="icon regular fa-check-circle"></i> Traitement des effluents et recyclage de l'énergie</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ligne-parfaite" style="margin-bottom: 0 !important;">
+                        <div class="colonne-texte">
+                            <h3>Technologie éco-responsable</h3>
+                            <p>Notre système intègre des technologies de pointe pour minimiser la consommation énergétique et maximiser l'efficacité du processus. La chaleur générée est récupérée et réutilisée, créant un cycle vertueux qui réduit l'impact environnemental.</p>
+                            <div class="stat-boxes">
+                                <div class="stat-box">
+                                    <h4>80 à 90%</h4>
+                                    <p>Réduction de volume</p>
+                                </div>
+                                <div class="stat-box">
+                                    <h4>70 à 80%</h4>
+                                    <p>Récupération d'eau hygiénisée</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="colonne-img">
+                            <img src="images/image_3.jpg" alt="Matière sèche obtenue" />
+                        </div>
+                    </div>
+                </section>
+
+                <section id="nos-machines" class="section-machines">
+                    <div class="container-machines">
+                        <div class="titre-parfait">
+                            <h2>Notre Gamme de Déshydratateurs</h2>
+                            <p>Des solutions performantes et éco-responsables adaptées à tous les volumes, de la restauration collective aux sites industriels.</p>
+                        </div>
+                        <div class="machines-grid">
+                            
+                            <div class="machine-card">
+                                <img src="images/G30F.png" alt="Déshydratateur G 30 F" class="machine-img" />
+                                <div class="machine-content">
+                                    <h4>Modèle G 30 F</h4>
+                                    <ul class="machine-specs">
+                                        <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 15 à 30 kg / jour</li>
+                                        <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 80 x 80 x 120 cm</li>
+                                        <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 1,5 Kw (Mono)</li>
+                                    </ul>
+                                    <div class="machine-btn">
+                                        <a href="images/G30F-technique.pdf" target="_blank"><i class="icon solid fa-file-download"></i> Voir la fiche technique</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="machine-card">
+                                <img src="images/G100F.png" alt="Déshydratateur G 100 F" class="machine-img" />
+                                <div class="machine-content">
+                                    <h4>Modèle G 100 F</h4>
+                                    <ul class="machine-specs">
+                                        <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 50 à 100 kg / jour</li>
+                                        <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 115 x 100 x 125 cm</li>
+                                        <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 3 Kw (Triphasé)</li>
+                                    </ul>
+                                    <div class="machine-btn">
+                                        <a href="images/G100F-technique.pdf" target="_blank"><i class="icon solid fa-file-download"></i> Voir la fiche technique</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="machine-card">
+                                <img src="images/G300F.png" alt="Déshydratateur G 300 F" class="machine-img" />
+                                <div class="machine-content">
+                                    <h4>Modèle G 300 F</h4>
+                                    <ul class="machine-specs">
+                                        <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 150 à 300 kg / jour</li>
+                                        <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 160 x 140 x 165 cm</li>
+                                        <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 9 Kw (Triphasé)</li>
+                                    </ul>
+                                    <div class="machine-btn">
+                                        <a href="images/G300F-technique.pdf" target="_blank"><i class="icon solid fa-file-download"></i> Voir la fiche technique</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section id="benefices" class="section-benefices">
+                    <div class="container-benefices">
+                        <div class="benefices-intro">
+                            <div class="benefices-texte">
+                                <h2>Des bénéfices concrets pour votre entreprise</h2>
+                                <p class="lead">La déshydratation des biodéchets n'est pas seulement une solution écologique, c'est aussi un investissement rentable qui transforme une contrainte réglementaire en opportunité économique.</p>
+                                <p>En réduisant drastiquement le volume de vos déchets organiques, vous diminuez vos coûts de collecte, de transport et de traitement. La matière déshydratée peut être valorisée comme amendement agricole ou source d'énergie, créant ainsi de nouvelles sources de revenus.</p>
+                                <p>Notre solution vous permet également de vous conformer aux réglementations environnementales de plus en plus strictes, tout en améliorant votre image de marque auprès de vos clients et partenaires sensibles aux enjeux écologiques.</p>
+                            </div>
+                            <div class="benefices-img">
+                                <img src="images/image_4.jpg" alt="Bénéfices écologiques et économiques" />
+                            </div>
+                        </div>
+                        <div class="benefices-grid">
+                            <div class="benefice-card">
+                                <div class="icon-box"><i class="icon solid fa-chart-line" style="transform: scaleY(-1);"></i></div>
+                                <h4>Réduction du Volume</h4>
+                                <p>Diminuez jusqu'à 80 à 90% le volume de vos biodéchets grâce à notre technologie de déshydratation avancée, optimisant ainsi vos coûts de transport et de stockage.</p>
+                            </div>
+                            <div class="benefice-card">
+                                <div class="icon-box"><i class="icon solid fa-tint"></i></div>
+                                <h4>Récupération d'eau hygiénisée</h4>
+                                <p>Notre processus récupère 70 à 80 % de l'eau hygiénisée, permettant sa réutilisation et réduisant la consommation d'eau douce tout en minimisant les rejets environnementaux.</p>
+                            </div>
+                            <div class="benefice-card">
+                                <div class="icon-box"><i class="icon solid fa-leaf"></i></div>
+                                <h4>Impact Écologique</h4>
+                                <p>Transformez vos déchets organiques en ressources valorisables tout en respectant l'environnement et en contribuant à l'économie circulaire.</p>
+                            </div>
+                            <div class="benefice-card">
+                                <div class="icon-box"><i class="icon solid fa-bolt"></i></div>
+                                <h4>Efficacité Opérationnelle</h4>
+                                <p>Système automatisé et facile à intégrer dans vos processus existants, avec un retour sur investissement rapide et mesurable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="legislation" class="section-legislation">
+                    <div class="container-legislation">
+                        <div class="legis-header">
+                            <h2>Législation et Normes</h2>
+                            <p>Nos solutions respectent l'ensemble des réglementations européennes et françaises en matière de gestion des biodéchets et sont certifiées selon les normes les plus exigeantes.</p>
+                        </div>
+                        <div class="legis-grid">
+                            <div class="legis-card">
+                                <i class="icon solid fa-award legis-icon"></i>
+                                <h4>ISO</h4>
+                                <p>Management environnemental</p>
+                            </div>
+                            <div class="legis-card">
+                                <i class="icon solid fa-shield-alt legis-icon"></i>
+                                <h4>CE</h4>
+                                <p>Conformité européenne</p>
+                            </div>
+                            <div class="legis-card">
+                                <i class="icon solid fa-file-contract legis-icon"></i>
+                                <h4>Directive 2008/98/CE</h4>
+                                <p>Gestion des déchets</p>
+                            </div>
+                            <div class="legis-card">
+                                <i class="icon solid fa-check-circle legis-icon"></i>
+                                <h4>Loi AGEC</h4>
+                                <p>Anti-gaspillage France</p>
+                            </div>
+                        </div>
+                        <div class="legis-banner">
+                            <h3>Conformité réglementaire garantie</h3>
+                            <div class="legis-subtitle">Nos Partenaires et distributeurs</div>
+                            <p>La directive européenne 2008/98/CE sur les déchets encourage la valorisation des biodéchets et fixe des objectifs ambitieux de recyclage. En choisissant GREEN D SOLUTIONS, vous anticipez les futures réglementations et positionnez votre entreprise comme un acteur responsable de l'économie circulaire.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="partenaires" class="section-partenaires">
+                    <div class="container-partenaires">
+                        <div class="titre-parfait">
+                            <h2>Nos Partenaires et distributeurs</h2>
+                            <p>Nous concevons avec nos partenaires des deshydrateurs afin de vous offrir les meilleures solutions de déshydratation des biodéchets.</p>
+                        </div>
+                        <div class="partenaires-grid-2">
+                            <div class="partenaire-card">
+                                <h4>BioCircular</h4>
+                                <p>Partenaire stratégique</p>
+                            </div>
+                            <div class="partenaire-card">
+                                <h4>CleanEnergy<br>Solutions</h4>
+                                <p>Partenaire énergétique</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="actualites" class="section-standard">
+                    <div class="titre-parfait">
+                        <h2>Actualités</h2>
+                        <p>Suivez nos dernières publications en temps réel directement depuis notre page LinkedIn.</p>
+                    </div>
+                    
+                    <div class="mock-widget-container">
+                        <div class="mock-widget-header">
+                            <div class="mock-widget-title">
+                                <i class="icon brands fa-linkedin" style="font-size:1.5em;"></i> Airbus sur LinkedIn
+                            </div>
+                            <a href="#" style="color: #0a66c2; text-decoration: none; font-size: 0.9em; font-weight: 600;">S'abonner +</a>
+                        </div>
+                        <div class="mock-widget-grid">
+                            <div class="mock-post">
+                                <div class="mock-post-header">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Airbus_Logo.svg/1200px-Airbus_Logo.svg.png" alt="Airbus Logo" style="object-fit: contain; padding: 2px; border: 1px solid #ddd;">
+                                    <div class="mock-post-meta">
+                                        <span class="mock-author">Airbus</span>
+                                        <span class="mock-date">Il y a 2 jours</span>
+                                    </div>
+                                </div>
+                                <div class="mock-post-content">
+                                    Aviation is evolving. Watch how our latest ZEROe hydrogen concept aircraft is pushing the boundaries of what’s possible for a sustainable future in flight. 🌍✈️ #ZeroEmission #Innovation #Airbus
+                                </div>
+                                <img src="https://mediacentre.airbus.com/api/v1/assets/95a5bd27-4a7b-402a-9f5b-0bc21008064d/transform?t=1200" alt="ZEROe" class="mock-post-img">
+                                <div class="mock-post-footer">
+                                    <span><i class="icon solid fa-thumbs-up"></i> 4,521</span>
+                                    <span><i class="icon solid fa-comment"></i> 184</span>
+                                </div>
+                            </div>
+                            <div class="mock-post">
+                                <div class="mock-post-header">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Airbus_Logo.svg/1200px-Airbus_Logo.svg.png" alt="Airbus Logo" style="object-fit: contain; padding: 2px; border: 1px solid #ddd;">
+                                    <div class="mock-post-meta">
+                                        <span class="mock-author">Airbus</span>
+                                        <span class="mock-date">Il y a 5 jours</span>
+                                    </div>
+                                </div>
+                                <div class="mock-post-content">
+                                    We are proud to announce a new partnership to scale up Sustainable Aviation Fuel (SAF) production globally. A vital step towards our 2050 net-zero goals. 🌱🤝 #Sustainability #SAF
+                                </div>
+                                <img src="https://mediacentre.airbus.com/api/v1/assets/6e2b9c7b-8c8a-4d2a-8b1b-7a5d9a9b1c2d/transform?t=1200" alt="SAF Fuel" class="mock-post-img" style="object-fit: contain; background: #f0f0f0;">
+                                <div class="mock-post-footer">
+                                    <span><i class="icon solid fa-thumbs-up"></i> 3,102</span>
+                                    <span><i class="icon solid fa-comment"></i> 95</span>
+                                </div>
+                            </div>
+                            <div class="mock-post">
+                                <div class="mock-post-header">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Airbus_Logo.svg/1200px-Airbus_Logo.svg.png" alt="Airbus Logo" style="object-fit: contain; padding: 2px; border: 1px solid #ddd;">
+                                    <div class="mock-post-meta">
+                                        <span class="mock-author">Airbus</span>
+                                        <span class="mock-date">Il y a 1 semaine</span>
+                                    </div>
+                                </div>
+                                <div class="mock-post-content">
+                                    Take a look behind the scenes at our final assembly line in Toulouse. Our teams are working tirelessly to deliver the next generation of the A350 family! 🔧🚀 #A350 #TeamAirbus
+                                </div>
+                                <img src="https://mediacentre.airbus.com/api/v1/assets/8d8a7c6b-5b5a-4b1a-9a0a-8d9b8c7d6e5f/transform?t=1200" alt="Assembly Line" class="mock-post-img" style="object-fit: cover;">
+                                <div class="mock-post-footer">
+                                    <span><i class="icon solid fa-thumbs-up"></i> 8,901</span>
+                                    <span><i class="icon solid fa-comment"></i> 342</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+
+            </article>
+
+            <section id="cta-contact">
+                <h2>Prêt à transformer vos biodéchets en opportunité ?</h2>
+                <p>Contactez-nous dès aujourd'hui pour découvrir comment notre solution peut réduire vos coûts et votre impact environnemental.</p>
+                <a href="mailto:contact@green3dsolutions.fr?subject=Demande de démonstration" class="button custom-btn">Demander une démonstration</a>
+            </section>
+
+            <footer id="footer" class="custom-footer">
+                <div class="footer-container">
+                    
+                    <div class="footer-col links-col">
+                        <h4>Liens rapides</h4>
+                        <ul>
+                            <li><a href="#page-wrapper" class="scrolly">Accueil</a></li>
+                            <li><a href="#comment-ca-marche" class="scrolly">Comment ça marche ?</a></li>
+                            <li><a href="#nos-machines" class="scrolly">Nos Machines</a></li>
+                            <li><a href="#benefices" class="scrolly">Bénéfices</a></li>
+                            <li><a href="#legislation" class="scrolly">Législation</a></li>
+                            <li><a href="#partenaires" class="scrolly">Partenaires</a></li>
+                            <li><a href="#actualites" class="scrolly">Actualités</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col center-col">
+                        
+                        <div class="footer-logo-brand-block">
+                            <span class="icon solid fa-leaf footer-logo-icon"></span>
+                            <div class="footer-brand-text-container">
+                                <h3>GREEN D SOLUTIONS</h3>
+                                <p>Solutions écologiques innovantes</p>
+                            </div>
+                        </div>
+                        
+                        <h4>Suivez-nous</h4>
+                        <ul class="social-icons">
+                            <li><a href="#" class="icon brands fa-linkedin-in" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="#" class="icon brands fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon brands fa-facebook-f" title="Facebook"><span class="label">Facebook</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col contact-col">
+                        <h4>Contact Général</h4>
+                        <ul>
+                            <li><i class="icon solid fa-envelope"></i> <span>contact@green3dsolutions.fr</span></li>
+                            <li><i class="icon solid fa-phone"></i> <span>+33 (0)4 74 05 96 68</span></li>
+                            <li><i class="icon solid fa-map-marker-alt"></i> <span>42360 Panissières</span></li>
+                        </ul>
+                        
+                        <h4 style="margin-top: 2em;">Zone Moyen-Orient</h4>
+                        <ul>
+                            <li><i class="icon solid fa-user"></i> <span>Omer Avan</span></li>
+                            <li><i class="icon solid fa-envelope"></i> <span>mhpx_@hotmail.com</span></li>
+                            <li><i class="icon solid fa-phone"></i> <span>+33 (0)6 95 21 04 33</span></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+                <div class="footer-bottom">
+                    &copy; Green D Solutions. Tous droits réservés.
+                </div>
+            </footer>
+
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
