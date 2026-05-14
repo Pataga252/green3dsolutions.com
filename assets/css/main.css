@@ -3538,3 +3538,25 @@ header.major h2 {
         margin-top: 1em !important;
     }
 }
+
+/* ========================================== */
+/* 10. CORRECTIONS FINALES MOBILE             */
+/* ========================================== */
+
+/* 1. Suppression de la barre blanche au sommet */
+body, #page-wrapper {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+#navButton {
+    background-color: transparent !important;
+}
+
+/* 2. Correction du texte collé (On force le saut de ligne) */
+#banner header br {
+    display: block !important;
+}
+#banner .inner header h2 .accent {
+    display: block !important;
+    margin-top: 0.2em !important; /* Ajoute un tout petit espace entre les deux lignes */
+}
