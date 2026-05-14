@@ -585,7 +585,7 @@
             /* ========================================== */
             #cta-contact {
                 background-color: #27ae60 !important;
-                padding: 5em 2em 4em 2em !important; /* Ajout d'espace vert en haut */
+                padding: 5em 2em 4em 2em !important; 
                 text-align: center;
                 margin: 0 !important;
             }
@@ -709,6 +709,71 @@
                 .contact-col ul { text-align: center !important; }
                 .contact-col li { flex-direction: column !important; text-align: center !important; }
                 .contact-col li i { margin-right: 0 !important; margin-bottom: 5px !important; }
+            }
+
+            /* ========================================== */
+            /* 9. NOUVEAU BLOC RESPONSIVE MOBILE          */
+            /* ========================================== */
+            @media (max-width: 768px) {
+                /* Typographie ajustée */
+                .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 {
+                    font-size: 2.2em !important;
+                }
+                
+                /* Marges et espacements réduits pour petits écrans */
+                #comment-ca-marche, .section-machines, .section-benefices, .section-legislation, .section-standard, .section-partenaires {
+                    padding: 4em 1.5em !important;
+                }
+
+                /* Comment ça marche : on empile */
+                .ligne-parfaite {
+                    flex-direction: column !important;
+                    gap: 30px !important;
+                    margin-bottom: 3em !important;
+                }
+                .colonne-img, .colonne-texte {
+                    width: 100% !important;
+                }
+                .stat-boxes {
+                    flex-direction: column !important;
+                }
+
+                /* Bénéfices : on empile l'intro et la grille passe à 1 colonne */
+                .benefices-intro {
+                    flex-direction: column !important;
+                    gap: 30px !important;
+                }
+                .benefices-grid {
+                    grid-template-columns: 1fr !important;
+                }
+
+                /* Législation : grille à 1 ou 2 colonnes au lieu de 4 */
+                .legis-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+                .legis-banner, .partenaires-banner {
+                    padding: 1.5em !important;
+                }
+
+                /* Partenaires : on empile */
+                .partenaires-grid-2 {
+                    flex-direction: column !important;
+                }
+
+                /* Actualités : on passe en colonne unique */
+                .mock-widget-grid {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+
+            /* Très petits téléphones : on passe la législation sur 1 colonne */
+            @media (max-width: 480px) {
+                .legis-grid {
+                    grid-template-columns: 1fr !important;
+                }
+                .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 {
+                    font-size: 1.8em !important;
+                }
             }
         </style>
     </head>
@@ -1014,7 +1079,6 @@
                             </div>
                         </div>
                     </div>
-                    
                 </section>
 
             </article>
@@ -1042,7 +1106,6 @@
                     </div>
                     
                     <div class="footer-col center-col">
-                        
                         <div class="footer-logo-brand-block">
                             <span class="icon solid fa-leaf footer-logo-icon"></span>
                             <div class="footer-brand-text-container">
@@ -1050,7 +1113,6 @@
                                 <p>Solutions écologiques innovantes</p>
                             </div>
                         </div>
-                        
                         <h4>Suivez-nous</h4>
                         <ul class="social-icons">
                             <li><a href="#" class="icon brands fa-linkedin-in" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
@@ -1066,7 +1128,6 @@
                             <li><i class="icon solid fa-phone"></i> <span>+33 (0)4 74 05 96 68</span></li>
                             <li><i class="icon solid fa-map-marker-alt"></i> <span>42360 Panissières</span></li>
                         </ul>
-                        
                         <h4 style="margin-top: 2em;">Zone Moyen-Orient</h4>
                         <ul>
                             <li><i class="icon solid fa-user"></i> <span>Omer Avan</span></li>
@@ -1074,7 +1135,6 @@
                             <li><i class="icon solid fa-phone"></i> <span>+33 (0)6 95 21 04 33</span></li>
                         </ul>
                     </div>
-                    
                 </div>
                 
                 <div class="footer-bottom">
