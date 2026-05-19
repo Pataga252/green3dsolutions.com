@@ -1,18 +1,105 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Green D Solutions - Déshydratation de Biodéchets</title>
+        <title>Green 3D Solutions - Déshydratation de Biodéchets</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
         <style>
-            /* 1. FOND GLOBAL */
-            #main {
+            /* ========================================== */
+            /* 11. BANNIÈRE DE COOKIES                    */
+            /* ========================================== */
+            .cookie-banner {
+                position: fixed;
+                bottom: -150%; /* Caché par défaut en bas de l'écran */
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                max-width: 800px;
+                background-color: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+                padding: 20px 25px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                z-index: 999999; /* Toujours au-dessus du reste */
+                transition: bottom 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+                border: 1px solid #eaeaea;
+            }
+
+            .cookie-banner.show {
+                bottom: 30px; /* Remonte pour s'afficher */
+            }
+
+            .cookie-content {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                flex: 1;
+            }
+
+            .cookie-content i {
+                font-size: 2em;
+                color: #27ae60;
+            }
+
+            .cookie-content p {
+                margin: 0 !important;
+                font-size: 0.9em !important;
+                color: #555 !important;
+                line-height: 1.4 !important;
+            }
+
+            .cookie-buttons {
+                display: flex;
+                gap: 10px;
+                margin-left: 20px;
+            }
+
+            .cookie-buttons button {
+                margin: 0 !important;
+                padding: 0 1.5em !important;
+                min-width: auto !important;
+                height: 3em !important;
+                line-height: 3em !important;
+                border-radius: 8px !important;
+                font-size: 0.85em !important;
+                letter-spacing: 0.5px !important;
+            }
+
+            /* Version Mobile */
+            @media (max-width: 768px) {
+                .cookie-banner {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 15px;
+                    bottom: -150%;
+                }
+                .cookie-banner.show {
+                    bottom: 15px;
+                }
+                .cookie-content {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .cookie-buttons {
+                    margin-left: 0;
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+            /* ========================================== */
+            /* 1. FOND GLOBAL ET ANNULATION MARGES CACHÉES*/
+            /* ========================================== */
+            #main, body.index #main {
                 background-color: #ffffff !important;
                 background-image: none !important;
                 padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                margin-top: 0 !important;
             }
 
             /* ========================================== */
@@ -56,16 +143,18 @@
             }
 
             /* ========================================== */
-            /* VIDÉO EN ARRIÈRE-PLAN (BANNER)             */
+            /* VIDÉO EN ARRIÈRE-PLAN (BANNER) AJUSTÉE     */
             /* ========================================== */
             #banner {
                 background-image: none !important;
-                background-color: #27ae60;
-                padding-top: 8em !important;
-                padding-bottom: 12em !important; 
+                background-color: #27ae60 !important;
+                padding-top: 5.5em !important;  
+                padding-bottom: 6.5em !important; /* Marge réajustée pour ne plus couper le bouton ! */
                 text-align: center;
                 position: relative;
                 overflow: hidden;
+                display: block !important;
+                min-height: 0 !important;
             }
             #bg-video {
                 position: absolute;
@@ -88,6 +177,8 @@
             #banner .inner {
                 position: relative;
                 z-index: 2;
+                width: 100%;
+                display: block !important;
             }
 
             /* ========================================== */
@@ -172,14 +263,30 @@
             }
 
             /* ========================================== */
+            /* ESPACEMENT STRICTEMENT IDENTIQUE PARTOUT   */
+            /* ========================================== */
+            #comment-ca-marche,
+            .section-machines,
+            .section-benefices,
+            .section-legislation,
+            .section-standard,
+            .section-partenaires,
+            #cta-contact {
+                padding: 5em 2em !important; 
+            }
+            
+            .titre-parfait, .benefices-intro, .legis-header {
+                margin-top: 0 !important;
+                margin-bottom: 3.5em !important;
+            }
+
+            /* ========================================== */
             /* 3. SECTION COMMENT ÇA MARCHE               */
             /* ========================================== */
             #comment-ca-marche {
-                padding-top: 6em !important;
-                padding-bottom: 4em !important;
                 background-color: #ffffff !important;
             }
-            .titre-parfait { text-align: center; margin-bottom: 4em; }
+            .titre-parfait { text-align: center; }
             .ligne-parfaite {
                 display: flex !important;
                 align-items: center !important;
@@ -243,7 +350,6 @@
             /* ========================================== */
             .section-machines {
                 background-color: #f9fbfb !important;
-                padding: 6em 2em !important;
                 text-align: center;
             }
             .container-machines { max-width: 1150px; margin: 0 auto; }
@@ -251,7 +357,6 @@
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 30px;
-                margin-top: 4em;
             }
             .machine-card {
                 background: #ffffff;
@@ -339,14 +444,12 @@
             /* ========================================== */
             .section-benefices {
                 background-color: #f4f7f6 !important;
-                padding: 6em 2em !important;
             }
             .container-benefices { max-width: 1150px; margin: 0 auto; }
             .benefices-intro {
                 display: flex !important;
                 align-items: stretch !important;
                 gap: 60px !important;
-                margin-bottom: 5em !important;
             }
             .benefices-texte {
                 flex: 1 !important;
@@ -403,17 +506,10 @@
             /* ========================================== */
             .section-legislation, .section-standard {
                 background-color: #ffffff !important;
-                padding: 6em 2em !important;
                 text-align: center;
             }
             
-            /* Ajustement spécifique de l'espace blanc en bas des actualités */
-            #actualites {
-                padding-bottom: 3em !important; 
-            }
-            
             .container-legislation, .container-partenaires { max-width: 1150px; margin: 0 auto; }
-            .legis-header { margin-bottom: 4em; }
             .legis-grid, .partenaires-grid {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
@@ -452,7 +548,12 @@
                 margin-bottom: 0.8em !important; 
                 text-transform: none !important;
             }
-            .section-partenaires { background-color: #f4f7f6 !important; padding: 6em 2em !important; text-align: center; }
+            
+            .section-partenaires { 
+                background-color: #f4f7f6 !important; 
+                text-align: center; 
+            }
+            
             .partenaires-grid-2 {
                 display: flex;
                 justify-content: center;
@@ -585,7 +686,6 @@
             /* ========================================== */
             #cta-contact {
                 background-color: #27ae60 !important;
-                padding: 5em 2em 4em 2em !important; 
                 text-align: center;
                 margin: 0 !important;
             }
@@ -720,9 +820,14 @@
                     font-size: 2.2em !important;
                 }
                 
-                /* Marges et espacements réduits pour petits écrans */
-                #comment-ca-marche, .section-machines, .section-benefices, .section-legislation, .section-standard, .section-partenaires {
-                    padding: 4em 1.5em !important;
+                /* Marges et espacements uniformisés pour petits écrans */
+                #comment-ca-marche, .section-machines, .section-benefices, .section-legislation, .section-standard, .section-partenaires, #cta-contact {
+                    padding: 4.5em 1.5em !important;
+                }
+                
+                #banner {
+                    padding-top: 7em !important;
+                    padding-bottom: 6em !important;
                 }
 
                 /* Comment ça marche : on empile */
@@ -775,13 +880,97 @@
                     font-size: 1.8em !important;
                 }
             }
+
+            /* ========================================== */
+            /* 10. DESIGN DES ARGUMENTS BANNER (BADGES)   */
+            /* ========================================== */
+            #banner .inner header h2 {
+                font-size: 3.2em !important; 
+            }
+
+            #banner .banner-intro {
+                font-size: 1.25em !important;
+                margin-bottom: 1.5em !important; 
+                font-weight: 500;
+            }
+
+            .banner-arguments {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                margin-bottom: 2em; 
+                max-width: 1000px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .arg-item {
+                background-color: rgba(255, 255, 255, 0.15);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                border-radius: 50px;
+                padding: 12px 25px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                color: #ffffff;
+                font-size: 1.05em;
+                backdrop-filter: blur(5px);
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+
+            .arg-item:hover {
+                background-color: rgba(255, 255, 255, 0.25);
+                transform: translateY(-3px);
+            }
+
+            .arg-item i {
+                color: #A8E6CF;
+                font-size: 1.3em;
+                margin-top: 2px;
+            }
+
+            .arg-item span {
+                line-height: 1.2;
+            }
+
+            .arg-item strong {
+                color: #ffffff;
+                font-weight: 800;
+                text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            }
+
+            /* Version Téléphone pour les badges */
+            @media (max-width: 840px) {
+                .banner-arguments {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                }
+                .arg-item {
+                    width: 100%;
+                    justify-content: flex-start;
+                    padding: 10px 20px;
+                    font-size: 0.95em;
+                }
+            }
         </style>
     </head>
     <body class="index is-preload">
+        <div id="cookie-banner" class="cookie-banner">
+            <div class="cookie-content">
+                <i class="icon solid fa-cookie-bite"></i>
+                <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site et analyser notre trafic. <br>En continuant à naviguer, vous acceptez notre politique de cookies.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="button primary small">Tout Accepter</button>
+                <button id="decline-cookies" class="button alt small" style="background-color: #f4f7f6; color: #555; border: 1px solid #ddd;">Refuser</button>
+            </div>
+        </div>
         <div id="page-wrapper">
 
             <header id="header" class="alt">
-                <h1 id="logo"><a href="#page-wrapper" class="scrolly"><span class="icon solid fa-leaf"></span> GREEN D SOLUTIONS</a></h1>
+                <h1 id="logo"><a href="#page-wrapper" class="scrolly"><span class="icon solid fa-leaf"></span> GREEN 3D SOLUTIONS</a></h1>
                 <nav id="nav">
                     <ul>
                         <li class="current"><a href="#page-wrapper" class="scrolly">Accueil</a></li>
@@ -810,7 +999,24 @@
                     <header>
                         <h2>Déshydratation de Biodéchets<br><span class="accent">Solution Écologique</span></h2>
                     </header>
-                    <p>Transformez vos déchets organiques en ressources valorisables avec notre technologie innovante de déshydratation. Réduisez vos coûts, votre empreinte carbone et respectez les nouvelles réglementations environnementales.</p>
+                    
+                    <p class="banner-intro">Transformez vos déchets organiques en ressources valorisables en éliminant définitivement l'humidité de vos poubelles.</p>
+                    
+                    <div class="banner-arguments">
+                        <div class="arg-item">
+                            <i class="icon solid fa-chart-line" style="transform: scaleY(-1);"></i> 
+                            <span>Réduisez drastiquement <strong>vos coûts</strong></span>
+                        </div>
+                        <div class="arg-item">
+                            <i class="icon solid fa-shield-alt"></i> 
+                            <span>Anticipez les <strong>réglementations environnementales</strong></span>
+                        </div>
+                        <div class="arg-item">
+                            <i class="icon solid fa-bug"></i> 
+                            <span>Stoppez les <strong>nuisibles</strong> (rats, insectes, odeurs...)</span>
+                        </div>
+                    </div>
+                    
                     <footer>
                         <ul class="buttons stacked">
                             <li><a href="#nos-machines" class="button fit scrolly">Découvrez nos déshydratateurs professionnels de 2,5 kg à 1400 kg</a></li>
@@ -924,9 +1130,11 @@
                         <div class="benefices-intro">
                             <div class="benefices-texte">
                                 <h2>Des bénéfices concrets pour votre entreprise</h2>
-                                <p class="lead">La déshydratation des biodéchets n'est pas seulement une solution écologique, c'est aussi un investissement rentable qui transforme une contrainte réglementaire en opportunité économique.</p>
+                                
+                                <p class="lead">Au-delà de la mise en conformité avec les nouvelles <strong>réglementations environnementales</strong>, la déshydratation assainit vos espaces de travail en <strong>combattant radicalement les odeurs et les nuisibles</strong> (rats, insectes...). Un investissement stratégique qui transforme une contrainte en opportunité économique.</p>
+                                
                                 <p>En réduisant drastiquement le volume de vos déchets organiques, vous diminuez vos coûts de collecte, de transport et de traitement. La matière déshydratée peut être valorisée comme amendement agricole ou source d'énergie, créant ainsi de nouvelles sources de revenus.</p>
-                                <p>Notre solution vous permet également de vous conformer aux réglementations environnementales de plus en plus strictes, tout en améliorant votre image de marque auprès de vos clients et partenaires sensibles aux enjeux écologiques.</p>
+                                <p>Notre solution vous permet également de vous conformer aux normes de plus en plus strictes, tout en améliorant votre image de marque auprès de vos clients et partenaires sensibles aux enjeux écologiques et d'hygiène.</p>
                             </div>
                             <div class="benefices-img">
                                 <img src="images/image_4.jpg" alt="Bénéfices écologiques et économiques" />
@@ -988,7 +1196,7 @@
                         <div class="legis-banner">
                             <h3>Conformité réglementaire garantie</h3>
                             <div class="legis-subtitle">Nos Partenaires et distributeurs</div>
-                            <p>La directive européenne 2008/98/CE sur les déchets encourage la valorisation des biodéchets et fixe des objectifs ambitieux de recyclage. En choisissant GREEN D SOLUTIONS, vous anticipez les futures réglementations et positionnez votre entreprise comme un acteur responsable de l'économie circulaire.</p>
+                            <p>La directive européenne 2008/98/CE sur les déchets encourage la valorisation des biodéchets et fixe des objectifs ambitieux de recyclage. En choisissant GREEN 3D SOLUTIONS, vous anticipez les futures réglementations et positionnez votre entreprise comme un acteur responsable de l'économie circulaire.</p>
                         </div>
                     </div>
                 </section>
@@ -1086,7 +1294,7 @@
             <section id="cta-contact">
                 <h2>Prêt à transformer vos biodéchets en opportunité ?</h2>
                 <p>Contactez-nous dès aujourd'hui pour découvrir comment notre solution peut réduire vos coûts et votre impact environnemental.</p>
-                <a href="mailto:contact@green3dsolutions.fr?subject=Demande de démonstration" class="button custom-btn">Demander une démonstration</a>
+                <a href="mailto:contact@green3dsolutions.fr?subject=Demande de démonstration" class="button custom-btn">Demander un devis</a>
             </section>
 
             <footer id="footer" class="custom-footer">
@@ -1109,7 +1317,7 @@
                         <div class="footer-logo-brand-block">
                             <span class="icon solid fa-leaf footer-logo-icon"></span>
                             <div class="footer-brand-text-container">
-                                <h3>GREEN D SOLUTIONS</h3>
+                                <h3>GREEN 3D SOLUTIONS</h3>
                                 <p>Solutions écologiques innovantes</p>
                             </div>
                         </div>
@@ -1153,5 +1361,33 @@
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
 
+    <script>
+            // LOGIQUE DE LA BANNIÈRE DE COOKIES
+            document.addEventListener("DOMContentLoaded", function() {
+                const cookieBanner = document.getElementById("cookie-banner");
+                const acceptBtn = document.getElementById("accept-cookies");
+                const declineBtn = document.getElementById("decline-cookies");
+
+                // Vérifie dans la mémoire du navigateur si l'utilisateur a déjà fait un choix
+                if (!localStorage.getItem("cookieConsent")) {
+                    // Si pas de choix, on affiche la bannière après 1,5 seconde
+                    setTimeout(() => {
+                        cookieBanner.classList.add("show");
+                    }, 1500);
+                }
+
+                // Action du bouton ACCEPTER
+                acceptBtn.addEventListener("click", function() {
+                    localStorage.setItem("cookieConsent", "accepted"); // Mémorise le choix
+                    cookieBanner.classList.remove("show"); // Cache la bannière
+                });
+
+                // Action du bouton REFUSER
+                declineBtn.addEventListener("click", function() {
+                    localStorage.setItem("cookieConsent", "declined"); // Mémorise le choix
+                    cookieBanner.classList.remove("show"); // Cache la bannière
+                });
+            });
+        </script>
     </body>
 </html>
