@@ -14,7 +14,7 @@
             /* ========================================== */
             .cookie-banner {
                 position: fixed;
-                bottom: -150%; /* Caché par défaut en bas de l'écran */
+                bottom: -150%; 
                 left: 50%;
                 transform: translateX(-50%);
                 width: 90%;
@@ -26,13 +26,13 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                z-index: 999999; /* Toujours au-dessus du reste */
+                z-index: 999999; 
                 transition: bottom 0.6s cubic-bezier(0.25, 1, 0.5, 1);
                 border: 1px solid #eaeaea;
             }
 
             .cookie-banner.show {
-                bottom: 30px; /* Remonte pour s'afficher */
+                bottom: 30px; 
             }
 
             .cookie-content {
@@ -69,9 +69,21 @@
                 border-radius: 8px !important;
                 font-size: 0.85em !important;
                 letter-spacing: 0.5px !important;
+            }
+
+            #accept-cookies {
                 background-color: #27ae60 !important; 
                 color: #ffffff !important;
                 border: none !important;
+            }
+            #accept-cookies:hover {
+                background-color: #219653 !important;
+            }
+
+            #decline-cookies {
+                background-color: #f4f7f6 !important; 
+                color: #555 !important; 
+                border: 1px solid #ddd !important;
             }
 
             /* Version Mobile */
@@ -153,7 +165,7 @@
                 background-image: none !important;
                 background-color: #27ae60 !important;
                 padding-top: 5.5em !important;  
-                padding-bottom: 6.5em !important; /* Marge réajustée pour ne plus couper le bouton ! */
+                padding-bottom: 6.5em !important; 
                 text-align: center;
                 position: relative;
                 overflow: hidden;
@@ -434,6 +446,63 @@
             .machine-btn a:hover {
                 background-color: #27ae60;
                 color: #ffffff;
+            }
+
+            /* STYLE DU BANDEAU "ARTICLES INTERMÉDIAIRES" */
+            .custom-machines-banner {
+                background-color: #e8f7ee !important;
+                border-radius: 15px !important;
+                padding: 2.5em 3em !important;
+                margin-top: 4em !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                gap: 30px !important;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.03) !important;
+                border: 1px solid rgba(39, 174, 96, 0.1) !important;
+                text-align: left;
+            }
+            .custom-machines-icon {
+                font-size: 3.5em !important;
+                color: #27ae60 !important;
+            }
+            .custom-machines-text {
+                flex: 1 !important;
+            }
+            .custom-machines-text h3 {
+                color: #27ae60 !important;
+                font-size: 1.6em !important;
+                font-weight: 800 !important;
+                margin-bottom: 0.3em !important;
+                text-transform: none !important;
+                border: none !important;
+                letter-spacing: -0.5px !important;
+            }
+            .custom-machines-text p {
+                margin: 0 !important;
+                font-size: 1.05em !important;
+                color: #555 !important;
+                line-height: 1.6 !important;
+            }
+            .custom-machines-action {
+                flex-shrink: 0 !important;
+            }
+            .custom-machines-action a {
+                background-color: #27ae60 !important;
+                color: #ffffff !important;
+                font-weight: 700 !important;
+                padding: 1em 2.5em !important;
+                border-radius: 50px !important;
+                box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2) !important;
+                transition: all 0.3s ease !important;
+                border: none !important;
+                display: inline-block !important;
+                text-decoration: none !important;
+            }
+            .custom-machines-action a:hover {
+                background-color: #219653 !important;
+                transform: translateY(-3px) !important;
+                box-shadow: 0 8px 20px rgba(39, 174, 96, 0.3) !important;
             }
 
             @media (max-width: 980px) {
@@ -781,7 +850,7 @@
             /* DROITE : Contact */
             .contact-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; text-align: left !important; display: inline-block !important; }
             .contact-col li { 
-                margin-bottom: 1em !important; 
+                margin-bottom: 0.8em !important; 
                 display: flex !important; 
                 align-items: center !important; 
                 font-size: 0.95em !important; 
@@ -873,6 +942,16 @@
                 .mock-widget-grid {
                     grid-template-columns: 1fr !important;
                 }
+
+                /* Ajustement bandeau intermédiaire mobile */
+                .custom-machines-banner {
+                    flex-direction: column !important;
+                    text-align: center !important;
+                    padding: 2em 1.5em !important;
+                }
+                .custom-machines-text {
+                    text-align: center !important;
+                }
             }
 
             /* Très petits téléphones : on passe la législation sur 1 colonne */
@@ -961,16 +1040,6 @@
         </style>
     </head>
     <body class="index is-preload">
-        <div id="cookie-banner" class="cookie-banner">
-            <div class="cookie-content">
-                <i class="icon solid fa-cookie-bite"></i>
-                <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site et analyser notre trafic. <br>En continuant à naviguer, vous acceptez notre politique de cookies.</p>
-            </div>
-            <div class="cookie-buttons">
-                <button id="accept-cookies" class="button primary small">Tout Accepter</button>
-                <button id="decline-cookies" class="button alt small" style="background-color: #f4f7f6; color: #555; border: 1px solid #ddd;">Refuser</button>
-            </div>
-        </div>
         <div id="page-wrapper">
 
             <header id="header" class="alt">
@@ -1004,7 +1073,7 @@
                         <h2>Déshydratation de Biodéchets<br><span class="accent">Solution Écologique</span></h2>
                     </header>
                     
-                    <p class="banner-intro">Transformez vos déchets organiques en ressources valorisables en éliminant définitivement l'humidité de vos poubelles.</p>
+                    <p class="banner-intro">Transformez vos déchets organics en ressources valorisables en éliminant définitivement l'humidité de vos poubelles.</p>
                     
                     <div class="banner-arguments">
                         <div class="arg-item">
@@ -1125,7 +1194,66 @@
                                 </div>
                             </div>
 
+                            <div class="machine-card">
+                                <img src="images/G500F.png" alt="Déshydratateur G 500 F" class="machine-img" />
+                                <div class="machine-content">
+                                    <h4>Modèle G 500 F</h4>
+                                    <ul class="machine-specs">
+                                        <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 300 à 500 kg / jour</li>
+                                        <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 220 x 145 x 175 cm</li>
+                                        <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 11 Kw (Triphasé)</li>
+                                    </ul>
+                                    <div class="machine-btn">
+                                        <a href="images/G500F-technique.pdf" target="_blank"><i class="icon solid fa-file-download"></i> Voir la fiche technique</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="machine-card">
+                                <img src="images/G1000F.png" alt="Déshydratateur G 1000 F" class="machine-img" />
+                                <div class="machine-content">
+                                    <h4>Modèle G 1000 F</h4>
+                                    <ul class="machine-specs">
+                                        <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 500 à 1000 kg / jour</li>
+                                        <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 280 x 180 x 190 cm</li>
+                                        <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 38 Kw (Triphasé)</li>
+                                    </ul>
+                                    <div class="machine-btn">
+                                        <a href="images/G1000F-technique.pdf" target="_blank"><i class="icon solid fa-file-download"></i> Voir la fiche technique</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="machine-card">
+                                <img src="images/G1300F.png" alt="Déshydratateur G 1300 F" class="machine-img" />
+                                <div class="machine-content">
+                                    <h4>Modèle G 1300 F</h4>
+                                    <ul class="machine-specs">
+                                        <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 700 à 1400 kg / jour</li>
+                                        <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 300 x 190 x 210 cm</li>
+                                        <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 42 Kw (Triphasé)</li>
+                                    </ul>
+                                    <div class="machine-btn">
+                                        <a href="images/G1300F-technique.pdf" target="_blank"><i class="icon solid fa-file-download"></i> Voir la fiche technique</a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+                        
+                        <div class="custom-machines-banner">
+                            <div class="custom-machines-icon">
+                                <i class="icon solid fa-cogs"></i>
+                            </div>
+                            <div class="custom-machines-text">
+                                <h3>Articles intermédiaires possibles sur demande</h3>
+                                <p>Vous avez un besoin spécifique ou des volumes particuliers ? Nous concevons également des déshydratateurs de capacités intermédiaires pour nous adapter parfaitement à votre configuration.</p>
+                            </div>
+                            <div class="custom-machines-action">
+                                <a href="#cta-contact" class="button primary scrolly">Nous consulter</a>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 
@@ -1200,7 +1328,7 @@
                         <div class="legis-banner">
                             <h3>Conformité réglementaire garantie</h3>
                             <div class="legis-subtitle">Nos Partenaires et distributeurs</div>
-                            <p>La directive européenne 2008/98/CE sur les déchets encourage la valorisation des biodéchets et fixe des objectifs ambitieux de recyclage. En choisissant GREEN 3D SOLUTIONS, vous anticipez les futures réglementations et positionnez votre entreprise comme un acteur responsable de l'économie circulaire.</p>
+                            <p>La directive européenne 2008/98/CE sur les déchets encourage la valorisation des biodéchets et fixe des objectifs ambitieux de recyclage. En choisissant GREEN 3D SOLUTIONS, vous anticipez les futures réglementations et positionnez votre entreprise comme un actor responsable de l'économie circulaire.</p>
                         </div>
                     </div>
                 </section>
@@ -1233,72 +1361,24 @@
                     <div class="mock-widget-container">
                         <div class="mock-widget-header">
                             <div class="mock-widget-title">
-                                <i class="icon brands fa-linkedin" style="font-size:1.5em;"></i> Airbus sur LinkedIn
+                                <i class="icon brands fa-linkedin" style="font-size:1.5em;"></i> Green 3D Solutions sur LinkedIn
                             </div>
-                            <a href="#" style="color: #0a66c2; text-decoration: none; font-size: 0.9em; font-weight: 600;">S'abonner +</a>
+                            <a href="https://www.linkedin.com/in/green-3d-solutions-b3155040a/" target="_blank" style="color: #0a66c2; text-decoration: none; font-size: 0.9em; font-weight: 600;">S'abonner +</a>
                         </div>
-                        <div class="mock-widget-grid">
-                            <div class="mock-post">
-                                <div class="mock-post-header">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Airbus_Logo.svg/1200px-Airbus_Logo.svg.png" alt="Airbus Logo" style="object-fit: contain; padding: 2px; border: 1px solid #ddd;">
-                                    <div class="mock-post-meta">
-                                        <span class="mock-author">Airbus</span>
-                                        <span class="mock-date">Il y a 2 jours</span>
-                                    </div>
-                                </div>
-                                <div class="mock-post-content">
-                                    Aviation is evolving. Watch how our latest ZEROe hydrogen concept aircraft is pushing the boundaries of what’s possible for a sustainable future in flight. 🌍✈️ #ZeroEmission #Innovation #Airbus
-                                </div>
-                                <img src="https://mediacentre.airbus.com/api/v1/assets/95a5bd27-4a7b-402a-9f5b-0bc21008064d/transform?t=1200" alt="ZEROe" class="mock-post-img">
-                                <div class="mock-post-footer">
-                                    <span><i class="icon solid fa-thumbs-up"></i> 4,521</span>
-                                    <span><i class="icon solid fa-comment"></i> 184</span>
-                                </div>
-                            </div>
-                            <div class="mock-post">
-                                <div class="mock-post-header">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Airbus_Logo.svg/1200px-Airbus_Logo.svg.png" alt="Airbus Logo" style="object-fit: contain; padding: 2px; border: 1px solid #ddd;">
-                                    <div class="mock-post-meta">
-                                        <span class="mock-author">Airbus</span>
-                                        <span class="mock-date">Il y a 5 jours</span>
-                                    </div>
-                                </div>
-                                <div class="mock-post-content">
-                                    We are proud to announce a new partnership to scale up Sustainable Aviation Fuel (SAF) production globally. A vital step towards our 2050 net-zero goals. 🌱🤝 #Sustainability #SAF
-                                </div>
-                                <img src="https://mediacentre.airbus.com/api/v1/assets/6e2b9c7b-8c8a-4d2a-8b1b-7a5d9a9b1c2d/transform?t=1200" alt="SAF Fuel" class="mock-post-img" style="object-fit: contain; background: #f0f0f0;">
-                                <div class="mock-post-footer">
-                                    <span><i class="icon solid fa-thumbs-up"></i> 3,102</span>
-                                    <span><i class="icon solid fa-comment"></i> 95</span>
-                                </div>
-                            </div>
-                            <div class="mock-post">
-                                <div class="mock-post-header">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Airbus_Logo.svg/1200px-Airbus_Logo.svg.png" alt="Airbus Logo" style="object-fit: contain; padding: 2px; border: 1px solid #ddd;">
-                                    <div class="mock-post-meta">
-                                        <span class="mock-author">Airbus</span>
-                                        <span class="mock-date">Il y a 1 semaine</span>
-                                    </div>
-                                </div>
-                                <div class="mock-post-content">
-                                    Take a look behind the scenes at our final assembly line in Toulouse. Our teams are working tirelessly to deliver the next generation of the A350 family! 🔧🚀 #A350 #TeamAirbus
-                                </div>
-                                <img src="https://mediacentre.airbus.com/api/v1/assets/8d8a7c6b-5b5a-4b1a-9a0a-8d9b8c7d6e5f/transform?t=1200" alt="Assembly Line" class="mock-post-img" style="object-fit: cover;">
-                                <div class="mock-post-footer">
-                                    <span><i class="icon solid fa-thumbs-up"></i> 8,901</span>
-                                    <span><i class="icon solid fa-comment"></i> 342</span>
-                                </div>
-                            </div>
+                        
+                        <div style="text-align: center; padding: 5em 2em; background-color: #fafafa;">
+                            <i class="icon solid fa-newspaper" style="font-size: 3.5em; color: #666; margin-bottom: 0.5em; display: block;"></i>
+                            <h3 style="color: #666; font-weight: 800; font-size: 1.6em; margin-bottom: 0.5em; border: none; text-transform: none;">Nos actualités arrivent bientôt</h3>
+                            <p style="color: #666; font-size: 1.05em; max-width: 600px; margin: 0 auto 1.5em auto; line-height: 1.6;">Abonnez-vous à notre page LinkedIn pour ne rien manquer de nos prochaines annonces, de nos nouvelles installations et de l'évolution de notre gamme.</p>
+                            <a href="https://www.linkedin.com/in/green-3d-solutions-b3155040a/" target="_blank" class="button primary" style="background-color: #0a66c2 !important; box-shadow: none !important;">Voir notre page LinkedIn</a>
                         </div>
                     </div>
                 </section>
 
-            </article>
-
             <section id="cta-contact">
                 <h2>Prêt à transformer vos biodéchets en opportunité ?</h2>
                 <p>Contactez-nous dès aujourd'hui pour découvrir comment notre solution peut réduire vos coûts et votre impact environnemental.</p>
-                <a href="mailto:contact@green3dsolutions.fr?subject=Demande de démonstration" class="button custom-btn">Demander un devis</a>
+                <a href="mailto:contact@green3dsolutions.com?subject=Demande de devis" class="button custom-btn">Demander un devis</a>
             </section>
 
             <footer id="footer" class="custom-footer">
@@ -1327,30 +1407,37 @@
                         </div>
                         <h4>Suivez-nous</h4>
                         <ul class="social-icons">
-                            <li><a href="#" class="icon brands fa-linkedin-in" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="https://www.linkedin.com/in/green-3d-solutions-b3155040a/" target="_blank" class="icon brands fa-linkedin-in" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
                             <li><a href="#" class="icon brands fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
                             <li><a href="#" class="icon brands fa-facebook-f" title="Facebook"><span class="label">Facebook</span></a></li>
                         </ul>
                     </div>
 
                     <div class="footer-col contact-col">
-                        <h4>Contact Général</h4>
+                        <h4>Commercial</h4>
                         <ul>
-                            <li><i class="icon solid fa-envelope"></i> <span>contact@green3dsolutions.fr</span></li>
+                            <li><i class="icon solid fa-envelope"></i> <span>contact@green3dsolutions.com</span></li>
                             <li><i class="icon solid fa-phone"></i> <span>+33 (0)4 74 05 96 68</span></li>
+                            <li><i class="icon solid fa-mobile-alt"></i> <span>+33 (0)6 84 50 59 85</span></li>
                             <li><i class="icon solid fa-map-marker-alt"></i> <span>42360 Panissières</span></li>
                         </ul>
-                        <h4 style="margin-top: 2em;">Zone Moyen-Orient</h4>
+                        
+                        <h4 style="margin-top: 1.5em;">Contact Technique</h4>
                         <ul>
-                            <li><i class="icon solid fa-user"></i> <span>Omer Avan</span></li>
-                            <li><i class="icon solid fa-envelope"></i> <span>mhpx_@hotmail.com</span></li>
-                            <li><i class="icon solid fa-phone"></i> <span>+33 (0)6 95 21 04 33</span></li>
+                            <li><i class="icon solid fa-envelope"></i> <span>infotech@green3dsolutions.com</span></li>
+                        </ul>
+                        
+                        <h4 style="margin-top: 1.5em;">Zone Moyen-Orient</h4>
+                        <ul>
+                            <li><i class="icon solid fa-envelope"></i> <span>contactmo@green3dsolutions.com</span></li>
+                            <li><i class="icon solid fa-phone"></i> <span>+90 (534) 329 85 39</span></li>
+                            <li><i class="icon solid fa-mobile-alt"></i> <span>+33 (0)6 95 21 04 33</span></li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="footer-bottom">
-                    &copy; Green D Solutions. Tous droits réservés.
+                    &copy; Green 3D Solutions. Tous droits réservés.
                 </div>
             </footer>
 
@@ -1365,7 +1452,7 @@
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
 
-    <script>
+        <script>
             // LOGIQUE DE LA BANNIÈRE DE COOKIES
             document.addEventListener("DOMContentLoaded", function() {
                 const cookieBanner = document.getElementById("cookie-banner");
