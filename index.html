@@ -80,29 +80,33 @@
             /* CORRECTION MOBILE : MENU ET BARRE BLANCHE  */
             /* ========================================== */
             @media (max-width: 840px) {
-                /* On force une belle barre blanche fixe en haut pour le mobile */
                 #titleBar {
-                    background-color: #ffffff !important;
-                    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+                    background: #ffffff !important;
                     height: 44px !important;
                     position: fixed !important;
                     top: 0 !important;
-                    width: 100% !important;
+                    left: 0 !important;      /* Plaque la barre à gauche */
+                    width: 100vw !important; /* Force la largeur à 100% de l'écran */
                     z-index: 10000 !important;
+                    box-shadow: 0 1px 5px rgba(0,0,0,0.2) !important;
                 }
-                /* Couleur du titre dans la barre mobile */
                 #titleBar .title {
                     color: #27ae60 !important;
                     font-weight: 800 !important;
+                    line-height: 44px !important;
+                    display: block !important;
+                    text-align: center !important; /* Centre le titre "Green 3D Solutions" */
                 }
-                /* Placement correct de l'icône Hamburger */
                 #titleBar .toggle {
                     width: 60px !important;
                     height: 44px !important;
+                    position: absolute !important;
+                    top: 0 !important;
+                    left: 0 !important;
                     background: transparent !important;
                 }
                 #titleBar .toggle:before {
-                    color: #27ae60 !important; /* Couleur verte pour les 3 traits */
+                    color: #27ae60 !important; /* L'icône du menu devient verte */
                     line-height: 44px !important;
                 }
             }
