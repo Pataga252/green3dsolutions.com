@@ -81,9 +81,6 @@
             /* ========================================== */
             /* CORRECTION MOBILE : MENU ET BARRE BLANCHE  */
             /* ========================================== */
-            /* ========================================== */
-            /* CORRECTION MOBILE : MENU ET BARRE BLANCHE  */
-            /* ========================================== */
             @media (max-width: 840px) {
                 #titleBar {
                     background: transparent !important; /* Supprime la barre blanche */
@@ -144,7 +141,7 @@
             .colonne-texte h3 { color: #1a1a1a !important; }
             .legis-banner h3, .partenaires-banner h3 { color: #1a6b3b !important; }
 
-            .benefice-card h4, .legis-card h4, .partenaires-card h4 { font-size: 1.25em !important; font-weight: 800 !important; color: #1a1a1a !important; text-transform: none !important; margin-bottom: 12px !important; }
+            .benefice-card h4, .legis-card h4, .partenaire-card h4 { font-size: 1.25em !important; font-weight: 800 !important; color: #1a1a1a !important; text-transform: none !important; margin-bottom: 12px !important; }
 
             .titre-parfait p, .legis-header p, .benefices-texte p.lead, #cta-contact p { font-size: 1.15em !important; color: #555 !important; line-height: 1.8 !important; margin-bottom: 1.5em !important; }
             .titre-parfait p, .legis-header p, #cta-contact p { max-width: 800px; margin-left: auto !important; margin-right: auto !important; }
@@ -154,7 +151,7 @@
             .benefices-texte p:last-child { margin-bottom: 0 !important; }
             .legis-banner p, .partenaires-banner p { color: #2b6142 !important; margin-bottom: 0 !important; line-height: 1.5 !important; }
             
-            .benefice-card p, .legis-card p, .partenaires-card p { font-size: 0.95em !important; color: #777 !important; line-height: 1.5 !important; margin: 0 !important; }
+            .benefice-card p, .legis-card p, .partenaire-card p { font-size: 0.95em !important; color: #777 !important; line-height: 1.5 !important; margin: 0 !important; }
 
             /* ========================================== */
             /* ESPACEMENT STRICTEMENT IDENTIQUE PARTOUT   */
@@ -228,24 +225,28 @@
             .icon-box i { font-size: 1.3em; color: #27ae60; }
 
             /* ========================================== */
-            /* 5. SECTIONS LÉGISLATION ET PARTENAIRES     */
+            /* 5. SECTIONS LÉGISLATION ET ZONES           */
             /* ========================================== */
             .section-legislation, .section-standard { background-color: #ffffff !important; text-align: center; }
             .container-legislation, .container-partenaires { max-width: 1150px; margin: 0 auto; }
-            .legis-grid, .partenaires-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 4em; }
-            .legis-card, .partenaires-card { background: #ffffff; border-radius: 15px; padding: 40px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-            .legis-card:hover, .partenaires-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-            .legis-icon, .partenaires-icon { font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block; }
-            .legis-banner, .partenaires-banner { background-color: #d1efe0 !important; border-radius: 15px !important; padding: 2em 3em !important; text-align: left; }
-            .legis-banner h3, .partenaires-banner h3 { margin-bottom: 0.2em !important; }
-            .legis-banner .legis-subtitle, .partenaires-banner .legis-subtitle { color: #27ae60 !important; font-size: 1.05em !important; font-weight: 600 !important; margin-bottom: 0.8em !important; text-transform: none !important; }
+            .legis-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 4em; }
+            .legis-card { background: #ffffff; border-radius: 15px; padding: 40px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+            .legis-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+            .legis-icon { font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block; }
+            .legis-banner { background-color: #d1efe0 !important; border-radius: 15px !important; padding: 2em 3em !important; text-align: left; }
+            .legis-banner h3 { margin-bottom: 0.2em !important; }
+            .legis-banner .legis-subtitle { color: #27ae60 !important; font-size: 1.05em !important; font-weight: 600 !important; margin-bottom: 0.8em !important; text-transform: none !important; }
             
+            /* NOUVELLE GRILLE ZONES PARTENAIRES & BANDEAU AUTRES */
             .section-partenaires { background-color: #f4f7f6 !important; text-align: center; }
-            .partenaires-grid-2 { display: flex; justify-content: center; gap: 30px; max-width: 800px; margin: 0 auto; }
-            .partenaire-card { background: #ffffff; border-radius: 15px; padding: 2.5em 2em !important; flex: 1; box-shadow: 0 5px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
+            .zones-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
+            .partenaire-card { background: #ffffff; border-radius: 15px; padding: 2.5em 2em !important; box-shadow: 0 5px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
             .partenaire-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-            .partenaire-card h4 { font-size: 1.6em !important; font-weight: 800 !important; color: #1a1a1a !important; margin-bottom: 0.3em !important; text-transform: none !important; line-height: 1.3 !important; }
-            .partenaire-card p { font-size: 1.05em !important; color: #777 !important; margin: 0 !important; }
+            .partenaire-card h4 { font-size: 1.4em !important; font-weight: 800 !important; color: #1a1a1a !important; margin-bottom: 0 !important; text-transform: none !important; line-height: 1.3 !important; }
+            
+            .autres-zones-banner { background-color: #e8f7ee !important; border-radius: 15px !important; padding: 1.5em 2em !important; margin: 2em auto 0 auto !important; max-width: 1000px !important; display: flex !important; align-items: center !important; justify-content: center !important; gap: 15px !important; box-shadow: 0 5px 20px rgba(0,0,0,0.02) !important; border: 1px dashed rgba(39, 174, 96, 0.4) !important; }
+            .autres-zones-banner i { font-size: 1.8em !important; color: #27ae60 !important; }
+            .autres-zones-banner p { margin: 0 !important; font-size: 1.1em !important; font-weight: 600 !important; color: #2b6142 !important; }
 
             /* ========================================== */
             /* 6. DESIGN DU WIDGET ACTUALITÉS             */
@@ -306,27 +307,14 @@
             /* ========================================== */
             @media (max-width: 768px) {
                 /* CORRECTION DES ESPACES ENTRE LES MOTS */
-                /* On force l'alignement à gauche pour éviter les immenses "trous blancs" liés à la justification */
                 p, .colonne-texte p, .benefices-texte p, .legis-banner p, .partenaires-banner p, .banner-intro {
-                    text-align: left !important;
-                    word-spacing: normal !important;
-                    letter-spacing: normal !important;
-                    hyphens: auto; /* Permet de couper les longs mots proprement si besoin */
+                    text-align: left !important; word-spacing: normal !important; letter-spacing: normal !important; hyphens: auto; 
                 }
 
-                /* Le petit texte de la bannière au centre */
-                .banner-intro {
-                    text-align: center !important;
-                }
-
-                /* CORRECTION TITRE COLLÉ SUR MOBILE */
+                .banner-intro { text-align: center !important; }
                 #banner .inner header h2 br { display: block !important; }
                 #banner .inner header h2 span.accent { display: block !important; margin-top: 10px; }
-
-                /* CORRECTION IMAGE TERRE SQUISHÉE */
                 .benefices-img img { height: 250px !important; }
-
-                /* Marges de sécurité */
                 #banner { padding-top: 7em !important; padding-bottom: 5em !important; }
 
                 .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 2.1em !important; }
@@ -338,16 +326,18 @@
                 .benefices-intro { flex-direction: column !important; gap: 30px !important; }
                 .benefices-grid { grid-template-columns: 1fr !important; }
                 .legis-grid { grid-template-columns: repeat(2, 1fr) !important; }
-                .legis-banner, .partenaires-banner { padding: 1.5em !important; }
-                .partenaires-grid-2 { flex-direction: column !important; }
+                .legis-banner { padding: 1.5em !important; }
+                
+                .zones-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important; }
+                .autres-zones-banner { flex-direction: column !important; text-align: center !important; padding: 1.5em !important; }
                 
                 .custom-machines-banner { flex-direction: column !important; text-align: center !important; padding: 2em 1.5em !important; }
                 .custom-machines-text { text-align: center !important; }
             }
 
-            /* TRÈS PETITS ÉCRANS (Éviter que les gros mots débordent) */
             @media (max-width: 480px) {
                 .legis-grid { grid-template-columns: 1fr !important; }
+                .zones-grid { grid-template-columns: 1fr !important; }
                 .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 1.7em !important; }
                 #banner .inner header h2 { font-size: 2.2em !important; }
             }
@@ -395,7 +385,7 @@
                                 <li><a href="#nos-machines">Nos Machines</a></li>
                                 <li><a href="#benefices">Bénéfices</a></li>
                                 <li><a href="#legislation">Législation</a></li>
-                                <li><a href="#partenaires">Partenaires</a></li>
+                                <li><a href="#partenaires">Zones d'intervention</a></li>
                                 <li><a href="#actualites">Actualités</a></li>
                             </ul>
                         </li>
@@ -427,7 +417,7 @@
                         </div>
                         <div class="arg-item">
                             <i class="icon solid fa-bug"></i> 
-                            <span>Stoppez les <strong>nuisibles</strong> (rats, insectes, odeurs...)</span>
+                            <span>Éradiquez les <strong>nuisibles et maladies</strong> (<strong>Hantavirus</strong>, rats, insectes...)</span>
                         </div>
                     </div>
                     
@@ -604,9 +594,10 @@
                             <div class="benefices-texte">
                                 <h2>Des bénéfices concrets pour votre entreprise</h2>
                                 
-                                <p class="lead">Au-delà de la mise en conformité avec les nouvelles <strong>réglementations environnementales</strong>, la déshydratation assainit vos espaces de travail en <strong>combattant radicalement les odeurs et les nuisibles</strong> (rats, insectes...). Un investissement stratégique qui transforme une contrainte en opportunité économique.</p>
+                                <p class="lead">Au-delà de la mise en conformité avec les nouvelles <strong>réglementations environnementales</strong>, la déshydratation assainit vos espaces de travail en <strong>combattant radicalement les odeurs, les nuisibles et les maladies</strong> (<strong>Hantavirus</strong>, rats, insectes...). Un investissement stratégique qui transforme une contrainte en opportunité économique.</p>
                                 
                                 <p>En réduisant drastiquement le volume de vos déchets organiques, vous diminuez vos coûts de collecte, de transport et de traitement. La matière déshydratée peut être valorisée comme amendement agricole ou source d'énergie, créant ainsi de nouvelles sources de revenus.</p>
+                                
                                 <p>Notre solution vous permet également de vous conformer aux normes de plus en plus strictes, tout en améliorant votre image de marque auprès de vos clients et partenaires sensibles aux enjeux écologiques et d'hygiène.</p>
                             </div>
                             <div class="benefices-img">
@@ -668,7 +659,7 @@
                         </div>
                         <div class="legis-banner">
                             <h3>Conformité réglementaire garantie</h3>
-                            <div class="legis-subtitle">Nos Partenaires et distributeurs</div>
+                            <div class="legis-subtitle">Une sécurité juridique et environnementale</div>
                             <p>La directive européenne 2008/98/CE sur les déchets encourage la valorisation des biodéchets et fixe des objectifs ambitieux de recyclage. En choisissant GREEN 3D SOLUTIONS, vous anticipez les futures réglementations et positionnez votre entreprise comme un acteur responsable de l'économie circulaire.</p>
                         </div>
                     </div>
@@ -677,18 +668,30 @@
                 <section id="partenaires" class="section-partenaires">
                     <div class="container-partenaires">
                         <div class="titre-parfait">
-                            <h2>Nos Partenaires et distributeurs</h2>
-                            <p>Nous concevons avec nos partenaires des deshydrateurs afin de vous offrir les meilleures solutions de déshydratation des biodéchets.</p>
+                            <h2>Zones d'intervention</h2>
+                            <p>Nous déployons nos solutions de déshydratation à travers le monde grâce à notre réseau de distributeurs et partenaires agréés, présents dans des zones stratégiques pour être au plus proche de vos besoins.</p>
                         </div>
-                        <div class="partenaires-grid-2">
+                        <div class="zones-grid">
                             <div class="partenaire-card">
-                                <h4>BioCircular</h4>
-                                <p>Partenaire stratégique</p>
+                                <i class="icon solid fa-map-marker-alt" style="font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block;"></i>
+                                <h4>Caraïbes</h4>
                             </div>
                             <div class="partenaire-card">
-                                <h4>CleanEnergy<br>Solutions</h4>
-                                <p>Partenaire énergétique</p>
+                                <i class="icon solid fa-map-marker-alt" style="font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block;"></i>
+                                <h4>Océan Indien</h4>
                             </div>
+                            <div class="partenaire-card">
+                                <i class="icon solid fa-map-marker-alt" style="font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block;"></i>
+                                <h4>Moyen-Orient</h4>
+                            </div>
+                            <div class="partenaire-card">
+                                <i class="icon solid fa-map-marker-alt" style="font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block;"></i>
+                                <h4>Afrique</h4>
+                            </div>
+                        </div>
+                        <div class="autres-zones-banner">
+                            <i class="icon solid fa-globe"></i>
+                            <p>Et de nombreux autres partenaires à travers le monde pour vous accompagner...</p>
                         </div>
                     </div>
                 </section>
@@ -735,7 +738,7 @@
                             <li><a href="#nos-machines" class="scrolly">Nos Machines</a></li>
                             <li><a href="#benefices" class="scrolly">Bénéfices</a></li>
                             <li><a href="#legislation" class="scrolly">Législation</a></li>
-                            <li><a href="#partenaires" class="scrolly">Partenaires</a></li>
+                            <li><a href="#partenaires" class="scrolly">Zones d'intervention</a></li>
                             <li><a href="#actualites" class="scrolly">Actualités</a></li>
                         </ul>
                     </div>
