@@ -54,7 +54,7 @@
             /* 1. FOND GLOBAL ET ANNULATION MARGES CACHÉES*/
             /* ========================================== */
             #main, body.index #main { background-color: #ffffff !important; background-image: none !important; padding-top: 0 !important; padding-bottom: 0 !important; margin-top: 0 !important; overflow-x: hidden; }
-            body { overflow-x: hidden; }
+            body { overflow-x: hidden; } /* Empêche le défilement horizontal sur mobile */
 
             /* ========================================== */
             /* CORRECTION ALIGNEMENT HEADER (MENU + LOGO) */
@@ -69,6 +69,7 @@
             #header nav ul li a.button.primary { background-color: #27ae60 !important; color: #ffffff !important; border: none !important; box-shadow: none !important; }
             #header nav ul li a.button.primary:hover { background-color: #219653 !important; }
 
+            /* CHANGEMENT COULEUR SURVOL MENU DÉROULANT */
             #nav ul li ul li a:hover,
             #nav ul li ul li:hover > a,
             .dropotron li a:hover,
@@ -82,7 +83,7 @@
             /* ========================================== */
             @media (max-width: 840px) {
                 #titleBar {
-                    background: transparent !important;
+                    background: transparent !important; /* Supprime la barre blanche */
                     height: 60px !important;
                     position: fixed !important;
                     top: 0 !important;
@@ -90,23 +91,25 @@
                     right: 0 !important;
                     width: 100% !important;
                     z-index: 10000 !important;
-                    box-shadow: none !important;
+                    box-shadow: none !important; /* Enlève la ligne d'ombre */
                     box-sizing: border-box !important;
                 }
-                #titleBar .title { display: none !important; }
+                #titleBar .title {
+                    display: none !important; /* Cache le texte du haut pour un rendu 100% épuré */
+                }
                 #titleBar .toggle {
                     width: 50px !important;
                     height: 50px !important;
                     position: absolute !important;
-                    top: 15px !important;
-                    left: 15px !important;
-                    background: rgba(0, 0, 0, 0.15) !important;
-                    border-radius: 8px !important;
+                    top: 15px !important; /* Décolle le bouton du haut de l'écran */
+                    left: 15px !important; /* Décolle le bouton du bord gauche */
+                    background: rgba(0, 0, 0, 0.15) !important; /* Léger fond noir transparent pour que l'icône reste lisible sur la vidéo */
+                    border-radius: 8px !important; /* Bords arrondis modernes */
                 }
                 #titleBar .toggle:before {
-                    color: #ffffff !important;
+                    color: #ffffff !important; /* L'icône passe en blanc brillant */
                     line-height: 50px !important;
-                    font-size: 1.3em !important;
+                    font-size: 1.3em !important; /* Taille parfaite pour le doigt */
                 }
             }
 
@@ -129,7 +132,7 @@
             #banner .inner { position: relative; z-index: 2; width: 100%; display: block !important; }
 
             /* ========================================== */
-            /* 2. SYSTÈME DE TYPOGRAPHIE UNIFIÉ           */
+            /* 2. SYSTÈME DE TYPOGRAPHIE UNIFIÉ ET LOGIQUE*/
             /* ========================================== */
             .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 2.8em !important; font-weight: 800 !important; color: #2b3138 !important; text-transform: none !important; letter-spacing: -1px !important; line-height: 1.2 !important; border: none !important; margin-bottom: 0.5em !important; }
             #cta-contact h2 { color: #ffffff !important; }
@@ -138,22 +141,21 @@
             .colonne-texte h3 { color: #1a1a1a !important; }
             .legis-banner h3, .partenaires-banner h3 { color: #1a6b3b !important; }
 
-            .benefice-card h4, .legis-card h4, .partenaire-card h4 { font-size: 1.25em !important; font-weight: 800 !important; color: #1a1a1a !important; text-transform: none !important; margin-bottom: 12px !important; }
+            .benefice-card h4, .legis-card h4, .partenaire-card h4 { font-size: 1.25em !important; font-weight: 800 !important; color: #1a1a1a !important; text-transform: none !important; margin-bottom: 12px !important; letter-spacing: normal !important; }
 
-            /* TEXTES DU CORPS (Paragraphes uniformisés pour éviter l'effet escalier) */
-            .titre-parfait p, .legis-header p, .benefices-texte p, .colonne-texte p, .legis-banner p, .partenaires-banner p, #cta-contact p { 
+            /* UNIFICATION STRICTE DE TOUS LES TEXTES DESCRIPTIFS ET PARAGRAPHES (Même taille partout) */
+            p, .titre-parfait p, .legis-header p, .benefices-texte p, .benefices-texte p.lead, #cta-contact p, .colonne-texte p, .legis-banner p, .partenaires-banner p, .benefice-card p, .legis-card p, .partenaire-card p { 
                 font-size: 1.15em !important; 
+                color: #555 !important; 
                 line-height: 1.8 !important; 
-                margin-bottom: 1.5em !important; 
-                color: #555 !important;
+                margin-bottom: 1.5em !important;
+                word-spacing: normal !important;
+                letter-spacing: normal !important;
             }
-            .titre-parfait p, .legis-header p, #cta-contact p { max-width: 800px; margin-left: auto !important; margin-right: auto !important; }
-            #cta-contact p { color: rgba(255, 255, 255, 0.9) !important; margin-bottom: 2.5em !important; }
-
             .benefices-texte p:last-child { margin-bottom: 0 !important; }
-            .legis-banner p, .partenaires-banner p { color: #2b6142 !important; margin-bottom: 0 !important; line-height: 1.5 !important; }
-            
-            .benefice-card p, .legis-card p, .partenaire-card p { font-size: 0.95em !important; color: #777 !important; line-height: 1.5 !important; margin: 0 !important; }
+            .legis-banner p, .partenaires-banner p { color: #2b6142 !important; margin-bottom: 0 !important; }
+            .benefice-card p, .legis-card p, .partenaire-card p { color: #777 !important; margin: 0 !important; }
+            #cta-contact p { color: rgba(255, 255, 255, 0.9) !important; margin-bottom: 2.5em !important; }
 
             /* ========================================== */
             /* ESPACEMENT STRICTEMENT IDENTIQUE PARTOUT   */
@@ -171,7 +173,7 @@
             .colonne-texte { text-align: left !important; }
             .colonne-img img { width: 100% !important; height: auto !important; aspect-ratio: 4/3 !important; object-fit: cover !important; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important; display: block !important; }
             .custom-check-list { list-style: none !important; padding-left: 0 !important; margin: 0 !important; }
-            .custom-check-list li { color: #2b3138 !important; font-weight: 500 !important; margin-bottom: 1em !important; display: flex !important; align-items: flex-start !important; }
+            .custom-check-list li { color: #2b3138 !important; font-weight: 500 !important; margin-bottom: 1em !important; display: flex !important; align-items: flex-start !important; font-size: 1.15em !important; }
             .custom-check-list li i { margin-top: 3px !important; color: #27ae60 !important; font-size: 1.4em !important; margin-right: 15px !important; }
             .stat-boxes { display: flex !important; gap: 20px !important; }
             .stat-box { background-color: #e8f7ee !important; border-radius: 12px !important; padding: 25px 20px !important; flex: 1 !important; }
@@ -189,12 +191,13 @@
             .machine-content { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
             .machine-content h4 { color: #27ae60 !important; font-size: 1.5em !important; font-weight: 800 !important; margin-bottom: 15px !important; text-transform: none !important; }
             .machine-specs { list-style: none !important; padding: 0 !important; margin: 0 0 25px 0 !important; flex-grow: 1; }
-            .machine-specs li { font-size: 0.95em !important; color: #555 !important; margin-bottom: 10px !important; display: flex !important; align-items: center !important; }
+            .machine-specs li { font-size: 1.1em !important; color: #555 !important; margin-bottom: 10px !important; display: flex !important; align-items: center !important; }
             .machine-specs li i { color: #27ae60; width: 25px; font-size: 1.1em; }
             .machine-btn { text-align: center; margin-top: auto; }
-            .machine-btn a { display: inline-block; width: 100%; padding: 12px 15px; background-color: #e8f7ee; color: #27ae60; border-radius: 8px; text-decoration: none; font-weight: 700; border: none !important; transition: background-color 0.3s ease, color 0.3s ease; }
+            .machine-btn a { display: inline-block; width: 100%; padding: 12px 15px; background-color: #e8f7ee; color: #27ae60; border-radius: 8px; text-decoration: none; font-weight: 700; border: none !important; transition: background-color 0.3s ease, color 0.3s ease; font-size: 1em !important; }
             .machine-btn a:hover { background-color: #27ae60; color: #ffffff; }
 
+            /* STYLE DU BANDEAU "ARTICLES INTERMÉDIAIRES" */
             .custom-machines-banner { background-color: #e8f7ee !important; border-radius: 15px !important; padding: 2.5em 3em !important; margin-top: 4em !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 30px !important; box-shadow: 0 5px 20px rgba(0,0,0,0.03) !important; border: 1px solid rgba(39, 174, 96, 0.1) !important; text-align: left; }
             .custom-machines-icon { font-size: 3.5em !important; color: #27ae60 !important; }
             .custom-machines-text { flex: 1 !important; }
@@ -215,6 +218,7 @@
             .benefices-intro { display: flex !important; align-items: stretch !important; gap: 60px !important; }
             .benefices-texte { flex: 1 !important; text-align: left !important; display: flex !important; flex-direction: column !important; justify-content: center !important; }
             
+            /* CORRECTION IMAGE TERRE RESPONSIVE */
             .benefices-img { flex: 1 !important; display: flex !important; }
             .benefices-img img { width: 100% !important; height: 100% !important; min-height: 300px !important; object-fit: cover !important; object-position: center !important; border-radius: 20px !important; box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important; display: block !important; }
 
@@ -241,9 +245,10 @@
             .section-partenaires { background-color: #f4f7f6 !important; text-align: center; }
             .zones-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
             
+            /* Design des cartes avec fond image soft */
             .partenaire-card { 
                 position: relative; 
-                background-color: #27ae60; 
+                background-color: #27ae60; /* Fond vert de base */
                 border-radius: 15px; 
                 padding: 3.5em 2em !important; 
                 box-shadow: 0 5px 20px rgba(0,0,0,0.06); 
@@ -263,20 +268,21 @@
                 top: 0; left: 0; right: 0; bottom: 0;
                 background-size: cover;
                 background-position: center;
-                opacity: 0.40; 
-                filter: grayscale(100%) contrast(120%); 
+                opacity: 0.40; /* Rendu très soft */
+                filter: grayscale(100%) contrast(120%); /* Assombrit la carte pour la fondre dans le vert */
                 transition: transform 0.6s ease, opacity 0.3s ease;
                 z-index: 0;
             }
             .partenaire-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(39, 174, 96, 0.3); }
-            .partenaire-card:hover::before { transform: scale(1.15); opacity: 0.5; }
+            .partenaire-card:hover::before { transform: scale(1.15); opacity: 0.5; } /* Effet de zoom au survol */
             
             .partenaire-card > * { position: relative; z-index: 1; }
             .partenaire-card h4 { font-size: 1.5em !important; font-weight: 800 !important; color: #ffffff !important; margin-bottom: 0 !important; text-transform: none !important; line-height: 1.3 !important; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
             .partenaire-card i { font-size: 2.5em; color: #ffffff !important; margin-bottom: 15px; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
             
+            /* Classes pour les fonds de cartes (extensions corrigées) */
             .bg-caraibes::before { background-image: url('images/map-caraibes.jpg'); }
-            .bg-ocean-indien::before { background-image: url('images/map-ocean-indien.jpg'); } 
+            .bg-ocean-indien::before { background-image: url('images/map-ocean-indien.webp'); } /* Pris en compte du .webp ! */
             .bg-moyen-orient::before { background-image: url('images/map-moyen-orient.jpg'); }
             .bg-afrique::before { background-image: url('images/map-afrique.jpg'); }
 
@@ -316,6 +322,7 @@
             .footer-logo-icon { font-size: 2em !important; color: #ffffff !important; }
             .footer-brand-text-container { text-align: left !important; }
             .footer-brand-text-container h3 { color: #ffffff !important; font-size: 1.4em !important; font-weight: 800 !important; margin: 0 !important; border: none !important; text-transform: none !important; line-height: 1.1 !important; }
+            .footer-brand-text-container p { font-size: 0.85em !important; color: #e8f7ee !important; margin: 0 !important; }
 
             .social-icons { list-style: none !important; padding: 0 !important; margin: 0 !important; display: flex !important; gap: 15px !important; }
             .social-icons li { padding: 0 !important; border: none !important; }
@@ -327,25 +334,45 @@
             .contact-col li i { width: 30px !important; font-size: 1.1em !important; color: #d1efe0 !important; margin-right: 10px !important; display: flex !important; justify-content: center !important; }
             
             .footer-bottom { text-align: center !important; margin-top: 3em !important; padding-top: 2em !important; border-top: 1px solid rgba(255,255,255,0.2) !important; font-size: 0.85em !important; color: #d1efe0 !important; }
+
+            /* CORRECTION DU FOOTER SUR MOBILE (La règle qui avait sauté) */
+            @media (max-width: 840px) {
+                .footer-container { grid-template-columns: 1fr !important; gap: 50px !important; }
+                .footer-logo-brand-block { flex-direction: column !important; gap: 10px !important; }
+                .footer-brand-text-container { align-items: center !important; text-align: center !important; }
+                .contact-col ul { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
+                .contact-col li { flex-direction: column !important; text-align: center !important; justify-content: center !important; }
+                .contact-col li i { margin-right: 0 !important; margin-bottom: 5px !important; }
+            }
             
             /* ========================================== */
             /* 9. RÉGLAGES GLOBAUX POUR LE RESPONSIVE     */
             /* ========================================== */
             @media (max-width: 768px) {
-                .colonne-texte p, .benefices-texte p, .legis-banner p, .partenaires-banner p {
+                /* CORRECTION DES ESPACES ENTRE LES MOTS (Priorité absolue) */
+                #page-wrapper p, #main p, .colonne-texte p, .benefices-texte p, .legis-banner p, .partenaires-banner p, .banner-intro, .benefice-card p, .legis-card p, .partenaire-card p {
                     text-align: left !important; 
-                    word-spacing: normal !important; 
+                    word-spacing: 0px !important; /* Force l'espace normal pour éviter les grands "trous blancs" */
                     letter-spacing: normal !important; 
                     hyphens: auto; 
+                    font-size: 1.1em !important; 
                 }
 
+                /* Garder ces textes centrés sur mobile, mais sans espaces étirés */
+                .titre-parfait p, .autres-zones-banner p, #actualites p {
+                    text-align: center !important;
+                    word-spacing: 0px !important;
+                }
+
+                /* DÉCALAGE DU TITRE SUR MOBILE POUR NE PAS ÊTRE COUPÉ */
                 #banner .inner {
                     padding-left: 15px !important;
                     padding-right: 15px !important;
                     box-sizing: border-box !important;
                 }
                 #banner .inner header h2 {
-                    text-align: center !important; /* Garde le titre centré sur mobile */
+                    text-align: left !important;
+                    padding-left: 5px !important;
                 }
 
                 .banner-intro { text-align: center !important; }
@@ -376,14 +403,15 @@
                 .legis-grid { grid-template-columns: 1fr !important; }
                 .zones-grid { grid-template-columns: 1fr !important; }
                 .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 1.7em !important; }
-                #banner .inner header h2 { font-size: 2.1em !important; word-break: keep-all; hyphens: auto; } /* Protège de la coupure */
+                /* LÉGÈRE RÉDUCTION POUR ÉVITER LA COUPE SUR TRÈS PETIT ÉCRAN */
+                #banner .inner header h2 { font-size: 1.9em !important; }
             }
 
             /* ========================================== */
             /* 10. DESIGN DES ARGUMENTS BANNER (BADGES)   */
             /* ========================================== */
-            #banner .inner header h2 { font-size: 3.2em !important; color: #ffffff !important; }
-            #banner .banner-intro { font-size: 1.25em !important; margin-bottom: 1.5em !important; font-weight: 500; color: #ffffff !important; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+            #banner .inner header h2 { font-size: 3.2em !important; }
+            #banner .banner-intro { font-size: 1.25em !important; margin-bottom: 1.5em !important; font-weight: 500; }
             .banner-arguments { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 2em; max-width: 1000px; margin-left: auto; margin-right: auto; }
             .arg-item { background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 50px; padding: 12px 25px; display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: 1.05em; backdrop-filter: blur(5px); transition: transform 0.3s ease, background-color 0.3s ease; }
             .arg-item:hover { background-color: rgba(255, 255, 255, 0.25); transform: translateY(-3px); }
@@ -408,6 +436,7 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+            /* Délais pour créer l'effet cascade (Staggered) */
             .delay-1 { transition-delay: 0.15s; }
             .delay-2 { transition-delay: 0.3s; }
             .delay-3 { transition-delay: 0.45s; }
