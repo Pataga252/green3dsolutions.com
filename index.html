@@ -325,7 +325,6 @@
             
             .footer-bottom { text-align: center !important; margin-top: 3em !important; padding-top: 2em !important; border-top: 1px solid rgba(255,255,255,0.2) !important; font-size: 0.85em !important; color: #d1efe0 !important; }
 
-            /* CORRECTION DU FOOTER SUR MOBILE */
             @media (max-width: 840px) {
                 .footer-container { grid-template-columns: 1fr !important; gap: 50px !important; }
                 .footer-logo-brand-block { flex-direction: column !important; gap: 10px !important; }
@@ -340,20 +339,21 @@
             /* ========================================== */
             @media (max-width: 768px) {
                 
-                /* 1. TEXTES COURTS & TITRES -> CENTRÉS POUR UN BEAU RENDU MOBILE */
-                .titre-parfait p, .legis-header p, .autres-zones-banner p, #actualites p, .banner-intro, #cta-contact p {
-                    text-align: center !important;
-                    word-spacing: normal !important;
-                    letter-spacing: normal !important;
-                }
-
-                /* 2. PARAGRAPHES DE CONTENU LONGS -> ALIGNÉS À GAUCHE POUR LA LISIBILITÉ */
-                #main p, .colonne-texte p, .benefices-texte p, .legis-banner p, .partenaires-banner p, .benefice-card p, .legis-card p, .partenaire-card p {
+                /* 1. PARAGRAPHES LONGS -> ALIGNÉS À GAUCHE POUR LA LECTURE */
+                .colonne-texte p, .benefices-texte p, .legis-banner p, .benefice-card p {
                     text-align: left !important; 
-                    word-spacing: normal !important; /* Empêche les énormes "trous blancs" */
+                    word-spacing: normal !important; 
                     letter-spacing: normal !important; 
                     hyphens: auto; 
                     font-size: 1.1em !important; 
+                }
+
+                /* 2. TEXTES COURTS, BADGES (Normes) ET TITRES -> CENTRÉS */
+                .titre-parfait p, .legis-header p, .autres-zones-banner p, .mock-widget-container p, .banner-intro, #cta-contact p, .legis-card p, .stat-box p, .custom-machines-text p {
+                    text-align: center !important;
+                    word-spacing: normal !important;
+                    letter-spacing: normal !important;
+                    font-size: 1.1em !important;
                 }
 
                 /* DÉCALAGE ET CENTRAGE DU TITRE PRINCIPAL SUR MOBILE */
@@ -363,7 +363,7 @@
                     box-sizing: border-box !important;
                 }
                 #banner .inner header h2 {
-                    text-align: center !important; /* Titre parfaitement centré sur la vidéo */
+                    text-align: center !important; 
                     padding-left: 0 !important;
                     padding-right: 0 !important;
                 }
@@ -408,7 +408,7 @@
                 font-size: 1.25em !important; 
                 margin-bottom: 1.5em !important; 
                 font-weight: 500; 
-                color: #ffffff !important; /* Force le texte en blanc */
+                color: #ffffff !important;
                 text-shadow: 0 2px 4px rgba(0,0,0,0.3); 
             }
             
@@ -675,11 +675,8 @@
                         <div class="benefices-intro">
                             <div class="benefices-texte scroll-reveal">
                                 <h2>Des bénéfices concrets pour votre entreprise</h2>
-                                
                                 <p>Au-delà de la mise en conformité avec les nouvelles <strong>réglementations environnementales</strong>, la déshydratation assainit vos espaces de travail en <strong>combattant radicalement les odeurs, les nuisibles et les maladies</strong> (<strong>Hantavirus</strong>, rats, insectes...). Un investissement stratégique qui transforme une contrainte en opportunité économique.</p>
-                                
                                 <p>En réduisant drastiquement le volume de vos déchets organiques, vous diminuez vos coûts de collecte, de transport et de traitement. La matière déshydratée peut être valorisée comme amendement agricole ou source d'énergie, créant ainsi de nouvelles sources de revenus.</p>
-                                
                                 <p>Notre solution vous permet également de vous conformer aux normes de plus en plus BIEN strictes, tout en améliorant votre image de marque auprès de vos clients et partenaires sensibles aux enjeux écologiques et d'hygiène.</p>
                             </div>
                             <div class="benefices-img scroll-reveal delay-1">
