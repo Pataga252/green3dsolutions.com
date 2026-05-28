@@ -34,7 +34,7 @@
             .cookie-banner.show { bottom: 30px; }
             .cookie-content { display: flex; align-items: center; gap: 15px; flex: 1; }
             .cookie-content i { font-size: 2em; color: #27ae60; }
-            .cookie-content p { margin: 0 !important; font-size: 0.9em !important; color: #555 !important; line-height: 1.4 !important; text-align: left !important; word-spacing: normal !important; }
+            .cookie-content p { margin: 0 !important; font-size: 0.95em !important; color: #555 !important; line-height: 1.4 !important; text-align: left !important; word-spacing: normal !important; letter-spacing: normal !important; }
             .cookie-buttons { display: flex; gap: 10px; margin-left: 20px; }
             .cookie-buttons button { margin: 0 !important; padding: 0 1.5em !important; min-width: auto !important; height: 3em !important; line-height: 3em !important; border-radius: 8px !important; font-size: 0.85em !important; letter-spacing: 0.5px !important; }
 
@@ -132,7 +132,7 @@
             #banner .inner { position: relative; z-index: 2; width: 100%; display: block !important; }
 
             /* ========================================== */
-            /* 2. SYSTÈME DE TYPOGRAPHIE UNIFIÉ           */
+            /* 2. SYSTÈME DE TYPOGRAPHIE UNIFIÉ ET LOGIQUE*/
             /* ========================================== */
             .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 2.8em !important; font-weight: 800 !important; color: #2b3138 !important; text-transform: none !important; letter-spacing: -1px !important; line-height: 1.2 !important; border: none !important; margin-bottom: 0.5em !important; }
             #cta-contact h2 { color: #ffffff !important; }
@@ -141,17 +141,21 @@
             .colonne-texte h3 { color: #1a1a1a !important; }
             .legis-banner h3, .partenaires-banner h3 { color: #1a6b3b !important; }
 
-            .benefice-card h4, .legis-card h4, .partenaire-card h4 { font-size: 1.25em !important; font-weight: 800 !important; color: #1a1a1a !important; text-transform: none !important; margin-bottom: 12px !important; }
+            .benefice-card h4, .legis-card h4, .partenaire-card h4 { font-size: 1.25em !important; font-weight: 800 !important; color: #1a1a1a !important; text-transform: none !important; margin-bottom: 12px !important; letter-spacing: normal !important; }
 
-            .titre-parfait p, .legis-header p, .benefices-texte p.lead, #cta-contact p { font-size: 1.15em !important; color: #555 !important; line-height: 1.8 !important; margin-bottom: 1.5em !important; }
-            .titre-parfait p, .legis-header p, #cta-contact p { max-width: 800px; margin-left: auto !important; margin-right: auto !important; }
-            #cta-contact p { color: rgba(255, 255, 255, 0.9) !important; margin-bottom: 2.5em !important; }
-
-            .colonne-texte p, .benefices-texte p, .legis-banner p, .partenaires-banner p { font-size: 1em !important; color: #666 !important; line-height: 1.7 !important; margin-bottom: 1.5em !important; }
+            /* UNIFICATION STRICTE DE TOUS LES TEXTES DESCRIPTIFS ET PARAGRAPHES (Même taille partout) */
+            p, .titre-parfait p, .legis-header p, .benefices-texte p, .benefices-texte p.lead, #cta-contact p, .colonne-texte p, .legis-banner p, .partenaires-banner p, .benefice-card p, .legis-card p, .partenaire-card p { 
+                font-size: 1.15em !important; 
+                color: #555 !important; 
+                line-height: 1.8 !important; 
+                margin-bottom: 1.5em !important;
+                word-spacing: normal !important;
+                letter-spacing: normal !important;
+            }
             .benefices-texte p:last-child { margin-bottom: 0 !important; }
-            .legis-banner p, .partenaires-banner p { color: #2b6142 !important; margin-bottom: 0 !important; line-height: 1.5 !important; }
-            
-            .benefice-card p, .legis-card p, .partenaire-card p { font-size: 0.95em !important; color: #777 !important; line-height: 1.5 !important; margin: 0 !important; }
+            .legis-banner p, .partenaires-banner p { color: #2b6142 !important; margin-bottom: 0 !important; }
+            .benefice-card p, .legis-card p, .partenaire-card p { color: #777 !important; margin: 0 !important; }
+            #cta-contact p { color: rgba(255, 255, 255, 0.9) !important; margin-bottom: 2.5em !important; }
 
             /* ========================================== */
             /* ESPACEMENT STRICTEMENT IDENTIQUE PARTOUT   */
@@ -169,7 +173,7 @@
             .colonne-texte { text-align: left !important; }
             .colonne-img img { width: 100% !important; height: auto !important; aspect-ratio: 4/3 !important; object-fit: cover !important; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important; display: block !important; }
             .custom-check-list { list-style: none !important; padding-left: 0 !important; margin: 0 !important; }
-            .custom-check-list li { color: #2b3138 !important; font-weight: 500 !important; margin-bottom: 1em !important; display: flex !important; align-items: flex-start !important; }
+            .custom-check-list li { color: #2b3138 !important; font-weight: 500 !important; margin-bottom: 1em !important; display: flex !important; align-items: flex-start !important; font-size: 1.15em !important; }
             .custom-check-list li i { margin-top: 3px !important; color: #27ae60 !important; font-size: 1.4em !important; margin-right: 15px !important; }
             .stat-boxes { display: flex !important; gap: 20px !important; }
             .stat-box { background-color: #e8f7ee !important; border-radius: 12px !important; padding: 25px 20px !important; flex: 1 !important; }
@@ -187,10 +191,10 @@
             .machine-content { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
             .machine-content h4 { color: #27ae60 !important; font-size: 1.5em !important; font-weight: 800 !important; margin-bottom: 15px !important; text-transform: none !important; }
             .machine-specs { list-style: none !important; padding: 0 !important; margin: 0 0 25px 0 !important; flex-grow: 1; }
-            .machine-specs li { font-size: 0.95em !important; color: #555 !important; margin-bottom: 10px !important; display: flex !important; align-items: center !important; }
+            .machine-specs li { font-size: 1.1em !important; color: #555 !important; margin-bottom: 10px !important; display: flex !important; align-items: center !important; }
             .machine-specs li i { color: #27ae60; width: 25px; font-size: 1.1em; }
             .machine-btn { text-align: center; margin-top: auto; }
-            .machine-btn a { display: inline-block; width: 100%; padding: 12px 15px; background-color: #e8f7ee; color: #27ae60; border-radius: 8px; text-decoration: none; font-weight: 700; border: none !important; transition: background-color 0.3s ease, color 0.3s ease; }
+            .machine-btn a { display: inline-block; width: 100%; padding: 12px 15px; background-color: #e8f7ee; color: #27ae60; border-radius: 8px; text-decoration: none; font-weight: 700; border: none !important; transition: background-color 0.3s ease, color 0.3s ease; font-size: 1em !important; }
             .machine-btn a:hover { background-color: #27ae60; color: #ffffff; }
 
             /* STYLE DU BANDEAU "ARTICLES INTERMÉDIAIRES" */
@@ -198,7 +202,6 @@
             .custom-machines-icon { font-size: 3.5em !important; color: #27ae60 !important; }
             .custom-machines-text { flex: 1 !important; }
             .custom-machines-text h3 { color: #27ae60 !important; font-size: 1.6em !important; font-weight: 800 !important; margin-bottom: 0.3em !important; text-transform: none !important; border: none !important; letter-spacing: -0.5px !important; }
-            .custom-machines-text p { margin: 0 !important; font-size: 1.05em !important; color: #555 !important; line-height: 1.6 !important; }
             .custom-machines-action { flex-shrink: 0 !important; }
             .custom-machines-action a { background-color: #27ae60 !important; color: #ffffff !important; font-weight: 700 !important; padding: 1em 2.5em !important; border-radius: 50px !important; box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2) !important; transition: all 0.3s ease !important; border: none !important; display: inline-block !important; text-decoration: none !important; }
             .custom-machines-action a:hover { background-color: #219653 !important; transform: translateY(-3px) !important; box-shadow: 0 8px 20px rgba(39, 174, 96, 0.3) !important; }
@@ -240,13 +243,50 @@
             /* NOUVELLE GRILLE ZONES PARTENAIRES & BANDEAU AUTRES */
             .section-partenaires { background-color: #f4f7f6 !important; text-align: center; }
             .zones-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
-            .partenaire-card { background: #ffffff; border-radius: 15px; padding: 2.5em 2em !important; box-shadow: 0 5px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
-            .partenaire-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-            .partenaire-card h4 { font-size: 1.4em !important; font-weight: 800 !important; color: #1a1a1a !important; margin-bottom: 0 !important; text-transform: none !important; line-height: 1.3 !important; }
             
+            /* Design des cartes avec fond image soft */
+            .partenaire-card { 
+                position: relative; 
+                background-color: #27ae60; /* Fond vert de base */
+                border-radius: 15px; 
+                padding: 3.5em 2em !important; 
+                box-shadow: 0 5px 20px rgba(0,0,0,0.06); 
+                border: none; 
+                overflow: hidden;
+                transition: transform 0.3s ease, box-shadow 0.3s ease; 
+                text-align: center; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 220px;
+            }
+            .partenaire-card::before {
+                content: '';
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background-size: cover;
+                background-position: center;
+                opacity: 0.40; /* Rendu très soft */
+                filter: grayscale(100%) contrast(120%); 
+                transition: transform 0.6s ease, opacity 0.3s ease;
+                z-index: 0;
+            }
+            .partenaire-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(39, 174, 96, 0.3); }
+            .partenaire-card:hover::before { transform: scale(1.15); opacity: 0.5; } 
+            
+            .partenaire-card > * { position: relative; z-index: 1; }
+            .partenaire-card h4 { font-size: 1.5em !important; font-weight: 800 !important; color: #ffffff !important; margin-bottom: 0 !important; text-transform: none !important; line-height: 1.3 !important; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+            .partenaire-card i { font-size: 2.5em; color: #ffffff !important; margin-bottom: 15px; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+            
+            /* Classes pour les fonds de cartes avec .webp pour l'Océan Indien */
+            .bg-caraibes::before { background-image: url('images/map-caraibes.jpg'); }
+            .bg-ocean-indien::before { background-image: url('images/map-ocean-indien.webp'); } 
+            .bg-moyen-orient::before { background-image: url('images/map-moyen-orient.jpg'); }
+            .bg-afrique::before { background-image: url('images/map-afrique.jpg'); }
+
             .autres-zones-banner { background-color: #e8f7ee !important; border-radius: 15px !important; padding: 1.5em 2em !important; margin: 2em auto 0 auto !important; max-width: 1000px !important; display: flex !important; align-items: center !important; justify-content: center !important; gap: 15px !important; box-shadow: 0 5px 20px rgba(0,0,0,0.02) !important; border: 1px dashed rgba(39, 174, 96, 0.4) !important; }
             .autres-zones-banner i { font-size: 1.8em !important; color: #27ae60 !important; }
-            .autres-zones-banner p { margin: 0 !important; font-size: 1.1em !important; font-weight: 600 !important; color: #2b6142 !important; }
 
             /* ========================================== */
             /* 6. DESIGN DU WIDGET ACTUALITÉS             */
@@ -280,7 +320,6 @@
             .footer-logo-icon { font-size: 2em !important; color: #ffffff !important; }
             .footer-brand-text-container { text-align: left !important; }
             .footer-brand-text-container h3 { color: #ffffff !important; font-size: 1.4em !important; font-weight: 800 !important; margin: 0 !important; border: none !important; text-transform: none !important; line-height: 1.1 !important; }
-            .footer-brand-text-container p { font-size: 0.85em !important; color: #e8f7ee !important; margin: 0 !important; }
 
             .social-icons { list-style: none !important; padding: 0 !important; margin: 0 !important; display: flex !important; gap: 15px !important; }
             .social-icons li { padding: 0 !important; border: none !important; }
@@ -293,22 +332,27 @@
             
             .footer-bottom { text-align: center !important; margin-top: 3em !important; padding-top: 2em !important; border-top: 1px solid rgba(255,255,255,0.2) !important; font-size: 0.85em !important; color: #d1efe0 !important; }
             
-            @media (max-width: 840px) {
-                .footer-container { grid-template-columns: 1fr !important; gap: 50px !important; }
-                .footer-logo-brand-block { flex-direction: column !important; gap: 10px !important; }
-                .footer-brand-text-container { align-items: center !important; text-align: center !important; }
-                .contact-col ul { text-align: center !important; }
-                .contact-col li { flex-direction: column !important; text-align: center !important; }
-                .contact-col li i { margin-right: 0 !important; margin-bottom: 5px !important; }
-            }
-
             /* ========================================== */
             /* 9. RÉGLAGES GLOBAUX POUR LE RESPONSIVE     */
             /* ========================================== */
             @media (max-width: 768px) {
-                /* CORRECTION DES ESPACES ENTRE LES MOTS */
-                p, .colonne-texte p, .benefices-texte p, .legis-banner p, .partenaires-banner p, .banner-intro {
-                    text-align: left !important; word-spacing: normal !important; letter-spacing: normal !important; hyphens: auto; 
+                p, .colonne-texte p, .benefices-texte p, .legis-banner p, .partenaires-banner p, .banner-intro, .benefice-card p, .legis-card p, .partenaire-card p {
+                    text-align: left !important; 
+                    word-spacing: normal !important; 
+                    letter-spacing: normal !important; 
+                    hyphens: auto; 
+                    font-size: 1.1em !important; /* Ajustement proportionnel global sur mobile */
+                }
+
+                /* DÉCALAGE DU TITRE SUR MOBILE POUR NE PAS ÊTRE COUPÉ */
+                #banner .inner {
+                    padding-left: 15px !important;
+                    padding-right: 15px !important;
+                    box-sizing: border-box !important;
+                }
+                #banner .inner header h2 {
+                    text-align: left !important;
+                    padding-left: 5px !important;
                 }
 
                 .banner-intro { text-align: center !important; }
@@ -339,7 +383,7 @@
                 .legis-grid { grid-template-columns: 1fr !important; }
                 .zones-grid { grid-template-columns: 1fr !important; }
                 .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 1.7em !important; }
-                #banner .inner header h2 { font-size: 2.2em !important; }
+                #banner .inner header h2 { font-size: 1.9em !important; } 
             }
 
             /* ========================================== */
@@ -358,6 +402,23 @@
                 .banner-arguments { flex-direction: column; align-items: center; gap: 10px; }
                 .arg-item { width: 100%; justify-content: flex-start; padding: 10px 20px; font-size: 0.95em; }
             }
+
+            /* ========================================== */
+            /* 12. ANIMATIONS DE DEFILEMENT (SCROLL REVEAL)*/
+            /* ========================================== */
+            .scroll-reveal {
+                opacity: 0;
+                transform: translateY(25px);
+                transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            }
+            .scroll-reveal.revealed {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .delay-1 { transition-delay: 0.15s; }
+            .delay-2 { transition-delay: 0.3s; }
+            .delay-3 { transition-delay: 0.45s; }
+            .delay-4 { transition-delay: 0.6s; }
         </style>
     </head>
     <body class="index is-preload">
@@ -401,7 +462,7 @@
                 <div class="video-overlay"></div>
                 <div class="inner">
                     <header>
-                        <h2>Déshydratation de Biodéchets<br><span class="accent">Solution Écologique</span></h2>
+                        <h2>Déshydratation de biodéchets<br><span class="accent">Solution écologique</span></h2>
                     </header>
                     
                     <p class="banner-intro">Transformez vos déchets organiques en ressources valorisables en éliminant définitivement l'humidité de vos poubelles.</p>
@@ -432,15 +493,15 @@
             <article id="main">
 
                 <section id="comment-ca-marche">
-                    <div class="titre-parfait">
+                    <div class="titre-parfait scroll-reveal">
                         <h2>Comment ça marche?</h2>
                         <p>Notre processus de déshydratation innovant transforme vos biodéchets en matière sèche valorisable, réduisant drastiquement leur volume et leur poids tout en préservant leurs propriétés nutritives.</p>
                     </div>
                     <div class="ligne-parfaite">
-                        <div class="colonne-img">
+                        <div class="colonne-img scroll-reveal">
                             <img src="images/image_2.jpg" alt="Biodéchets avant traitement" />
                         </div>
-                        <div class="colonne-texte">
+                        <div class="colonne-texte scroll-reveal delay-1">
                             <h3>Un processus simple et efficace</h3>
                             <p>Notre technologie utilise un processus thermique contrôlé qui élimine l'eau contenue dans les biodéchets sans altérer leur composition organique. Le résultat : une réduction de volume jusqu'à 80 à 90% et une matière stabilisée, facile à stocker et à transporter.</p>
                             <ul class="custom-check-list">
@@ -452,7 +513,7 @@
                         </div>
                     </div>
                     <div class="ligne-parfaite" style="margin-bottom: 0 !important;">
-                        <div class="colonne-texte">
+                        <div class="colonne-texte scroll-reveal">
                             <h3>Technologie éco-responsable</h3>
                             <p>Notre système intègre des technologies de pointe pour minimiser la consommation énergétique et maximiser l'efficacité du processus. La chaleur générée est récupérée et réutilisée, créant un cycle vertueux qui réduit l'impact environnemental.</p>
                             <div class="stat-boxes">
@@ -466,7 +527,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="colonne-img">
+                        <div class="colonne-img scroll-reveal delay-1">
                             <img src="images/image_3.jpg" alt="Matière sèche obtenue" />
                         </div>
                     </div>
@@ -474,16 +535,16 @@
 
                 <section id="nos-machines" class="section-machines">
                     <div class="container-machines">
-                        <div class="titre-parfait">
+                        <div class="titre-parfait scroll-reveal">
                             <h2>Notre Gamme de Déshydratateurs</h2>
                             <p>Des solutions performantes et éco-responsables adaptées à tous les volumes, de la restauration collective aux sites industriels.</p>
                         </div>
                         <div class="machines-grid">
                             
-                            <div class="machine-card">
+                            <div class="machine-card scroll-reveal delay-1">
                                 <img src="images/G30F.png" alt="Déshydratateur G 30 F" class="machine-img" />
                                 <div class="machine-content">
-                                    <h4>Modèle G 30 F</h4>
+                                    <h4>G 30 F</h4>
                                     <ul class="machine-specs">
                                         <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 15 à 30 kg / jour</li>
                                         <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 80 x 80 x 120 cm</li>
@@ -495,10 +556,10 @@
                                 </div>
                             </div>
 
-                            <div class="machine-card">
+                            <div class="machine-card scroll-reveal delay-2">
                                 <img src="images/G100F.png" alt="Déshydratateur G 100 F" class="machine-img" />
                                 <div class="machine-content">
-                                    <h4>Modèle G 100 F</h4>
+                                    <h4>G 100 F</h4>
                                     <ul class="machine-specs">
                                         <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 50 à 100 kg / jour</li>
                                         <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 115 x 100 x 125 cm</li>
@@ -510,10 +571,10 @@
                                 </div>
                             </div>
 
-                            <div class="machine-card">
+                            <div class="machine-card scroll-reveal delay-3">
                                 <img src="images/G300F.png" alt="Déshydratateur G 300 F" class="machine-img" />
                                 <div class="machine-content">
-                                    <h4>Modèle G 300 F</h4>
+                                    <h4>G 300 F</h4>
                                     <ul class="machine-specs">
                                         <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 150 à 300 kg / jour</li>
                                         <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 160 x 140 x 165 cm</li>
@@ -525,10 +586,10 @@
                                 </div>
                             </div>
 
-                            <div class="machine-card">
+                            <div class="machine-card scroll-reveal delay-1">
                                 <img src="images/G500F.png" alt="Déshydratateur G 500 F" class="machine-img" />
                                 <div class="machine-content">
-                                    <h4>Modèle G 500 F</h4>
+                                    <h4>G 500 F</h4>
                                     <ul class="machine-specs">
                                         <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 300 à 500 kg / jour</li>
                                         <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 220 x 145 x 175 cm</li>
@@ -540,10 +601,10 @@
                                 </div>
                             </div>
 
-                            <div class="machine-card">
+                            <div class="machine-card scroll-reveal delay-2">
                                 <img src="images/G1000F.png" alt="Déshydratateur G 1000 F" class="machine-img" />
                                 <div class="machine-content">
-                                    <h4>Modèle G 1000 F</h4>
+                                    <h4>G 1000 F</h4>
                                     <ul class="machine-specs">
                                         <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 500 à 1000 kg / jour</li>
                                         <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 280 x 180 x 190 cm</li>
@@ -555,10 +616,10 @@
                                 </div>
                             </div>
 
-                            <div class="machine-card">
+                            <div class="machine-card scroll-reveal delay-3">
                                 <img src="images/G1300F.png" alt="Déshydratateur G 1300 F" class="machine-img" />
                                 <div class="machine-content">
-                                    <h4>Modèle G 1300 F</h4>
+                                    <h4>G 1300 F</h4>
                                     <ul class="machine-specs">
                                         <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 700 à 1400 kg / jour</li>
                                         <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 300 x 190 x 210 cm</li>
@@ -572,7 +633,7 @@
 
                         </div>
                         
-                        <div class="custom-machines-banner">
+                        <div class="custom-machines-banner scroll-reveal">
                             <div class="custom-machines-icon">
                                 <i class="icon solid fa-cogs"></i>
                             </div>
@@ -591,36 +652,33 @@
                 <section id="benefices" class="section-benefices">
                     <div class="container-benefices">
                         <div class="benefices-intro">
-                            <div class="benefices-texte">
+                            <div class="benefices-texte scroll-reveal">
                                 <h2>Des bénéfices concrets pour votre entreprise</h2>
-                                
-                                <p class="lead">Au-delà de la mise en conformité avec les nouvelles <strong>réglementations environnementales</strong>, la déshydratation assainit vos espaces de travail en <strong>combattant radicalement les odeurs, les nuisibles et les maladies</strong> (<strong>Hantavirus</strong>, rats, insectes...). Un investissement stratégique qui transforme une contrainte en opportunité économique.</p>
-                                
+                                <p>Au-delà de la mise en conformité avec les nouvelles <strong>réglementations environnementales</strong>, la déshydratation assainit vos espaces de travail en <strong>combattant radicalement les odeurs, les nuisibles et les maladies</strong> (<strong>Hantavirus</strong>, rats, insectes...). Un investissement stratégique qui transforme une contrainte en opportunité économique.</p>
                                 <p>En réduisant drastiquement le volume de vos déchets organiques, vous diminuez vos coûts de collecte, de transport et de traitement. La matière déshydratée peut être valorisée comme amendement agricole ou source d'énergie, créant ainsi de nouvelles sources de revenus.</p>
-                                
-                                <p>Notre solution vous permet également de vous conformer aux normes de plus en plus strictes, tout en améliorant votre image de marque auprès de vos clients et partenaires sensibles aux enjeux écologiques et d'hygiène.</p>
+                                <p>Notre solution vous permet également de vous conformer aux normes de plus en plus BIEN strictes, tout en améliorant votre image de marque auprès de vos clients et partenaires sensibles aux enjeux écologiques et d'hygiène.</p>
                             </div>
-                            <div class="benefices-img">
+                            <div class="benefices-img scroll-reveal delay-1">
                                 <img src="images/image_4.jpg" alt="Bénéfices écologiques et économiques" />
                             </div>
                         </div>
                         <div class="benefices-grid">
-                            <div class="benefice-card">
+                            <div class="benefice-card scroll-reveal delay-1">
                                 <div class="icon-box"><i class="icon solid fa-chart-line" style="transform: scaleY(-1);"></i></div>
                                 <h4>Réduction du Volume</h4>
                                 <p>Diminuez jusqu'à 80 à 90% le volume de vos biodéchets grâce à notre technologie de déshydratation avancée, optimisant ainsi vos coûts de transport et de stockage.</p>
                             </div>
-                            <div class="benefice-card">
+                            <div class="benefice-card scroll-reveal delay-2">
                                 <div class="icon-box"><i class="icon solid fa-tint"></i></div>
                                 <h4>Récupération d'eau hygiénisée</h4>
                                 <p>Notre processus récupère 70 à 80 % de l'eau hygiénisée, permettant sa réutilisation et réduisant la consommation d'eau douce tout en minimisant les rejets environnementaux.</p>
                             </div>
-                            <div class="benefice-card">
+                            <div class="benefice-card scroll-reveal delay-3">
                                 <div class="icon-box"><i class="icon solid fa-leaf"></i></div>
                                 <h4>Impact Écologique</h4>
                                 <p>Transformez vos déchets organiques en ressources valorisables tout en respectant l'environnement et en contribuant à l'économie circulaire.</p>
                             </div>
-                            <div class="benefice-card">
+                            <div class="benefice-card scroll-reveal delay-4">
                                 <div class="icon-box"><i class="icon solid fa-bolt"></i></div>
                                 <h4>Efficacité Opérationnelle</h4>
                                 <p>Système automatisé et facile à intégrer dans vos processus existants, avec un retour sur investissement rapide et mesurable.</p>
@@ -631,33 +689,33 @@
 
                 <section id="legislation" class="section-legislation">
                     <div class="container-legislation">
-                        <div class="legis-header">
+                        <div class="legis-header scroll-reveal">
                             <h2>Législation et Normes</h2>
                             <p>Nos solutions respectent l'ensemble des réglementations européennes et françaises en matière de gestion des biodéchets et sont certifiées selon les normes les plus exigeantes.</p>
                         </div>
                         <div class="legis-grid">
-                            <div class="legis-card">
+                            <div class="legis-card scroll-reveal delay-1">
                                 <i class="icon solid fa-award legis-icon"></i>
                                 <h4>ISO</h4>
                                 <p>Management environnemental</p>
                             </div>
-                            <div class="legis-card">
+                            <div class="legis-card scroll-reveal delay-2">
                                 <i class="icon solid fa-shield-alt legis-icon"></i>
                                 <h4>CE</h4>
                                 <p>Conformité européenne</p>
                             </div>
-                            <div class="legis-card">
+                            <div class="legis-card scroll-reveal delay-3">
                                 <i class="icon solid fa-file-contract legis-icon"></i>
                                 <h4>Directive 2008/98/CE</h4>
                                 <p>Gestion des déchets</p>
                             </div>
-                            <div class="legis-card">
+                            <div class="legis-card scroll-reveal delay-4">
                                 <i class="icon solid fa-check-circle legis-icon"></i>
                                 <h4>Loi AGEC</h4>
                                 <p>Anti-gaspillage France</p>
                             </div>
                         </div>
-                        <div class="legis-banner">
+                        <div class="legis-banner scroll-reveal">
                             <h3>Conformité réglementaire garantie</h3>
                             <div class="legis-subtitle">Une sécurité juridique et environnementale</div>
                             <p>La directive européenne 2008/98/CE sur les déchets encourage la valorisation des biodéchets et fixe des objectifs ambitieux de recyclage. En choisissant GREEN 3D SOLUTIONS, vous anticipez les futures réglementations et positionnez votre entreprise comme un acteur responsable de l'économie circulaire.</p>
@@ -667,29 +725,29 @@
 
                 <section id="partenaires" class="section-partenaires">
                     <div class="container-partenaires">
-                        <div class="titre-parfait">
+                        <div class="titre-parfait scroll-reveal">
                             <h2>Zones d'intervention</h2>
                             <p>Nous déployons nos solutions de déshydratation à travers le monde grâce à notre réseau de distributeurs et partenaires agréés, présents dans des zones stratégiques pour être au plus proche de vos besoins.</p>
                         </div>
                         <div class="zones-grid">
-                            <div class="partenaire-card">
-                                <i class="icon solid fa-map-marker-alt" style="font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block;"></i>
+                            <div class="partenaire-card bg-caraibes scroll-reveal delay-1">
+                                <i class="icon solid fa-map-marker-alt"></i>
                                 <h4>Caraïbes</h4>
                             </div>
-                            <div class="partenaire-card">
-                                <i class="icon solid fa-map-marker-alt" style="font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block;"></i>
+                            <div class="partenaire-card bg-ocean-indien scroll-reveal delay-2">
+                                <i class="icon solid fa-map-marker-alt"></i>
                                 <h4>Océan Indien</h4>
                             </div>
-                            <div class="partenaire-card">
-                                <i class="icon solid fa-map-marker-alt" style="font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block;"></i>
+                            <div class="partenaire-card bg-moyen-orient scroll-reveal delay-3">
+                                <i class="icon solid fa-map-marker-alt"></i>
                                 <h4>Moyen-Orient</h4>
                             </div>
-                            <div class="partenaire-card">
-                                <i class="icon solid fa-map-marker-alt" style="font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block;"></i>
+                            <div class="partenaire-card bg-afrique scroll-reveal delay-4">
+                                <i class="icon solid fa-map-marker-alt"></i>
                                 <h4>Afrique</h4>
                             </div>
                         </div>
-                        <div class="autres-zones-banner">
+                        <div class="autres-zones-banner scroll-reveal">
                             <i class="icon solid fa-globe"></i>
                             <p>Et de nombreux autres partenaires à travers le monde pour vous accompagner...</p>
                         </div>
@@ -697,12 +755,12 @@
                 </section>
 
                 <section id="actualites" class="section-standard">
-                    <div class="titre-parfait">
+                    <div class="titre-parfait scroll-reveal">
                         <h2>Actualités</h2>
                         <p>Suivez nos dernières publications en temps réel directement depuis notre page LinkedIn.</p>
                     </div>
                     
-                    <div class="mock-widget-container">
+                    <div class="mock-widget-container scroll-reveal">
                         <div class="mock-widget-header">
                             <div class="mock-widget-title">
                                 <i class="icon brands fa-linkedin" style="font-size:1.5em;"></i> Green 3D Solutions sur LinkedIn
@@ -713,7 +771,7 @@
                         <div style="text-align: center; padding: 5em 2em; background-color: #fafafa;">
                             <i class="icon solid fa-newspaper" style="font-size: 3.5em; color: #d1efe0; margin-bottom: 0.5em; display: block;"></i>
                             <h3 style="color: #27ae60; font-weight: 800; font-size: 1.6em; margin-bottom: 0.5em; border: none; text-transform: none;">Nos actualités arrivent bientôt</h3>
-                            <p style="color: #666; font-size: 1.05em; max-width: 600px; margin: 0 auto 1.5em auto; line-height: 1.6;">Abonnez-vous à notre page LinkedIn pour ne rien manquer de nos prochaines annonces, de nos nouvelles installations et de l'évolution de notre gamme.</p>
+                            <p>Abonnez-vous à notre page LinkedIn pour ne rien manquer de nos prochaines annonces, de nos nouvelles installations et de l'évolution de notre gamme.</p>
                             <a href="https://www.linkedin.com/in/green-3d-solutions-b3155040a/" target="_blank" class="button primary" style="background-color: #0a66c2 !important; box-shadow: none !important;">Voir notre page LinkedIn</a>
                         </div>
                     </div>
@@ -816,9 +874,27 @@
                     cookieBanner.classList.remove("show"); 
                 });
 
-                declineBtn.addEventListener("click", function() {
+                document.getElementById("decline-cookies").addEventListener("click", function() {
                     localStorage.setItem("cookieConsent", "declined"); 
                     cookieBanner.classList.remove("show"); 
+                });
+
+                // LOGIQUE DE SCROLL REVEAL (ANIMATIONS AU DEFILEMENT)
+                const revealElements = document.querySelectorAll('.scroll-reveal');
+                const revealObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revealed');
+                            observer.unobserve(entry.target); 
+                        }
+                    });
+                }, {
+                    threshold: 0.12,
+                    rootMargin: "0px 0px -40px 0px"
+                });
+
+                revealElements.forEach(element => {
+                    revealObserver.observe(element);
                 });
             });
         </script>
