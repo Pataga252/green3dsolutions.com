@@ -5,54 +5,134 @@
         <meta name="description" content="Green 3D Solutions propose des déshydratateurs de biodéchets professionnels. Réduisez vos coûts, anticipez les réglementations et stoppez les nuisibles." />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        
-        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,900" />
-        
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
         <style>
             /* ========================================== */
-            /* RESET ET STYLES DE BASE DU TEMPLATE ORIGINAL */
+            /* 11. BANNIÈRE DE COOKIES                    */
             /* ========================================== */
-            html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
-            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
-            body { line-height: 1; background: #ffffff !important; -webkit-text-size-adjust: none; color: #555; font-family: 'Lato', sans-serif; overflow-x: hidden; }
-            ol, ul { list-style: none; }
-            blockquote, q { quotes: none; }
-            blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
-            table { border-collapse: collapse; border-spacing: 0; }
-            mark { background-color: transparent; color: inherit; }
-            input::-moz-focus-inner { border: 0; padding: 0; }
-            input, select, textarea { -moz-appearance: none; -webkit-appearance: none; -ms-appearance: none; appearance: none; }
-            html { box-sizing: border-box; }
-            *, *:before, *:after { box-sizing: inherit; }
-            
-            body.is-preload *, body.is-preload *:before, body.is-preload *:after { -moz-animation: none !important; -webkit-animation: none !important; -ms-animation: none !important; animation: none !important; -moz-transition: none !important; -webkit-transition: none !important; -ms-transition: none !important; transition: none !important; }
-            
-            a { -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out; -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out; -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out; transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out; color: #27ae60; text-decoration: none; border-bottom: dotted 1px; }
-            a:hover { border-bottom-color: transparent; }
-            strong, b { font-weight: 800; }
-            
-            p, ul, ol, dl, table, blockquote { margin: 0 0 1.5em 0; }
-            
-            h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; text-decoration: none; border: 0; }
-            
-            sub { font-size: 0.8em; position: relative; top: 0.5em; }
-            sup { font-size: 0.8em; position: relative; top: -0.5em; }
-            hr { border-top: solid 1px rgba(124, 128, 129, 0.2); border: 0; margin-bottom: 1.5em; }
-            blockquote { border-left: solid 0.5em rgba(124, 128, 129, 0.2); font-style: italic; padding: 1em 0 1em 2em; }
-            
-            /* Container & Layout */
-            .container { margin: 0 auto; max-width: 100%; width: 1150px; padding: 0 2em; }
-            #page-wrapper { margin-bottom: 0 !important; padding-bottom: 0 !important; }
-            
+            .cookie-banner {
+                position: fixed;
+                bottom: -150%; 
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                max-width: 800px;
+                background-color: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+                padding: 20px 25px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                z-index: 999999; 
+                transition: bottom 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+                border: 1px solid #eaeaea;
+            }
+
+            .cookie-banner.show { bottom: 30px; }
+            .cookie-content { display: flex; align-items: center; gap: 15px; flex: 1; }
+            .cookie-content i { font-size: 2em; color: #27ae60; }
+            .cookie-content p { margin: 0 !important; font-size: 0.95em !important; color: #555 !important; line-height: 1.4 !important; text-align: left !important; word-spacing: normal !important; letter-spacing: normal !important; }
+            .cookie-buttons { display: flex; gap: 10px; margin-left: 20px; }
+            .cookie-buttons button { margin: 0 !important; padding: 0 1.5em !important; min-width: auto !important; height: 3em !important; line-height: 3em !important; border-radius: 8px !important; font-size: 0.85em !important; letter-spacing: 0.5px !important; }
+
+            #accept-cookies { background-color: #27ae60 !important; color: #ffffff !important; border: none !important; }
+            #accept-cookies:hover { background-color: #219653 !important; }
+            #decline-cookies { background-color: #f4f7f6 !important; color: #555 !important; border: 1px solid #ddd !important; }
+
+            @media (max-width: 768px) {
+                .cookie-banner { flex-direction: column; text-align: center; gap: 15px; bottom: -150%; }
+                .cookie-banner.show { bottom: 15px; }
+                .cookie-content { flex-direction: column; gap: 10px; text-align: center; }
+                .cookie-content p { text-align: center !important; }
+                .cookie-buttons { margin-left: 0; width: 100%; justify-content: center; }
+            }
+
             /* ========================================== */
-            /* TYPOGRAPHIE UNIFIÉE (2 TAILLES UNIQUEMENT) */
+            /* 1. FOND GLOBAL ET ANNULATION MARGES CACHÉES*/
             /* ========================================== */
-            
-            h2, h3, h4, h5, h6 { color: inherit; font-weight: 300; line-height: 1.75em; margin-bottom: 1em; text-transform: uppercase; }
-            
-            /* Grosse taille pour les titres */
-            h2, .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2, #nos-machines h2, #comment-ca-marche h2, .colonne-texte h3 { 
+            #main, body.index #main { background-color: #ffffff !important; background-image: none !important; padding-top: 0 !important; padding-bottom: 0 !important; margin-top: 0 !important; overflow-x: hidden; }
+            body { overflow-x: hidden; }
+
+            /* ========================================== */
+            /* CORRECTION ALIGNEMENT HEADER (MENU + LOGO) */
+            /* ========================================== */
+            @media (min-width: 841px) {
+                #header { display: flex !important; align-items: center !important; justify-content: space-between !important; padding: 0 4em !important; height: 5em !important; }
+                #header h1 { position: static !important; margin: 0 !important; padding: 0 !important; line-height: 1 !important; }
+                #header nav { position: static !important; }
+                #header nav > ul { display: flex !important; align-items: center !important; margin: 0 !important; }
+            }
+
+            #header nav ul li a.button.primary { background-color: #27ae60 !important; color: #ffffff !important; border: none !important; box-shadow: none !important; }
+            #header nav ul li a.button.primary:hover { background-color: #219653 !important; }
+
+            #nav ul li ul li a:hover,
+            #nav ul li ul li:hover > a,
+            .dropotron li a:hover,
+            .dropotron li:hover > a {
+                background-color: #27ae60 !important; 
+                color: #ffffff !important;            
+            }
+
+            /* ========================================== */
+            /* CORRECTION MOBILE : MENU ET BARRE BLANCHE  */
+            /* ========================================== */
+            @media (max-width: 840px) {
+                #titleBar {
+                    background: transparent !important;
+                    height: 60px !important;
+                    position: fixed !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    right: 0 !important;
+                    width: 100% !important;
+                    z-index: 10000 !important;
+                    box-shadow: none !important;
+                    box-sizing: border-box !important;
+                }
+                #titleBar .title { display: none !important; }
+                #titleBar .toggle {
+                    width: 50px !important;
+                    height: 50px !important;
+                    position: absolute !important;
+                    top: 15px !important;
+                    left: 15px !important;
+                    background: rgba(0, 0, 0, 0.15) !important;
+                    border-radius: 8px !important;
+                }
+                #titleBar .toggle:before {
+                    color: #ffffff !important;
+                    line-height: 50px !important;
+                    font-size: 1.3em !important;
+                }
+            }
+
+            /* ========================================== */
+            /* VIDÉO EN ARRIÈRE-PLAN (BANNER) AJUSTÉE     */
+            /* ========================================== */
+            #banner {
+                background-image: none !important;
+                background-color: #27ae60 !important;
+                padding-top: 5.5em !important;  
+                padding-bottom: 6.5em !important; 
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                display: block !important;
+                min-height: 0 !important;
+            }
+            #bg-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+            .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(39, 174, 96, 0.75), rgba(41, 128, 185, 0.75)); z-index: 1; }
+            #banner .inner { position: relative; z-index: 2; width: 100%; display: block !important; }
+
+            /* ========================================== */
+            /* 2. SYSTÈME DE TYPOGRAPHIE UNIFIÉ ET LOGIQUE*/
+            /* ========================================== */
+            /* LOGIQUE DES DEUX TAILLES STRICTES FIXÉES PARTOUT */
+            .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2, #nos-machines h2, #comment-ca-marche h2, .colonne-texte h3 { 
                 font-size: 2.8em !important; 
                 font-weight: 800 !important; 
                 color: #2b3138 !important; 
@@ -63,326 +143,188 @@
                 margin-bottom: 0.5em !important; 
             }
             #cta-contact h2 { color: #ffffff !important; }
-            
-            .legis-banner h3, .partenaires-banner h3 { font-size: 1.6em !important; font-weight: 800 !important; text-transform: none !important; letter-spacing: -0.5px !important; margin-bottom: 0.6em !important; border: none !important; color: #1a6b3b !important; }
-            
+
+            .legis-banner h3, .partenaires-banner h3 { font-size: 1.6em !important; font-weight: 800 !important; text-transform: none !important; letter-spacing: -0.5px !important; margin-bottom: 0.6em !important; border: none !important; }
+            .legis-banner h3, .partenaires-banner h3 { color: #1a6b3b !important; }
+
             .benefice-card h4, .legis-card h4, .partenaire-card h4 { font-size: 1.25em !important; font-weight: 800 !important; color: #1a1a1a !important; text-transform: none !important; margin-bottom: 12px !important; letter-spacing: normal !important; }
-            
-            /* Taille standard pour le reste du texte */
-            p, .titre-parfait p, .legis-header p, .benefices-texte p, .benefices-texte p.lead, #cta-contact p, .colonne-texte p, .legis-banner p, .partenaires-banner p, li { 
+
+            /* UNIFICATION STRICTE DU RESTE DU TEXTE (Taille unique 1.15em et aligné à gauche par défaut) */
+            p, .titre-parfait p, .legis-header p, .benefices-texte p, .benefices-texte p.lead, #cta-contact p, .colonne-texte p, .legis-banner p, .partenaires-banner p { 
                 font-size: 1.15em !important; 
                 color: #555 !important; 
                 line-height: 1.8 !important; 
+                margin-bottom: 1.5em !important;
                 word-spacing: normal !important;
                 letter-spacing: normal !important;
+                text-align: left !important; /* PAR DÉFAUT TOUT RESTE À GAUCHE */
             }
             .benefices-texte p:last-child { margin-bottom: 0 !important; }
             .legis-banner p, .partenaires-banner p { color: #2b6142 !important; margin-bottom: 0 !important; line-height: 1.5 !important; }
             
+            /* EXCEPTIONS UNIQUEMENT POUR LE CONTENU À L'INTÉRIEUR DES CADRES / CARTES / BADGES -> TOUT RESTE CENTRÉ */
+            .benefice-card p, .legis-card p, .partenaire-card p, .stat-box p, .stat-box h4, .machine-card h4 { 
+                text-align: center !important; 
+            }
             .benefice-card p, .legis-card p, .partenaire-card p { font-size: 1em !important; line-height: 1.5 !important; margin: 0 !important; }
             .benefice-card p, .legis-card p { color: #777 !important; }
             .partenaire-card p { color: #ffffff !important; }
-            
-            /* ========================================== */
-            /* ALIGNEMENTS SPECIFIQUES                    */
-            /* ========================================== */
-            
-            /* Alignement à gauche par défaut pour les textes principaux */
-            #main h2, #main h3, #main p, .colonne-texte p, .benefices-texte p, .legis-banner p, .partenaires-banner p, .titre-parfait p, .legis-header p, .titre-parfait h2, .legis-header h2 {
-                text-align: left !important;
-            }
-            
-            /* Centrage uniquement pour les éléments dans des cadres/boîtes et la bannière */
-            .stat-box, .stat-box h4, .stat-box p, 
-            .benefice-card, .benefice-card h4, .benefice-card p, 
-            .legis-card, .legis-card h4, .legis-card p, 
-            .partenaire-card, .partenaire-card h4, .partenaire-card p, 
-            #cta-contact, #cta-contact h2, #cta-contact p, 
-            .machine-card h4, .machine-btn,
-            #banner .inner h2, #banner .inner p, .banner-intro, .arg-item,
-            .autres-zones-banner p, .custom-machines-text p, .custom-machines-text h3 { 
-                text-align: center !important; 
-            }
-            
-            .partenaire-card i { margin-left: auto !important; margin-right: auto !important; }
-            
-            /* ========================================== */
-            /* BOUTONS                                    */
-            /* ========================================== */
-            input[type="button"], input[type="submit"], input[type="reset"], button, .button { -moz-appearance: none; -webkit-appearance: none; -ms-appearance: none; appearance: none; -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out; -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out; -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out; transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out; background: none; border: solid 1px; border-radius: 0; color: inherit; cursor: pointer; display: inline-block; font-size: 0.8em; font-weight: 900; letter-spacing: 2px; min-width: 18em; padding: 0 0.75em; line-height: 3.75em; text-align: center; text-decoration: none; text-transform: uppercase; }
-            input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:hover, .button:hover { background: rgba(188, 202, 206, 0.15); border-color: inherit; }
-            input[type="button"].primary, input[type="submit"].primary, input[type="reset"].primary, button.primary, .button.primary { background: #27ae60; border-color: #27ae60; color: #fff !important; }
-            input[type="button"].primary:hover, input[type="submit"].primary:hover, input[type="reset"].primary:hover, button.primary:hover, .button.primary:hover { background: #219653 !important; border-color: #219653 !important; }
-            input[type="button"].fit, input[type="submit"].fit, input[type="reset"].fit, button.fit, .button.fit { width: 100%; }
-            input[type="button"].small, input[type="submit"].small, input[type="reset"].small, button.small, .button.small { font-size: 0.7em; min-width: 14em; padding: 0.5em 0; }
-            
-            /* ========================================== */
-            /* HEADER / NAVIGATION                        */
-            /* ========================================== */
-            @-moz-keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
-            @-webkit-keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
-            @-ms-keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
-            @keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
-            
-            #header { background: #fff; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075); color: inherit; cursor: default; font-size: 0.8em; left: 0; padding: 1em 1.5em; position: fixed; top: 0; width: 100%; z-index: 10000; }
-            #header h1 { font-weight: 900; margin: 0; }
-            #header h1 span { font-weight: 300; }
-            #header nav { letter-spacing: 0.075em; position: absolute; right: 1.5em; text-transform: uppercase; top: 0.75em; }
-            #header nav ul { list-style: none; padding-left: 0; }
-            #header nav ul li { display: inline-block; margin-left: 1.5em; padding-left: 0; }
-            #header nav ul li > ul { display: none; }
-            #header nav ul li a { border: solid 1px transparent; color: inherit; display: inline-block; line-height: 1em; padding: 0.6em 0.75em; text-decoration: none; }
-            #header nav ul li input[type="button"], #header nav ul li input[type="submit"], #header nav ul li input[type="reset"], #header nav ul li button, #header nav ul li .button { font-size: 1em; min-width: 0; width: auto; }
-            #header nav ul li.submenu > a { text-decoration: none; }
-            #header nav ul li.submenu > a:before { -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; display: inline-block; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1; text-transform: none !important; font-family: 'Font Awesome 5 Free'; font-weight: 900; content: '\f107'; margin-right: 0.65em; }
-            #header nav ul li.active > a, #header nav ul li:hover > a { -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; background: rgba(188, 202, 206, 0.15); }
-            #header nav ul li.current > a { font-weight: 900; }
-            #header.reveal { -moz-animation: reveal-header 0.5s; -webkit-animation: reveal-header 0.5s; -ms-animation: reveal-header 0.5s; animation: reveal-header 0.5s; }
-            #header.alt { -moz-animation: none; -webkit-animation: none; -ms-animation: none; animation: none; background: transparent; box-shadow: none; color: #fff; padding: 2em 2.5em; position: absolute; }
-            #header.alt nav { right: 2.5em; top: 1.75em; }
-            #header.alt nav ul li.active > a, #header.alt nav ul li:hover > a { border: solid 1px; }
-            
-            #header h1#logo { top: 1.2em !important; transform: none !important; }
-            #header #nav { top: 1.2em !important; transform: none !important; }
-            #header h1#logo a, #header.alt h1#logo a { display: inline-flex !important; align-items: center !important; font-weight: 800 !important; text-transform: uppercase !important; color: #2b3138 !important; text-decoration: none !important; border: none !important; }
-            #header h1#logo a .icon, #header.alt h1#logo a .icon { display: flex !important; justify-content: center !important; align-items: center !important; background-color: #27ae60 !important; width: 36px !important; height: 36px !important; border-radius: 10px !important; margin-right: 12px !important; padding: 0 !important; }
-            #header h1#logo a .icon::before, #header.alt h1#logo a .icon::before { color: #ffffff !important; font-size: 18px !important; }
-            
-            @media (min-width: 841px) {
-                #header { display: flex !important; align-items: center !important; justify-content: space-between !important; padding: 0 4em !important; height: 5em !important; }
-                #header h1 { position: static !important; margin: 0 !important; padding: 0 !important; line-height: 1 !important; }
-                #header nav { position: static !important; }
-                #header nav > ul { display: flex !important; align-items: center !important; margin: 0 !important; }
-            }
-            #header nav ul li a.button.primary { background-color: #27ae60 !important; color: #ffffff !important; border: none !important; box-shadow: none !important; }
-            #header nav ul li a.button.primary:hover { background-color: #219653 !important; }
-            #nav ul li ul li a:hover, #nav ul li ul li:hover > a, .dropotron li a:hover, .dropotron li:hover > a { background-color: #27ae60 !important; color: #ffffff !important; }
-            
-            @media (max-width: 840px) {
-                #titleBar { background: transparent !important; height: 60px !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 10000 !important; box-shadow: none !important; box-sizing: border-box !important; }
-                #titleBar .title { display: none !important; }
-                #titleBar .toggle { width: 50px !important; height: 50px !important; position: absolute !important; top: 15px !important; left: 15px !important; background: rgba(0, 0, 0, 0.15) !important; border-radius: 8px !important; }
-                #titleBar .toggle:before { color: #ffffff !important; line-height: 50px !important; font-size: 1.3em !important; }
-                #header { display: none; }
-            }
-            
-            /* Dropotron */
-            .dropotron { list-style: none; padding-left: 0; background: #fff; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075); line-height: 2.25em; min-width: 13em; padding: 1em 0; text-transform: uppercase; margin-top: calc(-1em + 1px); }
-            .dropotron.level-0 { font-size: 0.7em; font-weight: 400; margin-top: 1.5em; }
-            .dropotron.level-0:before { border-bottom: solid 0.5em #fff; border-left: solid 0.5em transparent; border-right: solid 0.5em transparent; content: ''; left: 0.75em; position: absolute; top: -0.45em; }
-            .dropotron > li { border-top: solid 1px rgba(124, 128, 129, 0.2); padding-left: 0; }
-            .dropotron > li > a { -moz-transition: none; -webkit-transition: none; -ms-transition: none; transition: none; color: inherit; text-decoration: none; padding: 0 1em; border: 0; display: block; }
-            .dropotron > li:hover > a { background: #27ae60; color: #fff; }
-            .dropotron > li:first-child { border-top: 0; }
-            
-            /* Navigation Mobile (Panel) */
-            #navPanel, #navButton { display: none; }
-            @media screen and (max-width: 840px) {
-                #navButton { -moz-backface-visibility: hidden; -webkit-backface-visibility: hidden; -ms-backface-visibility: hidden; backface-visibility: hidden; -moz-transition: -moz-transform 0.5s ease; -webkit-transition: -webkit-transform 0.5s ease; -ms-transition: -ms-transform 0.5s ease; transition: transform 0.5s ease; display: block; height: 60px; left: 0; position: fixed; top: 0; width: 100%; z-index: 10001; }
-                #navButton .toggle { text-decoration: none; height: 60px; left: 0; position: absolute; text-align: center; top: 0; width: 100%; border: 0; outline: 0; }
-                #navButton .toggle:before { -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; display: inline-block; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1; text-transform: none !important; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #fff; content: '\f0c9'; font-size: 1em; height: 40px; left: 10px; line-height: 40px; opacity: 0.5; position: absolute; top: 11px; width: 60px; z-index: 1; }
-                #navButton .toggle:after { background: rgba(163, 169, 170, 0.75); border-radius: 2px; content: ''; height: 40px; left: 10px; position: absolute; top: 10px; width: 60px; }
-                #navPanel { -moz-backface-visibility: hidden; -webkit-backface-visibility: hidden; -ms-backface-visibility: hidden; backface-visibility: hidden; -moz-transform: translateX(-275px); -webkit-transform: translateX(-275px); -ms-transform: translateX(-275px); transform: translateX(-275px); -moz-transition: -moz-transform 0.5s ease; -webkit-transition: -webkit-transform 0.5s ease; -ms-transition: -ms-transform 0.5s ease; transition: transform 0.5s ease; display: block; height: 100%; left: 0; overflow-y: auto; position: fixed; top: 0; width: 275px; z-index: 10002; background: #1c2021; color: #fff; font-size: 0.8em; letter-spacing: 0.075em; text-transform: uppercase; padding: 0.25em 0.75em 1em 0.75em; }
-                #navPanel .link { border: 0; border-top: solid 1px rgba(255, 255, 255, 0.05); color: inherit; display: block; height: 3em; line-height: 3em; opacity: 0.75; text-decoration: none; }
-                #navPanel .link.depth-0 { font-weight: 900; }
-                #navPanel .link:first-child { border-top: 0; }
-                #navPanel .indent-1 { display: inline-block; width: 1em; }
-                #navPanel .indent-2 { display: inline-block; width: 2em; }
-                #navPanel .indent-3 { display: inline-block; width: 3em; }
-                #navPanel .indent-4 { display: inline-block; width: 4em; }
-                #navPanel .indent-5 { display: inline-block; width: 5em; }
-                body.navPanel-visible #page-wrapper { -moz-transform: translateX(275px); -webkit-transform: translateX(275px); -ms-transform: translateX(275px); transform: translateX(275px); }
-                body.navPanel-visible #navButton { -moz-transform: translateX(275px); -webkit-transform: translateX(275px); -ms-transform: translateX(275px); transform: translateX(275px); }
-                body.navPanel-visible #navPanel { -moz-transform: translateX(0); -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
-            }
-            
-            /* ========================================== */
-            /* BANNER (SECTION REFONDUE)                  */
-            /* ========================================== */
-            @-moz-keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
-            @-webkit-keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
-            @-ms-keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
-            @keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
-            @keyframes fadeUpBanner { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
-            
-            #banner { background-attachment: fixed; background-color: #27ae60; background-image: linear-gradient(135deg, rgba(39, 174, 96, 0.85), rgba(41, 128, 185, 0.85)), url("images/image_1.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; padding-top: 8em; padding-bottom: 15em; text-align: center; }
-            #banner .inner { background: transparent; display: inline-block; max-width: 950px; margin: 0 auto; text-align: center; opacity: 0; animation: fadeUpBanner 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
-            #banner .inner header h2 { color: #ffffff; font-size: 3.8em !important; font-weight: 800; text-transform: none; letter-spacing: -0.02em; border: none; margin: 0 0 0.3em 0; line-height: 1.15; text-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-            #banner .inner header h2 .accent { background-color: transparent; padding: 0; margin: 0; border-radius: 0; box-shadow: none; color: #A8E6CF; font-size: 1em; font-weight: 800; text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
-            #banner .inner p.banner-intro { color: rgba(255, 255, 255, 0.95) !important; font-size: 1.2em !important; text-transform: none; letter-spacing: normal; line-height: 1.7; margin: 0 auto 2.5em auto; font-weight: 400; max-width: 800px; text-shadow: 0 4px 10px rgba(0,0,0,0.15); text-align: center !important; }
-            
-            #banner .button { background-color: #ffffff !important; color: #27ae60 !important; border: none !important; border-radius: 50px; font-weight: 700; display: inline-block !important; width: auto !important; min-width: 0 !important; padding: 1.1em 2.8em !important; line-height: 1.5em; font-size: 1.05em; text-transform: none; letter-spacing: 0.5px; text-decoration: none; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); }
-            #banner .button:hover { background-color: #ffffff !important; color: #1e8449 !important; transform: translateY(-4px); box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25); }
-            
-            .banner-arguments { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 2em; max-width: 1000px; margin-left: auto; margin-right: auto; }
-            .arg-item { background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 50px; padding: 12px 25px; display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: 1.05em; backdrop-filter: blur(5px); transition: transform 0.3s ease, background-color 0.3s ease; }
-            .arg-item:hover { background-color: rgba(255, 255, 255, 0.25); transform: translateY(-3px); }
-            .arg-item i { color: #A8E6CF; font-size: 1.3em; margin-top: 2px; }
-            .arg-item span { line-height: 1.2; text-align: left !important; }
-            .arg-item strong { color: #ffffff; font-weight: 800; text-shadow: 0 2px 5px rgba(0,0,0,0.3); }
 
             /* ========================================== */
-            /* CORPS DE PAGE ET SECTIONS SPECIFIQUES      */
+            /* ESPACEMENT STRICTEMENT IDENTIQUE PARTOUT   */
             /* ========================================== */
-            #main { padding-top: 0 !important; }
-            
             #comment-ca-marche, .section-machines, .section-benefices, .section-legislation, .section-standard, .section-partenaires, #cta-contact { padding: 5em 2em !important; }
-            
-            /* Section Comment ça marche */
-            #comment-ca-marche { background-color: #ffffff !important; scroll-margin-top: 120px !important; }
+            .titre-parfait, .benefices-intro, .legis-header { margin-top: 0 !important; margin-bottom: 3.5em !important; }
+
+            /* ========================================== */
+            /* 3. SECTION COMMENT ÇA MARCHE               */
+            /* ========================================== */
+            #comment-ca-marche { background-color: #ffffff !important; }
+            .titre-parfait { text-align: left !important; }
             .ligne-parfaite { display: flex !important; align-items: center !important; justify-content: space-between !important; max-width: 1150px !important; margin: 0 auto 5em auto !important; gap: 60px !important; }
             .colonne-img, .colonne-texte { flex: 1 !important; width: 48% !important; padding: 0 !important; margin: 0 !important; }
+            .colonne-texte { text-align: left !important; }
             .colonne-img img { width: 100% !important; height: auto !important; aspect-ratio: 4/3 !important; object-fit: cover !important; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important; display: block !important; }
-            
             .custom-check-list { list-style: none !important; padding-left: 0 !important; margin: 0 !important; }
-            .custom-check-list li { margin-bottom: 1.2em !important; display: flex !important; align-items: flex-start !important; color: #555 !important; font-size: 1.15em !important; }
-            .custom-check-list li i { color: #27ae60 !important; font-size: 1.4em !important; margin-right: 15px !important; margin-top: 2px !important; }
-            
+            .custom-check-list li { color: #2b3138 !important; font-weight: 500 !important; margin-bottom: 1em !important; display: flex !important; align-items: flex-start !important; font-size: 1.15em !important; text-align: left !important; }
+            .custom-check-list li i { margin-top: 3px !important; color: #27ae60 !important; font-size: 1.4em !important; margin-right: 15px !important; }
             .stat-boxes { display: flex !important; gap: 20px !important; }
-            .stat-box { background-color: #e8f7ee !important; border-radius: 12px !important; padding: 25px 20px !important; flex: 1 !important; text-align: center; }
+            .stat-box { background-color: #e8f7ee !important; border-radius: 12px !important; padding: 25px 20px !important; flex: 1 !important; }
             .stat-box h4 { color: #27ae60 !important; font-size: 1.8em !important; font-weight: 800 !important; margin-bottom: 0.3em !important; letter-spacing: -0.5px !important; text-transform: none !important; }
-            .stat-box p { margin: 0 !important; font-size: 1.15em !important; color: #555 !important; line-height: 1.4 !important; text-align: center !important; }
-            
-            /* Section Machines */
-            .section-machines { background-color: #f9fbfb !important; }
+
+            /* ========================================== */
+            /* SECTION MACHINES                           */
+            /* ========================================== */
+            .section-machines { background-color: #f9fbfb !important; text-align: center; }
             .container-machines { max-width: 1150px; margin: 0 auto; }
             .machines-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
             .machine-card { background: #ffffff; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; text-align: left; padding-top: 30px; }
             .machine-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
             .machine-img { width: 85%; height: 220px; object-fit: contain; margin: 0 auto; display: block; }
             .machine-content { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
-            .machine-content h4 { color: #27ae60 !important; font-size: 1.5em !important; font-weight: 800 !important; margin-bottom: 15px !important; text-transform: none !important; text-align: center !important; }
+            .machine-content h4 { color: #27ae60 !important; font-size: 1.5em !important; font-weight: 800 !important; margin-bottom: 15px !important; text-transform: none !important; }
             .machine-specs { list-style: none !important; padding: 0 !important; margin: 0 0 25px 0 !important; flex-grow: 1; }
-            .machine-specs li { font-size: 1.15em !important; color: #555 !important; margin-bottom: 10px !important; display: flex !important; align-items: center !important; text-align: left !important; }
+            .machine-specs li { font-size: 1.1em !important; color: #555 !important; margin-bottom: 10px !important; display: flex !important; align-items: center !important; text-align: left !important; }
             .machine-specs li i { color: #27ae60; width: 25px; font-size: 1.1em; }
-            .machine-specs li strong { white-space: nowrap !important; margin-right: 5px !important; }
             .machine-btn { text-align: center; margin-top: auto; }
             .machine-btn a { display: inline-block; width: 100%; padding: 12px 15px; background-color: #e8f7ee; color: #27ae60; border-radius: 8px; text-decoration: none; font-weight: 700; border: none !important; transition: background-color 0.3s ease, color 0.3s ease; font-size: 1em !important; }
             .machine-btn a:hover { background-color: #27ae60; color: #ffffff; }
 
+            /* SÉCURITÉ RESPONSIVE SUR LES LABELS MACHINES */
+            .machine-specs li strong {
+                white-space: nowrap !important;
+                margin-right: 5px !important;
+            }
+
             .custom-machines-banner { background-color: #e8f7ee !important; border-radius: 15px !important; padding: 2.5em 3em !important; margin-top: 4em !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 30px !important; box-shadow: 0 5px 20px rgba(0,0,0,0.03) !important; border: 1px solid rgba(39, 174, 96, 0.1) !important; text-align: left; }
             .custom-machines-icon { font-size: 3.5em !important; color: #27ae60 !important; }
-            .custom-machines-text { flex: 1 !important; }
-            .custom-machines-text h3 { color: #27ae60 !important; font-size: 1.6em !important; font-weight: 800 !important; margin-bottom: 0.3em !important; text-transform: none !important; border: none !important; letter-spacing: -0.5px !important; text-align: left !important; }
-            .custom-machines-text p { margin: 0 !important; text-align: left !important; }
             .custom-machines-action { flex-shrink: 0 !important; }
             .custom-machines-action a { background-color: #27ae60 !important; color: #ffffff !important; font-weight: 700 !important; padding: 1em 2.5em !important; border-radius: 50px !important; box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2) !important; transition: all 0.3s ease !important; border: none !important; display: inline-block !important; text-decoration: none !important; }
             .custom-machines-action a:hover { background-color: #219653 !important; transform: translateY(-3px) !important; box-shadow: 0 8px 20px rgba(39, 174, 96, 0.3) !important; }
 
-            /* Section Bénéfices */
-            .section-benefices { background-color: #f4f7f6 !important; }
-            .container-benefices { max-width: 1150px; margin: 0 auto; }
-            .benefices-intro { display: flex !important; align-items: stretch !important; gap: 60px !important; }
-            .benefices-texte { flex: 1 !important; display: flex !important; flex-direction: column !important; justify-content: center !important; }
-            .benefices-img { flex: 1 !important; display: flex !important; }
-            .benefices-img img { width: 100% !important; height: 100% !important; min-height: 300px !important; object-fit: cover !important; object-position: center !important; border-radius: 20px !important; box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important; display: block !important; }
-
-            .benefices-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-            .benefice-card { background: #ffffff; border-radius: 15px; padding: 25px 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.04); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-            .benefice-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
-            .icon-box { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background-color: #e8f7ee; border-radius: 10px; margin-bottom: 15px; }
-            .icon-box i { font-size: 1.3em; color: #27ae60; }
-
-            /* Section Législation et Partenaires */
-            .section-legislation, .section-standard { background-color: #ffffff !important; }
-            .container-legislation, .container-partenaires { max-width: 1150px; margin: 0 auto; }
-            
+            /* ========================================== */
+            /* 5. SECTIONS LÉGISLATION ET PARTENAIRES     */
+            /* ========================================== */
             .legis-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 4em; }
-            .legis-card { background: #ffffff; border-radius: 15px; padding: 40px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
+            .legis-card { background: #ffffff; border-radius: 15px; padding: 40px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s ease, box-shadow 0.3s ease; }
             .legis-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
             .legis-icon { font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block; }
             .legis-banner { background-color: #d1efe0 !important; border-radius: 15px !important; padding: 2em 3em !important; text-align: left; }
+            .legis-banner h3 { margin-bottom: 0.2em !important; }
+            .legis-banner .legis-subtitle { color: #27ae60 !important; font-size: 1.05em !important; font-weight: 600 !important; margin-bottom: 0.8em !important; text-transform: none !important; }
             
-            .section-partenaires { background-color: #f4f7f6 !important; }
             .zones-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
-            .partenaire-card { position: relative; background-color: #27ae60; border-radius: 15px; padding: 3.5em 2em !important; box-shadow: 0 5px 20px rgba(0,0,0,0.06); border: none; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 220px; }
-            .partenaire-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-size: cover; background-position: center; opacity: 0.40; filter: grayscale(100%) contrast(120%); transition: transform 0.6s ease, opacity 0.3s ease; z-index: 0; }
+            
+            .partenaire-card { 
+                position: relative; 
+                background-color: #27ae60; 
+                border-radius: 15px; 
+                padding: 3.5em 2em !important; 
+                box-shadow: 0 5px 20px rgba(0,0,0,0.06); 
+                border: none; 
+                overflow: hidden;
+                transition: transform 0.3s ease, box-shadow 0.3s ease; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 220px;
+            }
+            .partenaire-card::before {
+                content: '';
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background-size: cover;
+                background-position: center;
+                opacity: 0.40; 
+                filter: grayscale(100%) contrast(120%); 
+                transition: transform 0.6s ease, opacity 0.3s ease;
+                z-index: 0;
+            }
             .partenaire-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(39, 174, 96, 0.3); }
-            .partenaire-card:hover::before { transform: scale(1.15); opacity: 0.5; } 
+            .partenaire-card:hover::before { transform: scale(1.15); opacity: 0.5; }
+            
             .partenaire-card > * { position: relative; z-index: 1; }
+            .partenaire-card h4 { font-size: 1.5em !important; font-weight: 800 !important; color: #ffffff !important; margin-bottom: 0 !important; text-transform: none !important; line-height: 1.3 !important; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
             .partenaire-card i { font-size: 2.5em; color: #ffffff !important; margin-bottom: 15px; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
             
             .bg-caraibes::before { background-image: url('images/map-caraibes.jpg'); }
-            .bg-ocean-indien::before { background-image: url('images/map-ocean-indien.webp'); } 
+            .bg-ocean-indien::before { background-image: url('images/map-ocean-indien.jpg'); } 
             .bg-moyen-orient::before { background-image: url('images/map-moyen-orient.jpg'); }
             .bg-afrique::before { background-image: url('images/map-afrique.jpg'); }
 
             .autres-zones-banner { background-color: #e8f7ee !important; border-radius: 15px !important; padding: 1.5em 2em !important; margin: 2em auto 0 auto !important; max-width: 1000px !important; display: flex !important; align-items: center !important; justify-content: center !important; gap: 15px !important; box-shadow: 0 5px 20px rgba(0,0,0,0.02) !important; border: 1px dashed rgba(39, 174, 96, 0.4) !important; }
             .autres-zones-banner i { font-size: 1.8em !important; color: #27ae60 !important; }
-            .autres-zones-banner p { text-align: center !important; margin: 0 !important; }
 
-            /* Actualités */
+            /* ========================================== */
+            /* 6. DESIGN DU WIDGET ACTUALITÉS             */
+            /* ========================================== */
             .mock-widget-container { max-width: 1000px; margin: 0 auto; background: #ffffff; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.05); border: 1px solid #eaeaea; overflow: hidden; text-align: left; }
             .mock-widget-header { padding: 20px; border-bottom: 1px solid #eaeaea; display: flex; align-items: center; justify-content: space-between; background-color: #fcfcfc; }
             .mock-widget-title { display: flex; align-items: center; gap: 10px; font-weight: 700; color: #0a66c2; font-size: 1.1em; }
-            
-            /* ========================================== */
-            /* 7. CTA CONTACT ET FOOTER                   */
-            /* ========================================== */
-            #cta-contact { background-color: #27ae60 !important; text-align: center !important; margin: 0 !important; padding: 6em 2em 5em 2em !important; }
-            #cta-contact h2 { color: #ffffff !important; text-align: center !important; }
-            #cta-contact p { text-align: center !important; }
-            #cta-contact .custom-btn { background-color: #ffffff !important; color: #27ae60 !important; border: none !important; border-radius: 50px !important; font-weight: 700 !important; display: inline-block !important; padding: 1em 2.5em !important; font-size: 1.1em !important; text-transform: none !important; text-decoration: none !important; box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important; transition: all 0.3s ease !important; }
-            #cta-contact .custom-btn:hover { transform: translateY(-3px) !important; box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important; background-color: #f8f8f8 !important; }
 
-            #footer { background-color: #27ae60 !important; color: #ffffff !important; padding: 4em 0 2em 0 !important; text-align: left; }
-            #footer a { color: rgba(255, 255, 255, 0.9) !important; text-decoration: none !important; border-bottom: none !important; transition: opacity 0.2s ease-in-out; }
-            #footer a:hover { color: #ffffff !important; opacity: 0.7; }
-            
-            .footer-container { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 2em; gap: 2em; }
-            .footer-col { flex: 1; min-width: 220px; }
-            .center-col { flex: 1.2; }
-            
-            #footer h3, #footer h4 { color: #ffffff !important; margin-bottom: 1.2em !important; border: none !important; text-transform: none !important; font-weight: 600 !important; letter-spacing: 0 !important; }
-            
-            .footer-logo-brand-block { display: flex !important; align-items: center !important; gap: 12px !important; margin-bottom: 2em !important; }
-            .footer-logo-icon { background: rgba(255, 255, 255, 0.2); padding: 0.4em; border-radius: 8px; font-size: 1.2em !important; color: #ffffff !important; }
-            .footer-brand-text-container h3 { text-transform: uppercase !important; font-weight: 700 !important; margin: 0 !important; font-size: 1.2em !important; }
-            .footer-brand-text-container p { color: rgba(255, 255, 255, 0.9) !important; font-size: 0.95em !important; line-height: 1.6 !important; margin: 0 !important; }
-
-            .links-col ul, .contact-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
-            .links-col li { margin-bottom: 0.8em !important; padding: 0 !important; border: none !important; color: #ffffff; }
-            
-            .contact-col li { margin-bottom: 0.8em !important; display: flex !important; align-items: flex-start !important; gap: 12px !important; font-size: 1.15em !important; line-height: 1.5; border: none !important; }
-            .contact-col li i { margin-top: 4px; font-size: 1.1em !important; color: #ffffff !important; }
-
-            .social-icons { display: flex !important; gap: 10px !important; list-style: none !important; padding: 0 !important; margin: 0 !important; }
-            .social-icons li { margin: 0 !important; padding: 0 !important; border: none !important; }
-            .social-icons li a { display: flex !important; align-items: center !important; justify-content: center !important; width: 42px !important; height: 42px !important; background-color: rgba(255,255,255,0.2) !important; border-radius: 8px !important; color: #ffffff !important; font-size: 1.2em !important; transition: background 0.3s !important; }
-            .social-icons li a:hover { background-color: rgba(255,255,255,0.4) !important; }
-            
-            .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.2) !important; text-align: center !important; padding-top: 2em !important; margin-top: 3em !important; font-size: 0.85em !important; color: rgba(255, 255, 255, 0.7) !important; }
-            
             /* ========================================== */
-            /* RESPONSIVE GLOBAUX                         */
+            /* 9. RÉGLAGES GLOBAUX POUR LE RESPONSIVE     */
             /* ========================================== */
-            @media (max-width: 980px) { .machines-grid { grid-template-columns: repeat(2, 1fr); } }
-            @media (max-width: 840px) { 
-                .machines-grid { grid-template-columns: 1fr; } 
-                .footer-container { flex-direction: column !important; text-align: center !important; gap: 2.5em !important; }
-                .footer-logo-brand-block { justify-content: center !important; }
-                .contact-col ul li { justify-content: center !important; text-align: center !important; }
-                .social-icons { justify-content: center !important; margin-top: 1em !important; }
-            }
             @media (max-width: 768px) {
-                /* On passe les titres génériques un peu plus petits sur mobile */
-                h2, .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2, #nos-machines h2, #comment-ca-marche h2, .colonne-texte h3 { 
+                /* LOGIQUE: TOUT TEXTE DE CONTENU RESTE À GAUCHE SANS TROUS BLANCS */
+                #main p, .colonne-texte p, .benefices-texte p, .legis-banner p, .partenaires-banner p, .benefice-card p {
+                    text-align: left !important; 
+                    word-spacing: normal !important; 
+                    letter-spacing: normal !important; 
+                    hyphens: auto; 
+                    font-size: 1.15em !important; 
+                }
+
+                /* LOGIQUE: SEULS LES TITRES, INTROS ET CONTENUS DE CADRES RESTENT CENTRÉS ET COHÉRENTS */
+                .titre-parfait p, .legis-header p, .autres-zones-banner p, .banner-intro, #cta-contact p, .legis-card p, .stat-box p, .custom-machines-text p {
+                    text-align: center !important;
+                    word-spacing: normal !important;
+                    letter-spacing: normal !important;
+                    font-size: 1.15em !important;
+                }
+
+                /* Titres à gauche comme demandé */
+                .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2, #nos-machines h2, #comment-ca-marche h2, .colonne-texte h3 { 
                     font-size: 2.1em !important; 
                     text-align: left !important; 
                 }
 
-                #banner .inner { padding-left: 15px !important; padding-right: 15px !important; box-sizing: border-box !important; }
-                #banner .inner header h2 { font-size: 2.2em !important; text-align: center !important; padding: 0 !important; margin-bottom: 0.5em !important; }
-                #banner .inner p.banner-intro { font-size: 1.15em !important; text-align: center !important; padding: 0 1em !important; }
-                #banner .button { padding: 1em 1.5em !important; font-size: 0.9em !important; }
-                #banner { padding-top: 5em !important; padding-bottom: 8em !important; }
+                /* Sauf icônes cartes */
+                .partenaire-card i { margin-left: auto !important; margin-right: auto !important; }
 
-                #comment-ca-marche, .section-machines, .section-benefices, .section-legislation, .section-standard, .section-partenaires { padding: 4em 1.5em !important; }
-                #cta-contact { padding: 4em 1.5em 3em 1.5em !important; }
-                #cta-contact h2 { font-size: 1.8em !important; text-align: center !important; }
+                #banner .inner { padding-left: 15px !important; padding-right: 15px !important; box-sizing: border-box !important; }
+                #banner .inner header h2 { text-align: center !important; } /* Garder la bannière principale bien centrée */
+
+                #banner .inner header h2 br { display: block !important; }
+                #banner .inner header h2 span.accent { display: block !important; margin-top: 10px; }
+                .benefices-img img { height: 250px !important; }
+                #banner { padding-top: 7em !important; padding-bottom: 5em !important; }
+
+                #comment-ca-marche, .section-machines, .section-benefices, .section-legislation, .section-standard, .section-partenaires, #cta-contact { padding: 4em 1.5em !important; }
                 
                 .ligne-parfaite { flex-direction: column !important; gap: 30px !important; margin-bottom: 3em !important; }
-                .colonne-img, .colonne-texte { width: 100% !important; max-width: 100% !important; }
+                .colonne-img, .colonne-texte { width: 100% !important; }
                 .stat-boxes { flex-direction: column !important; }
                 .benefices-intro { flex-direction: column !important; gap: 30px !important; }
                 .benefices-grid { grid-template-columns: 1fr !important; }
@@ -393,22 +335,54 @@
                 .autres-zones-banner { flex-direction: column !important; text-align: center !important; padding: 1.5em !important; }
                 
                 .custom-machines-banner { flex-direction: column !important; text-align: center !important; padding: 2em 1.5em !important; }
-                .custom-machines-text h3 { text-align: center !important; }
-                .custom-machines-text p { text-align: center !important; }
+                .custom-machines-text { text-align: center !important; }
+            }
+
+            @media (max-width: 840px) {
+                .footer-container { grid-template-columns: 1fr !important; gap: 50px !important; }
+                .footer-logo-brand-block { flex-direction: column !important; gap: 10px !important; }
+                .footer-brand-text-container { align-items: center !important; text-align: center !important; }
+                .contact-col ul { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
+                .contact-col li { flex-direction: column !important; text-align: center !important; justify-content: center !important; }
+                .contact-col li i { margin-right: 0 !important; margin-bottom: 5px !important; }
             }
 
             @media (max-width: 480px) {
                 .legis-grid { grid-template-columns: 1fr !important; }
                 .zones-grid { grid-template-columns: 1fr !important; }
-                h2, .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #nos-machines h2, #comment-ca-marche h2 { font-size: 1.8em !important; }
+                .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 1.7em !important; }
                 #banner .inner header h2 { font-size: 1.9em !important; }
+            }
+
+            /* ========================================== */
+            /* 10. DESIGN DES ARGUMENTS BANNER (BADGES)   */
+            /* ========================================== */
+            #banner .inner header h2 { font-size: 3.2em !important; color: #ffffff !important; }
+            #banner .banner-intro { font-size: 1.25em !important; margin-bottom: 1.5em !important; font-weight: 500; color: #ffffff !important; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+            .banner-arguments { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 2em; max-width: 1000px; margin-left: auto; margin-right: auto; }
+            .arg-item { background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 50px; padding: 12px 25px; display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: 1.05em; backdrop-filter: blur(5px); transition: transform 0.3s ease, background-color 0.3s ease; }
+            .arg-item:hover { background-color: rgba(255, 255, 255, 0.25); transform: translateY(-3px); }
+            .arg-item i { color: #A8E6CF; font-size: 1.3em; margin-top: 2px; }
+            .arg-item span { line-height: 1.2; text-align: left !important; }
+            .arg-item strong { color: #ffffff; font-weight: 800; text-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+
+            @media (max-width: 840px) {
+                .banner-arguments { flex-direction: column; align-items: center; gap: 10px; }
+                .arg-item { width: 100%; justify-content: flex-start; padding: 10px 20px; font-size: 0.95em; }
             }
 
             /* ========================================== */
             /* 12. ANIMATIONS DE DEFILEMENT (SCROLL REVEAL)*/
             /* ========================================== */
-            .scroll-reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
-            .scroll-reveal.revealed { opacity: 1; transform: translateY(0); }
+            .scroll-reveal {
+                opacity: 0;
+                transform: translateY(25px);
+                transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            }
+            .scroll-reveal.revealed {
+                opacity: 1;
+                transform: translateY(0);
+            }
             .delay-1 { transition-delay: 0.15s; }
             .delay-2 { transition-delay: 0.3s; }
             .delay-3 { transition-delay: 0.45s; }
@@ -426,7 +400,6 @@
                 <button id="decline-cookies" class="button alt small">Refuser</button>
             </div>
         </div>
-        
         <div id="page-wrapper">
 
             <header id="header" class="alt">
@@ -489,7 +462,7 @@
 
                 <section id="comment-ca-marche">
                     <div class="titre-parfait scroll-reveal">
-                        <h2>Comment ça marche ?</h2>
+                        <h2>Comment ça marche?</h2>
                         <p>Notre processus de déshydratation innovant transforme vos biodéchets en matière sèche valorisable, réduisant drastiquement leur volume et leur poids tout en préservant leurs propriétés nutritives.</p>
                     </div>
                     <div class="ligne-parfaite">
@@ -791,7 +764,7 @@
                             <li><a href="#nos-machines" class="scrolly">Nos Machines</a></li>
                             <li><a href="#benefices" class="scrolly">Bénéfices</a></li>
                             <li><a href="#legislation" class="scrolly">Législation</a></li>
-                            <li><a href="#partenaires" class="scrolly">Nos partenaires</a></li>
+                            <li><a href="#partenaires" class="scrolly">Zones d'intervention</a></li>
                             <li><a href="#actualites" class="scrolly">Actualités</a></li>
                         </ul>
                     </div>
