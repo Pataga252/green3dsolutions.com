@@ -2766,7 +2766,7 @@ input, select, textarea {
             }
  
             p {
-               text-align: justify;
+               text-align: left;
             }
  
         /* Section/Article */
