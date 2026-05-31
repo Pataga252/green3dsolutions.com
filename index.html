@@ -338,63 +338,179 @@
             /* 9. RÉGLAGES GLOBAUX POUR LE RESPONSIVE     */
             /* ========================================== */
             @media (max-width: 768px) {
-                
-                /* 1. PARAGRAPHES LONGS -> ALIGNÉS À GAUCHE POUR LA LECTURE */
-                .colonne-texte p, .benefices-texte p, .legis-banner p, .benefice-card p {
-                    text-align: left !important; 
-                    word-spacing: normal !important; 
-                    letter-spacing: normal !important; 
-                    hyphens: auto; 
-                    font-size: 1.1em !important; 
+
+                /* === RÈGLE MAÎTRESSE : tout est centré sur mobile par défaut === */
+                #comment-ca-marche,
+                .section-machines,
+                .section-benefices,
+                .section-legislation,
+                .section-standard,
+                .section-partenaires,
+                #cta-contact {
+                    padding: 4em 1.2em !important;
+                    text-align: center !important;
                 }
 
-                /* 2. TEXTES COURTS, BADGES (Normes) ET TITRES -> CENTRÉS */
-                .titre-parfait p, .legis-header p, .autres-zones-banner p, .mock-widget-container p, .banner-intro, #cta-contact p, .legis-card p, .stat-box p, .custom-machines-text p {
+                /* === EXCEPTION : les paragraphes longs de lecture restent à gauche === */
+                .colonne-texte p,
+                .benefices-texte p,
+                .legis-banner p {
+                    text-align: left !important;
+                    hyphens: auto;
+                }
+
+                /* === TOUS les titres h2, h3 centrés === */
+                .titre-parfait h2,
+                .benefices-texte h2,
+                .legis-header h2,
+                #partenaires h2,
+                #cta-contact h2 {
+                    font-size: 2.1em !important;
                     text-align: center !important;
+                }
+
+                .colonne-texte h3,
+                .legis-banner h3,
+                .custom-machines-text h3 {
+                    text-align: center !important;
+                }
+
+                /* === Tailles de police uniformes === */
+                #main p,
+                .colonne-texte p,
+                .benefices-texte p,
+                .legis-banner p,
+                .benefice-card p,
+                .legis-card p,
+                .partenaire-card p,
+                .stat-box p,
+                .custom-machines-text p,
+                .autres-zones-banner p,
+                #cta-contact p,
+                .titre-parfait p,
+                .legis-header p {
+                    font-size: 1.05em !important;
                     word-spacing: normal !important;
                     letter-spacing: normal !important;
-                    font-size: 1.1em !important;
                 }
 
-                /* DÉCALAGE ET CENTRAGE DU TITRE PRINCIPAL SUR MOBILE */
+                /* === BANNER PRINCIPALE === */
+                #banner {
+                    padding-top: 7em !important;
+                    padding-bottom: 5em !important;
+                }
                 #banner .inner {
                     padding-left: 15px !important;
                     padding-right: 15px !important;
                     box-sizing: border-box !important;
                 }
                 #banner .inner header h2 {
-                    text-align: center !important; 
-                    padding-left: 0 !important;
-                    padding-right: 0 !important;
+                    text-align: center !important;
                 }
-
                 #banner .inner header h2 br { display: block !important; }
                 #banner .inner header h2 span.accent { display: block !important; margin-top: 10px; }
-                .benefices-img img { height: 250px !important; }
-                #banner { padding-top: 7em !important; padding-bottom: 5em !important; }
 
-                .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 2.1em !important; text-align: center !important; }
-                #comment-ca-marche, .section-machines, .section-benefices, .section-legislation, .section-standard, .section-partenaires, #cta-contact { padding: 4em 1.5em !important; }
-                
-                .ligne-parfaite { flex-direction: column !important; gap: 30px !important; margin-bottom: 3em !important; }
-                .colonne-img, .colonne-texte { width: 100% !important; }
-                .stat-boxes { flex-direction: column !important; }
-                .benefices-intro { flex-direction: column !important; gap: 30px !important; }
-                .benefices-grid { grid-template-columns: 1fr !important; }
-                .legis-grid { grid-template-columns: repeat(2, 1fr) !important; }
-                .legis-banner { padding: 1.5em !important; }
-                
-                .zones-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important; }
-                .autres-zones-banner { flex-direction: column !important; text-align: center !important; padding: 1.5em !important; }
-                
-                .custom-machines-banner { flex-direction: column !important; text-align: center !important; padding: 2em 1.5em !important; }
-                .custom-machines-text { text-align: center !important; }
+                /* === SECTION COMMENT ÇA MARCHE === */
+                .ligne-parfaite {
+                    flex-direction: column !important;
+                    gap: 30px !important;
+                    margin-bottom: 3em !important;
+                }
+                .colonne-img,
+                .colonne-texte {
+                    width: 100% !important;
+                    text-align: center !important;
+                }
+                /* Mais les <p> dans colonne-texte restent à gauche (cf. exception ci-dessus) */
+                .colonne-texte ul {
+                    text-align: left !important;
+                }
+                .stat-boxes {
+                    flex-direction: column !important;
+                }
+                .stat-box {
+                    text-align: center !important;
+                }
+
+                /* === SECTION BÉNÉFICES === */
+                .benefices-intro {
+                    flex-direction: column !important;
+                    gap: 30px !important;
+                }
+                .benefices-texte {
+                    text-align: center !important;
+                }
+                /* Exception : les paragraphes de .benefices-texte restent à gauche */
+                .benefices-grid {
+                    grid-template-columns: 1fr !important;
+                }
+                .benefices-img img {
+                    height: 250px !important;
+                }
+
+                /* === SECTION LÉGISLATION === */
+                .legis-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+                .legis-banner {
+                    padding: 1.5em !important;
+                    text-align: left !important; /* bloc entier à gauche, logique lecture */
+                }
+                .legis-banner h3 {
+                    text-align: left !important;
+                }
+
+                /* === SECTION ZONES === */
+                .zones-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                    gap: 15px !important;
+                }
+                .autres-zones-banner {
+                    flex-direction: column !important;
+                    text-align: center !important;
+                    padding: 1.5em !important;
+                }
+                .autres-zones-banner p {
+                    text-align: center !important;
+                }
+
+                /* === BANNIÈRE MACHINES SUR MESURE === */
+                .custom-machines-banner {
+                    flex-direction: column !important;
+                    text-align: center !important;
+                    padding: 2em 1.5em !important;
+                    align-items: center !important;
+                }
+                .custom-machines-text {
+                    text-align: center !important;
+                }
+                .custom-machines-action {
+                    width: 100% !important;
+                    text-align: center !important;
+                }
             }
 
             @media (max-width: 480px) {
+                #comment-ca-marche,
+                .section-machines,
+                .section-benefices,
+                .section-legislation,
+                .section-standard,
+                .section-partenaires,
+                #cta-contact {
+                    padding: 3.5em 1em !important;
+                }
+
                 .legis-grid { grid-template-columns: 1fr !important; }
                 .zones-grid { grid-template-columns: 1fr !important; }
-                .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 1.7em !important; }
+
+                .titre-parfait h2,
+                .benefices-texte h2,
+                .legis-header h2,
+                #partenaires h2,
+                #cta-contact h2 {
+                    font-size: 1.7em !important;
+                }
                 #banner .inner header h2 { font-size: 1.9em !important; }
             }
 
