@@ -283,7 +283,21 @@
             .bg-moyen-orient::before { background-image: url('images/map-moyen-orient.jpg'); }
             .bg-afrique::before { background-image: url('images/map-afrique.jpg'); }
 
-            .autres-zones-banner { background-color: #e8f7ee !important; border-radius: 15px !important; padding: 1.5em 2em !important; margin: 2em auto 0 auto !important; max-width: 1000px !important; display: flex !important; align-items: center !important; justify-content: center !important; gap: 15px !important; box-shadow: 0 5px 20px rgba(0,0,0,0.02) !important; border: 1px dashed rgba(39, 174, 96, 0.4) !important; }
+            .autres-zones-banner { 
+                background-color: #e8f7ee !important; 
+                border-radius: 15px !important; 
+                padding: 1.5em 2em !important; 
+                margin: 2em auto 0 auto !important; 
+                max-width: 1000px !important; 
+                display: flex !important; 
+                flex-direction: row !important;
+                text-align: center !important;
+                align-items: center !important; 
+                justify-content: center !important; 
+                gap: 15px !important; 
+                box-shadow: 0 5px 20px rgba(0,0,0,0.02) !important; 
+                border: 1px dashed rgba(39, 174, 96, 0.4) !important; 
+            }
             .autres-zones-banner i { font-size: 1.8em !important; color: #27ae60 !important; }
 
             /* ========================================== */
@@ -390,7 +404,7 @@
                 .partenaire-card p,
                 .stat-box p { text-align: center !important; }
                 .custom-machines-text p,
-                .autres-zones-banner p,
+                .autres-zones-banner p { text-align: center !important; width: 100% !important; }
                 #cta-contact p,
                 .titre-parfait p,
                 .legis-header p {
@@ -891,7 +905,7 @@
                         </div>
                         <div class="autres-zones-banner scroll-reveal">
                             <i class="icon solid fa-globe"></i>
-                            <p>Et de nombreux autres partenaires à travers le monde pour vous accompagner...</p>
+                            <span>Et de nombreux autres partenaires à travers le monde pour vous accompagner...</span>
                         </div>
                     </div>
                 </section>
