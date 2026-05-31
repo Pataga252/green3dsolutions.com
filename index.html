@@ -339,8 +339,8 @@
             /* ========================================== */
             @media (max-width: 768px) {
                 
-                /* 1. PARAGRAPHES LONGS -> ALIGNÉS À GAUCHE POUR LA LECTURE */
-                .colonne-texte p, .benefices-texte p, .legis-banner p, .benefice-card p {
+                /* 1. LISIBILITÉ : On aligne tout le contenu de lecture à gauche pour la cohérence */
+                #main h2, #main h3, #main h4, #main p, .colonne-texte p, .benefices-texte p, .legis-banner p, .partenaires-banner p, .benefice-card p, .legis-card p {
                     text-align: left !important; 
                     word-spacing: normal !important; 
                     letter-spacing: normal !important; 
@@ -348,22 +348,42 @@
                     font-size: 1.1em !important; 
                 }
 
-                /* 2. TEXTES COURTS, BADGES (Normes) ET TITRES -> CENTRÉS */
-                .titre-parfait p, .legis-header p, .autres-zones-banner p, .mock-widget-container p, .banner-intro, #cta-contact p, .legis-card p, .stat-box p, .custom-machines-text p {
+                /* 2. EXCEPTIONS : On centre uniquement les éléments visuels, badges, intro et boutons */
+                #banner h2, #banner p, .banner-intro, #cta-contact h2, #cta-contact p, .autres-zones-banner p, .custom-machines-text h3, .custom-machines-text p, .stat-box h4, .stat-box p, .partenaire-card h4 {
                     text-align: center !important;
                     word-spacing: normal !important;
                     letter-spacing: normal !important;
-                    font-size: 1.1em !important;
                 }
 
-                /* DÉCALAGE ET CENTRAGE DU TITRE PRINCIPAL SUR MOBILE */
+                /* Centrer les icônes dans les cartes Partenaires qui sont centrées */
+                .partenaire-card i {
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                }
+
+                /* 3. CORRECTION DES LISTES MACHINES (Empêcher "Dimensions :" de se couper) */
+                .machine-specs li {
+                    display: flex !important;
+                    align-items: flex-start !important;
+                    text-align: left !important;
+                }
+                .machine-specs li i {
+                    flex-shrink: 0 !important;
+                    margin-top: 5px !important;
+                    width: 25px !important;
+                }
+                .machine-specs li strong {
+                    white-space: nowrap !important; /* Force le mot à rester attaché aux 2 points */
+                    margin-right: 5px !important;
+                }
+
+                /* DÉCALAGE DU TITRE SUR MOBILE POUR NE PAS ÊTRE COUPÉ */
                 #banner .inner {
                     padding-left: 15px !important;
                     padding-right: 15px !important;
                     box-sizing: border-box !important;
                 }
                 #banner .inner header h2 {
-                    text-align: center !important; 
                     padding-left: 0 !important;
                     padding-right: 0 !important;
                 }
@@ -373,7 +393,7 @@
                 .benefices-img img { height: 250px !important; }
                 #banner { padding-top: 7em !important; padding-bottom: 5em !important; }
 
-                .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 2.1em !important; text-align: center !important; }
+                .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 2.1em !important; }
                 #comment-ca-marche, .section-machines, .section-benefices, .section-legislation, .section-standard, .section-partenaires, #cta-contact { padding: 4em 1.5em !important; }
                 
                 .ligne-parfaite { flex-direction: column !important; gap: 30px !important; margin-bottom: 3em !important; }
@@ -385,10 +405,9 @@
                 .legis-banner { padding: 1.5em !important; }
                 
                 .zones-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important; }
-                .autres-zones-banner { flex-direction: column !important; text-align: center !important; padding: 1.5em !important; }
+                .autres-zones-banner { flex-direction: column !important; padding: 1.5em !important; }
                 
-                .custom-machines-banner { flex-direction: column !important; text-align: center !important; padding: 2em 1.5em !important; }
-                .custom-machines-text { text-align: center !important; }
+                .custom-machines-banner { flex-direction: column !important; padding: 2em 1.5em !important; }
             }
 
             @media (max-width: 480px) {
