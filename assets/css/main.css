@@ -3538,3 +3538,108 @@ header.major h2 {
         margin-top: 1em !important;
     }
 }
+
+/* ========================================================= */
+/* HYPER-RÉGLAGE VISUEL : TAILLES, ALIGNEMENTS ET RESPONSIVE */
+/* ========================================================= */
+
+/* 1. LES TITRES : Force la grosse taille identique sur les titres cibles */
+.titre-parfait h2, 
+.benefices-texte h2, 
+.legis-header h2, 
+#partenaires h2, 
+#nos-machines h2, 
+#comment-ca-marche h2, 
+.colonne-texte h3,
+#actualites h2 { 
+    font-size: 2.8em !important; 
+    font-weight: 800 !important; 
+    color: #2b3138 !important; 
+    text-transform: none !important; 
+    letter-spacing: -1px !important; 
+    line-height: 1.2 !important; 
+    border: none !important; 
+    margin-bottom: 0.5em !important;
+    text-align: left !important; /* Titres alignés à gauche */
+}
+
+/* 2. LE RESTE DU TEXTE : Taille unique et aligné à gauche par défaut */
+#main p, 
+.titre-parfait p, 
+.legis-header p, 
+.benefices-texte p, 
+.colonne-texte p, 
+.legis-banner p, 
+.partenaires-banner p,
+.custom-machines-text p { 
+    font-size: 1.15em !important; 
+    color: #555 !important; 
+    line-height: 1.8 !important; 
+    margin-bottom: 1.5em !important;
+    text-align: left !important; /* Aligné à gauche pour le confort de lecture */
+}
+
+/* 3. LES EXCEPTIONS DE CENTRAGE : Uniquement le contenu à l'intérieur des cadres */
+.stat-box, .stat-box h4, .stat-box p,
+.benefice-card, .benefice-card h4, .benefice-card p,
+.legis-card, .legis-card h4, .legis-card p,
+.partenaire-card, .partenaire-card h4, .partenaire-card p,
+.machine-card h4,
+#cta-contact, #cta-contact h2, #cta-contact p {
+    text-align: center !important;
+}
+
+/* Centrage forcé de l'icône de géolocalisation dans les cartes partenaires */
+.partenaire-card i { 
+    margin-left: auto !important; 
+    margin-right: auto !important; 
+}
+
+/* 4. DESIGN SOBRE ET PRO DES DOUBLES BOUTONS FR / EN */
+.machine-btn-group { 
+    display: flex !important; 
+    gap: 10px !important; 
+    margin-top: auto !important; 
+    justify-content: center !important; 
+}
+.machine-btn-dl { 
+    flex: 1 !important; 
+    padding: 12px 5px !important; 
+    background-color: #e8f7ee !important; 
+    color: #27ae60 !important; 
+    border-radius: 8px !important; 
+    text-decoration: none !important; 
+    font-weight: 700 !important; 
+    border: none !important; 
+    transition: background-color 0.3s ease, color 0.3s ease !important; 
+    font-size: 0.95em !important; 
+    text-align: center !important; 
+    line-height: 1.5em !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+.machine-btn-dl:hover { 
+    background-color: #27ae60 !important; 
+    color: #ffffff !important; 
+}
+
+/* 5. CORRECTIF SÉCURITÉ MOBILE (Évite l'étirement affreux des mots et harmonise les espaces) */
+@media (max-width: 768px) {
+    #page-wrapper p, #main p, .colonne-texte p, .benefices-texte p, .legis-banner p, .partenaires-banner p, .benefice-card p, .legis-card p, .partenaire-card p, .custom-machines-text p {
+        text-align: left !important; /* Reste à gauche sur mobile pour éviter les gros trous blancs */
+        word-spacing: normal !important; /* Écrase la justification forcée du template */
+        letter-spacing: normal !important;
+        font-size: 1.15em !important;
+    }
+    
+    /* On garde centrés uniquement les titres majeurs et les intros de section sur mobile */
+    .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #nos-machines h2, #comment-ca-marche h2, #actualites h2, .titre-parfait p, .legis-header p, #cta-contact p {
+        text-align: center !important;
+    }
+
+    /* Empêche le texte technique des machines de sauter à la ligne de manière moche */
+    .machine-specs li strong {
+        white-space: nowrap !important;
+        margin-right: 5px !important;
+    }
+}
