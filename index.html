@@ -169,7 +169,12 @@
             /* 3. SECTION COMMENT ÇA MARCHE               */
             /* ========================================== */
             #comment-ca-marche { background-color: #ffffff !important; }
-            .titre-parfait { text-align: left; }
+            .titre-parfait { 
+                text-align: left; 
+                max-width: 1150px !important; 
+                margin-left: auto !important; 
+                margin-right: auto !important; 
+            }
             .ligne-parfaite { display: flex !important; align-items: center !important; justify-content: space-between !important; max-width: 1150px !important; margin: 0 auto 5em auto !important; gap: 60px !important; }
             .colonne-img, .colonne-texte { flex: 1 !important; width: 48% !important; padding: 0 !important; margin: 0 !important; }
             .colonne-texte { text-align: left !important; }
@@ -544,7 +549,8 @@
                 margin-bottom: 1.5em !important; 
                 font-weight: 500; 
                 color: #ffffff !important;
-                text-shadow: 0 2px 4px rgba(0,0,0,0.3); 
+                text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                text-align: center !important; 
             }
             
             .banner-arguments { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 2em; max-width: 1000px; margin-left: auto; margin-right: auto; }
