@@ -136,7 +136,7 @@
             /* ========================================== */
             /* 2. SYSTÈME DE TYPOGRAPHIE UNIFIÉ ET LOGIQUE*/
             /* ========================================== */
-            .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 2.8em !important; font-weight: 800 !important; color: #2b3138 !important; text-transform: none !important; letter-spacing: -1px !important; line-height: 1.2 !important; border: none !important; margin-bottom: 0.5em !important; text-align: left !important;  }
+            .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 2.8em !important; font-weight: 800 !important; color: #2b3138 !important; text-transform: none !important; letter-spacing: -1px !important; line-height: 1.2 !important; border: none !important; margin-bottom: 0.2em !important; text-align: left !important;  }
             #cta-contact h2 { color: #ffffff !important; }
 
             .colonne-texte h3, .legis-banner h3, .partenaires-banner h3 { font-size: 1.6em !important; font-weight: 800 !important; text-transform: none !important; letter-spacing: -0.5px !important; margin-bottom: 0.6em !important; border: none !important; }
@@ -163,7 +163,7 @@
             /* ESPACEMENT STRICTEMENT IDENTIQUE PARTOUT   */
             /* ========================================== */
             #comment-ca-marche, .section-machines, .section-benefices, .section-legislation, .section-standard, .section-partenaires, #cta-contact { padding: 5em 2em !important; }
-            .titre-parfait, .benefices-intro, .legis-header { margin-top: 0 !important; margin-bottom: 3.5em !important; }
+            .titre-parfait, .benefices-intro, .legis-header { margin-top: 0 !important; margin-bottom: 1.5em !important; }
 
             /* ========================================== */
             /* 3. SECTION COMMENT ÇA MARCHE               */
@@ -192,12 +192,12 @@
             .section-machines { background-color: #f9fbfb !important; text-align: center; }
             .container-machines { max-width: 1150px; margin: 0 auto; }
             .machines-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-            .machine-card { background: #ffffff; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; text-align: left; padding-top: 30px; }
+            .machine-card { background: #ffffff; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; text-align: left; padding-top: 20px; }
             .machine-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-            .machine-img { width: 85%; height: 220px; object-fit: contain; margin: 0 auto; display: block; }
-            .machine-content { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
+            .machine-img { width: 85%; height: 180px; object-fit: contain; margin: 0 auto; display: block; }
+            .machine-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
             .machine-content h4 { color: #27ae60 !important; font-size: 1.5em !important; font-weight: 800 !important; margin-bottom: 15px !important; text-transform: none !important; }
-            .machine-specs { list-style: none !important; padding: 0 !important; margin: 0 0 25px 0 !important; flex-grow: 1; }
+            .machine-specs { list-style: none !important; padding: 0 !important; margin: 0 0 15px 0 !important; flex-grow: 1; }
             .machine-specs li { font-size: 1.1em !important; color: #555 !important; margin-bottom: 10px !important; display: flex !important; align-items: center !important; }
             .machine-specs li i { color: #27ae60; width: 25px; font-size: 1.1em; }
             .machine-btn { text-align: center; margin-top: auto; }
@@ -600,6 +600,74 @@
                 text-align: center !important;
             }
 
+            /* ========================================== */
+            /* SECTION MACHINES REDESIGNÉE - CATÉGORIES  */
+            /* ========================================== */
+            .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 2em; }
+            .cat-card { position: relative; border-radius: 20px; overflow: hidden; cursor: pointer; min-height: 330px; display: flex; align-items: flex-end; box-shadow: 0 10px 30px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+            .cat-card:hover { transform: translateY(-6px); box-shadow: 0 20px 45px rgba(0,0,0,0.25); }
+            .cat-card::before { content: ''; position: absolute; inset: 0; background-image: var(--cat-img); background-size: cover; background-position: center; transition: transform 0.7s ease; z-index: 0; }
+            .cat-card:hover::before { transform: scale(1.07); }
+            .cat-overlay { 
+                position: absolute; 
+                inset: 0; 
+                /* Dégradé sombre plus fort pour faire ressortir le texte blanc */
+                background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.45) 100%) !important; 
+                z-index: 1; 
+                transition: background 0.3s ease; 
+            }
+            .cat-card.active .cat-overlay { background: linear-gradient(to top, rgba(5,30,15,0.97) 0%, rgba(39,174,96,0.65) 60%, rgba(0,0,0,0.2) 100%); }
+            .cat-content { position: relative; z-index: 2; padding: 2em; width: 100%; color: #fff; }
+            .cat-icon { display: none !important; }
+            .cat-content h3 { color: #ffffff !important; font-size: 1.5em !important; font-weight: 800 !important; margin: 0 0 1.2em 0 !important; text-transform: none !important; letter-spacing: -0.5px !important; border: none !important; text-shadow: 0 2px 8px rgba(0,0,0,0.5); text-align: center !important; }
+            .cat-range { 
+                display: block !important; 
+                width: max-content !important; /* Le badge s'ajuste pile à la taille du texte */
+                text-align: center !important; 
+                margin: 0 auto 1em auto !important; 
+                background: rgba(0, 0, 0, 0.5) !important; /* Fond sombre translucide */
+                border: 1px solid rgba(255, 255, 255, 0.25) !important; /* Bordure blanche très fine et élégante */
+                border-radius: 50px !important; 
+                padding: 8px 22px !important; 
+                font-size: 0.9em !important; 
+                font-weight: 700 !important; 
+                color: #ffffff !important; 
+                backdrop-filter: blur(5px) !important; /* Effet de flou derrière le badge */
+                line-height: 1.4 !important; 
+            }
+            #main .cat-content p.cat-clients { 
+                color: #ffffff !important; 
+                font-size: 1.05em !important; 
+                margin-bottom: 0.8em !important; 
+                line-height: 1.5 !important; 
+                text-shadow: 0 2px 6px rgba(0,0,0,0.8) !important; 
+                text-align: center !important;
+                font-weight: 700 !important; 
+            }
+            #main .cat-content .cat-models { 
+                color: #27ae60 !important; 
+                font-size: 0.88em !important; 
+                font-weight: 700 !important; 
+                letter-spacing: 0.5px !important; 
+                margin-bottom: 1.3em !important; 
+                text-shadow: 0 2px 6px rgba(0,0,0,0.8) !important;
+            }
+            .cat-btn { display: inline-flex; align-items: center; gap: 8px; background: #27ae60; color: #fff; padding: 10px 22px; border-radius: 50px; font-size: 0.9em; font-weight: 700; transition: all 0.3s ease; }
+            .cat-btn i { transition: transform 0.3s ease; }
+            .cat-card:hover .cat-btn { background: #219653; }
+            .cat-card.active .cat-btn { background: #ffffff; color: #27ae60; }
+            .cat-card.active .cat-btn i { transform: rotate(180deg); }
+
+            .cat-machines-panel { max-height: 0; overflow: hidden; transition: max-height 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease; opacity: 0; }
+            .cat-machines-panel.open { max-height: 2000px; opacity: 1; }
+            .cat-machines-panel-inner { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; padding: 2em 0 0.5em 0; }
+            .cat-label { display: flex; align-items: center; gap: 12px; padding: 1em 1.5em; background: linear-gradient(135deg, #e8f7ee, #f4fbf7); border-radius: 12px; border-left: 4px solid #27ae60; margin-bottom: 1.5em; }
+            .cat-label i { font-size: 1.5em; color: #27ae60; }
+            .cat-label span { font-weight: 800; color: #1a6b3b; font-size: 1.05em; }
+
+            @media (max-width: 980px) { .cat-grid { grid-template-columns: repeat(2, 1fr) !important; } .cat-card { min-height: 320px !important; } }
+            @media (max-width: 600px) { .cat-grid { grid-template-columns: 1fr !important; } .cat-machines-panel-inner { grid-template-columns: 1fr !important; } }
+        
         </style>
     </head>
     <body class="index is-preload">
@@ -718,112 +786,141 @@
                     <div class="container-machines">
                         <div class="titre-parfait scroll-reveal">
                             <h2>Notre Gamme de Déshydratateurs</h2>
-                            <p>Des solutions performantes et éco-responsables adaptées à tous les volumes, de la restauration collective aux sites industriels.</p>
+                            <p>Sélectionnez votre secteur d'activité pour découvrir les machines adaptées à vos volumes.</p>
                         </div>
-                        <div class="machines-grid">
-                            
-                            <div class="machine-card scroll-reveal delay-1">
-                                <img src="images/G30F.png" alt="Déshydratateur G 30 F" class="machine-img" />
-                                <div class="machine-content">
-                                    <h4>G 30 F</h4>
-                                    <ul class="machine-specs">
-                                        <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 15 à 30 kg / jour</li>
-                                        <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 80 x 80 x 120 cm</li>
-                                        <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 1,5 Kw (Mono)</li>
-                                    </ul>
-                                    <div class="machine-btn-group">
-                                        <a href="images/G30F-technique.pdf" target="_blank" class="machine-btn-dl" title="Fiche Française">FR <i class="icon solid fa-file-download"></i></a>
-                                        <a href="images/G30F-technique-EN.pdf" target="_blank" class="machine-btn-dl" title="English Datasheet">EN <i class="icon solid fa-file-download"></i></a>
-                                    </div>
+
+                        <div class="cat-grid">
+
+                            <div class="cat-card scroll-reveal delay-1" onclick="toggleCat('petite', this)" style="--cat-img: url('images/cat-petite.jpg')">
+                                <div class="cat-overlay"></div>
+                                <div class="cat-content">
+                                    <i class="icon solid fa-school cat-icon"></i>
+                                    <h3>Petite Capacité</h3>
+                                    <div class="cat-range">15 à 100 kg / jour</div>
+                                    <p class="cat-clients">Restauration, écoles, petits supermarchés</p>
+                                    <span class="cat-btn">Voir les machines <i class="icon solid fa-chevron-down"></i></span>
                                 </div>
                             </div>
 
-                            <div class="machine-card scroll-reveal delay-2">
-                                <img src="images/G100F.png" alt="Déshydratateur G 100 F" class="machine-img" />
-                                <div class="machine-content">
-                                    <h4>G 100 F</h4>
-                                    <ul class="machine-specs">
-                                        <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 50 à 100 kg / jour</li>
-                                        <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 115 x 100 x 125 cm</li>
-                                        <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 3 Kw (Triphasé)</li>
-                                    </ul>
-                                    <div class="machine-btn-group">
-                                        <a href="images/G100F-technique.pdf" target="_blank" class="machine-btn-dl" title="Fiche Française">FR <i class="icon solid fa-file-download"></i></a>
-                                        <a href="images/G100F-technique-EN.pdf" target="_blank" class="machine-btn-dl" title="English Datasheet">EN <i class="icon solid fa-file-download"></i></a>
-                                    </div>
+                            <div class="cat-card scroll-reveal delay-2" onclick="toggleCat('moyenne', this)" style="--cat-img: url('images/cat-moyenne.jpg')">
+                                <div class="cat-overlay"></div>
+                                <div class="cat-content">
+                                    <i class="icon solid fa-hotel cat-icon"></i>
+                                    <h3>Moyenne Capacité</h3>
+                                    <div class="cat-range">150 à 500 kg / jour</div>
+                                    <p class="cat-clients">Hôtellerie, restauration collective, grands supermarchés</p>
+                                    <span class="cat-btn">Voir les machines <i class="icon solid fa-chevron-down"></i></span>
                                 </div>
                             </div>
 
-                            <div class="machine-card scroll-reveal delay-3">
-                                <img src="images/G300F.png" alt="Déshydratateur G 300 F" class="machine-img" />
-                                <div class="machine-content">
-                                    <h4>G 300 F</h4>
-                                    <ul class="machine-specs">
-                                        <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 150 à 300 kg / jour</li>
-                                        <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 160 x 140 x 165 cm</li>
-                                        <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 9 Kw (Triphasé)</li>
-                                    </ul>
-                                    <div class="machine-btn-group">
-                                        <a href="images/G300F-technique.pdf" target="_blank" class="machine-btn-dl" title="Fiche Technique Française">FR <i class="icon solid fa-file-download"></i></a>
-                                        <a href="images/G300F-technique-EN.pdf" target="_blank" class="machine-btn-dl" title="English Data Sheet">EN <i class="icon solid fa-file-download"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="machine-card scroll-reveal delay-1">
-                                <img src="images/G500F.png" alt="Déshydratateur G 500 F" class="machine-img" />
-                                <div class="machine-content">
-                                    <h4>G 500 F</h4>
-                                    <ul class="machine-specs">
-                                        <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 300 à 500 kg / jour</li>
-                                        <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 220 x 145 x 175 cm</li>
-                                        <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 11 Kw (Triphasé)</li>
-                                    </ul>
-                                    <div class="machine-btn-group">
-                                        <a href="images/G500F-technique.pdf" target="_blank" class="machine-btn-dl" title="Fiche Technique Française">FR <i class="icon solid fa-file-download"></i></a>
-                                        <a href="images/G500F-technique-EN.pdf" target="_blank" class="machine-btn-dl" title="English Data Sheet">EN <i class="icon solid fa-file-download"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="machine-card scroll-reveal delay-2">
-                                <img src="images/G1000F.png" alt="Déshydratateur G 1000 F" class="machine-img" />
-                                <div class="machine-content">
-                                    <h4>G 1000 F</h4>
-                                    <ul class="machine-specs">
-                                        <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 500 à 1000 kg / jour</li>
-                                        <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 280 x 180 x 190 cm</li>
-                                        <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 38 Kw (Triphasé)</li>
-                                    </ul>
-                                    <div class="machine-btn-group">
-                                        <a href="images/G1000F-technique.pdf" target="_blank" class="machine-btn-dl" title="Fiche Technique Française">FR <i class="icon solid fa-file-download"></i></a>
-                                        <a href="images/G1000F-technique-EN.pdf" target="_blank" class="machine-btn-dl" title="English Data Sheet">EN <i class="icon solid fa-file-download"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="machine-card scroll-reveal delay-3">
-                                <img src="images/G1300F.png" alt="Déshydratateur G 1300 F" class="machine-img" />
-                                <div class="machine-content">
-                                    <h4>G 1300 F</h4>
-                                    <ul class="machine-specs">
-                                        <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 700 à 1400 kg / jour</li>
-                                        <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 300 x 190 x 210 cm</li>
-                                        <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 42 Kw (Triphasé)</li>
-                                    </ul>
-                                    <div class="machine-btn-group">
-                                        <a href="images/G1300F-technique.pdf" target="_blank" class="machine-btn-dl" title="Fiche Technique Française">FR <i class="icon solid fa-file-download"></i></a>
-                                        <a href="images/G1300F-technique-EN.pdf" target="_blank" class="machine-btn-dl" title="English Data Sheet">EN <i class="icon solid fa-file-download"></i></a>
-                                    </div>
+                            <div class="cat-card scroll-reveal delay-3" onclick="toggleCat('grande', this)" style="--cat-img: url('images/cat-grande.jpg')">
+                                <div class="cat-overlay"></div>
+                                <div class="cat-content">
+                                    <i class="icon solid fa-industry cat-icon"></i>
+                                    <h3>Grande Capacité</h3>
+                                    <div class="cat-range">500 à 1400 kg / jour</div>
+                                    <p class="cat-clients">Agroalimentaire, traitement industriel centralisé</p>
+                                    <span class="cat-btn">Voir les machines <i class="icon solid fa-chevron-down"></i></span>
                                 </div>
                             </div>
 
                         </div>
-                        
+
+                        <!-- Panel Petite Capacité -->
+                        <div id="panel-petite" class="cat-machines-panel">
+                            <div class="cat-label"><span>Petite Capacité — Restauration, écoles, petits supermarchés</span></div>
+                            <div class="cat-machines-panel-inner">
+                                <div class="machine-card">
+                                    <img src="images/G30F.png" alt="Déshydratateur G 30 F" class="machine-img" />
+                                    <div class="machine-content">
+                                        <h4>G 30 F</h4>
+                                        <ul class="machine-specs">
+                                            <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 15 à 30 kg / jour</li>
+                                            <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 80 x 80 x 120 cm</li>
+                                            <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 1,5 Kw (Mono)</li>
+                                        </ul>
+                                        <div class="machine-btn"><a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Recevoir les détails techniques</a></div>
+                                    </div>
+                                </div>
+                                <div class="machine-card">
+                                    <img src="images/G100F.png" alt="Déshydratateur G 100 F" class="machine-img" />
+                                    <div class="machine-content">
+                                        <h4>G 100 F</h4>
+                                        <ul class="machine-specs">
+                                            <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 50 à 100 kg / jour</li>
+                                            <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 115 x 100 x 125 cm</li>
+                                            <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 3 Kw (Triphasé)</li>
+                                        </ul>
+                                        <div class="machine-btn"><a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Recevoir les détails techniques</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel Moyenne Capacité -->
+                        <div id="panel-moyenne" class="cat-machines-panel">
+                            <div class="cat-label"><span>Moyenne Capacité — Hôtellerie, restauration collective, grands supermarchés</span></div>
+                            <div class="cat-machines-panel-inner">
+                                <div class="machine-card">
+                                    <img src="images/G300F.png" alt="Déshydratateur G 300 F" class="machine-img" />
+                                    <div class="machine-content">
+                                        <h4>G 300 F</h4>
+                                        <ul class="machine-specs">
+                                            <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 150 à 300 kg / jour</li>
+                                            <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 160 x 140 x 165 cm</li>
+                                            <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 9 Kw (Triphasé)</li>
+                                        </ul>
+                                        <div class="machine-btn"><a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Recevoir les détails techniques</a></div>
+                                    </div>
+                                </div>
+                                <div class="machine-card">
+                                    <img src="images/G500F.png" alt="Déshydratateur G 500 F" class="machine-img" />
+                                    <div class="machine-content">
+                                        <h4>G 500 F</h4>
+                                        <ul class="machine-specs">
+                                            <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 300 à 500 kg / jour</li>
+                                            <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 220 x 145 x 175 cm</li>
+                                            <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 11 Kw (Triphasé)</li>
+                                        </ul>
+                                        <div class="machine-btn"><a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Recevoir les détails techniques</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel Grande Capacité -->
+                        <div id="panel-grande" class="cat-machines-panel">
+                            <div class="cat-label"><span>Grande Capacité — Agroalimentaire, traitement industriel centralisé</span></div>
+                            <div class="cat-machines-panel-inner">
+                                <div class="machine-card">
+                                    <img src="images/G1000F.png" alt="Déshydratateur G 1000 F" class="machine-img" />
+                                    <div class="machine-content">
+                                        <h4>G 1000 F</h4>
+                                        <ul class="machine-specs">
+                                            <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 500 à 1000 kg / jour</li>
+                                            <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 280 x 180 x 190 cm</li>
+                                            <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 38 Kw (Triphasé)</li>
+                                        </ul>
+                                        <div class="machine-btn"><a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Recevoir les détails techniques</a></div>
+                                    </div>
+                                </div>
+                                <div class="machine-card">
+                                    <img src="images/G1300F.png" alt="Déshydratateur G 1300 F" class="machine-img" />
+                                    <div class="machine-content">
+                                        <h4>G 1300 F</h4>
+                                        <ul class="machine-specs">
+                                            <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 700 à 1400 kg / jour</li>
+                                            <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 300 x 190 x 210 cm</li>
+                                            <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 42 Kw (Triphasé)</li>
+                                        </ul>
+                                        <div class="machine-btn"><a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Recevoir les détails techniques</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="custom-machines-banner scroll-reveal">
-                            <div class="custom-machines-icon">
-                                <i class="icon solid fa-cogs"></i>
-                            </div>
+                            <div class="custom-machines-icon"><i class="icon solid fa-cogs"></i></div>
                             <div class="custom-machines-text">
                                 <h3>Articles intermédiaires possibles sur demande</h3>
                                 <p>Vous avez un besoin spécifique ou des volumes particuliers ? Nous concevons également des déshydratateurs de capacités intermédiaires pour nous adapter parfaitement à votre configuration.</p>
@@ -1084,6 +1181,36 @@
                     revealObserver.observe(element);
                 });
             });
+        
+            function toggleCat(id, card) {
+            const panel = document.getElementById('panel-' + id);
+            const allPanels = document.querySelectorAll('.cat-machines-panel');
+            const allCards = document.querySelectorAll('.cat-card');
+            const isOpen = panel.classList.contains('open');
+
+            // Ferme tout
+            allPanels.forEach(p => p.classList.remove('open'));
+            allCards.forEach(c => c.classList.remove('active'));
+
+            // Ouvre si c'était fermé
+            if (!isOpen) {
+                panel.classList.add('open');
+                card.classList.add('active');
+                
+                // On laisse juste 150ms pour que l'animation d'ouverture démarre
+                setTimeout(() => {
+                    const grid = document.querySelector('.cat-grid');
+                    
+                    // L'astuce : on cible le BAS (.bottom) de la grille des cartes !
+                    // On retire environ 80px pour que ton menu d'en-tête ne cache pas le titre
+                    const yPosition = grid.getBoundingClientRect().bottom + window.scrollY - 80;
+                    
+                    window.scrollTo({ top: yPosition, behavior: 'smooth' });
+                    
+                }, 150);
+            }
+        }
+        
         </script>
     </body>
 </html>
