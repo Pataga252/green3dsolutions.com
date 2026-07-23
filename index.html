@@ -1,324 +1,321 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Green 3D Solutions - Déshydratation de Biodéchets</title>
-        <meta name="description" content="Green 3D Solutions propose des déshydratateurs de biodéchets professionnels. Réduisez vos coûts, anticipez les réglementations et stoppez les nuisibles." />
+       <title>Green 3D Solutions - Déshydratation de Biodéchets</title>
+        <meta name="description" content="Green 3D Solutions propose des déshydrateurs de biodéchets professionnels. Réduisez vos coûts, anticipez les réglementations et stoppez les nuisibles." />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
+       <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+ 
         <style>
             /* ========================================== */
             /* 11. BANNIÈRE DE COOKIES                    */
             /* ========================================== */
-            .cookie-banner {
-                position: fixed;
-                bottom: -150%; 
+           .cookie-banner {
+               position: fixed;
+               bottom: -150%; 
                 left: 50%;
-                transform: translateX(-50%);
+               transform: translateX(-50%);
                 width: 90%;
-                max-width: 800px;
-                background-color: #ffffff;
-                border-radius: 12px;
-                box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-                padding: 20px 25px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                z-index: 999999; 
-                transition: bottom 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-                border: 1px solid #eaeaea;
+               max-width: 800px;
+               background-color: #ffffff;
+               border-radius: 12px;
+               box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+               padding: 20px 25px;
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               z-index: 999999; 
+               transition: bottom 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+               border: 1px solid #eaeaea;
             }
-
-            .cookie-banner.show { bottom: 30px; }
-            .cookie-content { display: flex; align-items: center; gap: 15px; flex: 1; }
-            .cookie-content i { font-size: 2em; color: #27ae60; }
-            .cookie-content p { margin: 0 !important; font-size: 0.95em !important; color: #555 !important; line-height: 1.4 !important; text-align: left !important; word-spacing: normal !important; letter-spacing: normal !important; }
-            .cookie-buttons { display: flex; gap: 10px; margin-left: 20px; }
-            .cookie-buttons button { margin: 0 !important; padding: 0 1.5em !important; min-width: auto !important; height: 3em !important; line-height: 3em !important; border-radius: 8px !important; font-size: 0.85em !important; letter-spacing: 0.5px !important; }
-
-            #accept-cookies { background-color: #27ae60 !important; color: #ffffff !important; border: none !important; }
-            #accept-cookies:hover { background-color: #219653 !important; }
-            #decline-cookies { background-color: #f4f7f6 !important; color: #555 !important; border: 1px solid #ddd !important; }
-
+ 
+           .cookie-banner.show { bottom: 30px; }
+           .cookie-content { display: flex; align-items: center; gap: 15px; flex: 1; }
+           .cookie-content i { font-size: 2em; color: #27ae60; }
+           .cookie-content p { margin: 0 !important; font-size: 0.95em !important; color: #555 !important; line-height: 1.4 !important; text-align: left !important; word-spacing: normal !important; letter-spacing: normal !important; }
+           .cookie-buttons { display: flex; gap: 10px; margin-left: 20px; }
+           .cookie-buttons button { margin: 0 !important; padding: 0 1.5em !important; min-width: auto !important; height: 3em !important; line-height: 3em !important; border-radius: 8px !important; font-size: 0.85em !important; letter-spacing: 0.5px !important; }
+ 
+           #accept-cookies { background-color: #27ae60 !important; color: #ffffff !important; border: none !important; }
+           #accept-cookies:hover { background-color: #219653 !important; }
+           #decline-cookies { background-color: #f4f7f6 !important; color: #555 !important; border: 1px solid #ddd !important; }
+ 
             @media (max-width: 768px) {
-                .cookie-banner { flex-direction: column; text-align: center; gap: 15px; bottom: -150%; }
-                .cookie-banner.show { bottom: 15px; }
-                .cookie-content { flex-direction: column; gap: 10px; text-align: center; }
-                .cookie-content p { text-align: center !important; }
-                .cookie-buttons { margin-left: 0; width: 100%; justify-content: center; }
+               .cookie-banner { flex-direction: column; text-align: center; gap: 15px; bottom: -150%; }
+               .cookie-banner.show { bottom: 15px; }
+               .cookie-content { flex-direction: column; gap: 10px; text-align: center; }
+               .cookie-content p { text-align: center !important; }
+               .cookie-buttons { margin-left: 0; width: 100%; justify-content: center; }
             }
-
+ 
             /* ========================================== */
             /* 1. FOND GLOBAL ET ANNULATION MARGES CACHÉES*/
             /* ========================================== */
             #main, body.index #main { background-color: #ffffff !important; background-image: none !important; padding-top: 0 !important; padding-bottom: 0 !important; margin-top: 0 !important; overflow-x: hidden; }
             body { overflow-x: hidden; }
             /* CORRECTION JUSTIFICATION */
-            p {
-                text-align: left !important;
-                hyphens: none !important;
-            }
-
+            p { text-align: left !important; hyphens: none !important; }
+ 
             /* ========================================== */
             /* CORRECTION ALIGNEMENT HEADER (MENU + LOGO) */
             /* ========================================== */
             @media (min-width: 841px) {
-                #header { display: flex !important; align-items: center !important; justify-content: space-between !important; padding: 0 4em !important; height: 5em !important; }
-                #header h1 { position: static !important; margin: 0 !important; padding: 0 !important; line-height: 1 !important; }
-                #header nav { position: static !important; }
-                #header nav > ul { display: flex !important; align-items: center !important; margin: 0 !important; }
+               #header { display: flex !important; align-items: center !important; justify-content: space-between !important; padding: 0 4em !important; height: 5em !important; }
+               #header h1 { position: static !important; margin: 0 !important; padding: 0 !important; line-height: 1 !important; }
+               #header nav { position: static !important; }
+               #header nav > ul { display: flex !important; align-items: center !important; margin: 0 !important; }
             }
-
+ 
             #header nav ul li a.button.primary { background-color: #27ae60 !important; color: #ffffff !important; border: none !important; box-shadow: none !important; }
             #header nav ul li a.button.primary:hover { background-color: #219653 !important; }
-
+ 
             #nav ul li ul li a:hover,
             #nav ul li ul li:hover > a,
             .dropotron li a:hover,
             .dropotron li:hover > a {
-                background-color: #27ae60 !important; 
+               background-color: #27ae60 !important; 
                 color: #ffffff !important;            
             }
-
+ 
             /* ========================================== */
             /* CORRECTION MOBILE : MENU ET BARRE BLANCHE  */
             /* ========================================== */
             @media (max-width: 840px) {
-                #titleBar {
-                    background: transparent !important;
-                    height: 60px !important;
-                    position: fixed !important;
-                    top: 0 !important;
-                    left: 0 !important;
-                    right: 0 !important;
-                    width: 100% !important;
-                    z-index: 10000 !important;
-                    box-shadow: none !important;
-                    box-sizing: border-box !important;
+               #titleBar {
+                   background: transparent !important;
+                   height: 60px !important;
+                   position: fixed !important;
+                   top: 0 !important;
+                   left: 0 !important;
+                   right: 0 !important;
+                   width: 100% !important;
+                   z-index: 10000 !important;
+                   box-shadow: none !important;
+                   box-sizing: border-box !important;
                 }
-                #titleBar .title { display: none !important; }
-                #titleBar .toggle {
-                    width: 50px !important;
-                    height: 50px !important;
-                    position: absolute !important;
-                    top: 15px !important;
-                    left: 15px !important;
-                    background: rgba(0, 0, 0, 0.15) !important;
-                    border-radius: 8px !important;
+               #titleBar .title { display: none !important; }
+               #titleBar .toggle {
+                   width: 50px !important;
+                   height: 50px !important;
+                   position: absolute !important;
+                   top: 15px !important;
+                   left: 15px !important;
+                   background: rgba(0, 0, 0, 0.15) !important;
+                   border-radius: 8px !important;
                 }
-                #titleBar .toggle:before {
-                    color: #ffffff !important;
-                    line-height: 50px !important;
-                    font-size: 1.3em !important;
+               #titleBar .toggle:before {
+                   color: #ffffff !important;
+                   line-height: 50px !important;
+                   font-size: 1.3em !important;
                 }
             }
-
+ 
             /* ========================================== */
             /* VIDÉO EN ARRIÈRE-PLAN (BANNER) AJUSTÉE     */
             /* ========================================== */
             #banner {
-                background-image: none !important;
-                background-color: #27ae60 !important;
-                padding-top: 5.5em !important;  
-                padding-bottom: 6.5em !important; 
-                text-align: center;
-                position: relative;
-                overflow: hidden;
-                display: block !important;
-                min-height: 0 !important;
+               background-image: none !important;
+               background-color: #27ae60 !important;
+               padding-top: 5.5em !important;  
+               padding-bottom: 6.5em !important; 
+               text-align: center;
+               position: relative;
+               overflow: hidden;
+               display: block !important;
+               min-height: 0 !important;
             }
             #bg-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
-            .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(39, 174, 96, 0.75), rgba(41, 128, 185, 0.75)); z-index: 1; }
+           .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(39, 174, 96, 0.75), rgba(41, 128, 185, 0.75)); z-index: 1; }
             #banner .inner { position: relative; z-index: 2; width: 100%; display: block !important; }
-
+ 
             /* ========================================== */
             /* 2. SYSTÈME DE TYPOGRAPHIE UNIFIÉ ET LOGIQUE*/
             /* ========================================== */
-            .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 2.8em !important; font-weight: 800 !important; color: #2b3138 !important; text-transform: none !important; letter-spacing: -1px !important; line-height: 1.2 !important; border: none !important; margin-bottom: 0.2em !important; text-align: left !important;  }
-            #cta-contact h2 { color: #ffffff !important; }
-
-            .colonne-texte h3, .legis-banner h3, .partenaires-banner h3 { font-size: 1.6em !important; font-weight: 800 !important; text-transform: none !important; letter-spacing: -0.5px !important; margin-bottom: 0.6em !important; border: none !important; }
-            .colonne-texte h3 { color: #1a1a1a !important; }
-            .legis-banner h3, .partenaires-banner h3 { color: #1a6b3b !important; }
-
-            .benefice-card h4, .legis-card h4, .partenaire-card h4 { font-size: 1.25em !important; font-weight: 800 !important; color: #1a1a1a !important; text-transform: none !important; margin-bottom: 12px !important; letter-spacing: normal !important; text-align: left !important; }
-
+           .titre-parfait h2, .benefices-texte h2, .legis-header h2, #partenaires h2, #cta-contact h2 { font-size: 2.8em !important; font-weight: 800 !important; color: #2b3138 !important; text-transform: none !important; letter-spacing: -1px !important; line-height: 1.2 !important; border: none !important; margin-bottom: 0.2em !important; text-align: left !important;  }
+           #cta-contact h2 { color: #ffffff !important; }
+ 
+           .colonne-texte h3, .legis-banner h3, .partenaires-banner h3 { font-size: 1.6em !important; font-weight: 800 !important; text-transform: none !important; letter-spacing: -0.5px !important; margin-bottom: 0.6em !important; border: none !important; }
+           .colonne-texte h3 { color: #1a1a1a !important; }
+           .legis-banner h3, .partenaires-banner h3 { color: #1a6b3b !important; }
+ 
+           .benefice-card h4, .legis-card h4, .partenaire-card h4 { font-size: 1.25em !important; font-weight: 800 !important; color: #1a1a1a !important; text-transform: none !important; margin-bottom: 12px !important; letter-spacing: normal !important; text-align: left !important; }
+ 
             /* UNIFICATION STRICTE DES PARAGRAPHES POUR ORDINATEUR */
             #main p, #cta-contact p, .titre-parfait p, .legis-header p, .benefices-texte p, .benefices-texte p.lead, .colonne-texte p, .legis-banner p, .partenaires-banner p, .benefice-card p, .legis-card p, .partenaire-card p { 
-                font-size: 1.15em !important; 
+               font-size: 1.15em !important; 
                 color: #555 !important; 
-                line-height: 1.8 !important; 
-                margin-bottom: 1.5em !important;
-                word-spacing: normal !important;
-                letter-spacing: normal !important;
+               line-height: 1.8 !important; 
+               margin-bottom: 1.5em !important;
+               word-spacing: normal !important;
+               letter-spacing: normal !important;
             }
-            .benefices-texte p:last-child { margin-bottom: 0 !important; }
-            .legis-banner p, .partenaires-banner p { color: #2b6142 !important; margin-bottom: 0 !important; }
-            .benefice-card p, .legis-card p, .partenaire-card p { color: #777 !important; margin: 0 !important; text-align: left !important; }
-            #cta-contact p { color: rgba(255, 255, 255, 0.9) !important; margin-bottom: 2.5em !important; }
-
+           .benefices-texte p:last-child { margin-bottom: 0 !important; }
+           .legis-banner p, .partenaires-banner p { color: #2b6142 !important; margin-bottom: 0 !important; }
+           .benefice-card p, .legis-card p, .partenaire-card p { color: #777 !important; margin: 0 !important; text-align: left !important; }
+           #cta-contact p { color: rgba(255, 255, 255, 0.9) !important; margin-bottom: 2.5em !important; }
+ 
             /* ========================================== */
             /* ESPACEMENT STRICTEMENT IDENTIQUE PARTOUT   */
             /* ========================================== */
-            #comment-ca-marche, .section-machines, .section-benefices, .section-legislation, .section-standard, .section-partenaires, #cta-contact { padding: 5em 2em !important; }
-            .titre-parfait, .benefices-intro, .legis-header { margin-top: 0 !important; margin-bottom: 1.5em !important; }
-
+           #comment-ca-marche, .section-machines, .section-benefices, .section-legislation, .section-standard, .section-partenaires, #cta-contact { padding: 5em 2em !important; }
+           .titre-parfait, .benefices-intro, .legis-header { margin-top: 0 !important; margin-bottom: 1.5em !important; }
+ 
             /* ========================================== */
             /* 3. SECTION COMMENT ÇA MARCHE               */
             /* ========================================== */
-            #comment-ca-marche { background-color: #ffffff !important; }
-            .titre-parfait { 
-                text-align: left; 
-                max-width: 1150px !important; 
-                margin-left: auto !important; 
-                margin-right: auto !important; 
+           #comment-ca-marche { background-color: #ffffff !important; }
+           .titre-parfait { 
+               text-align: left; 
+               max-width: 1150px !important; 
+               margin-left: auto !important; 
+               margin-right: auto !important; 
             }
-            .ligne-parfaite { display: flex !important; align-items: center !important; justify-content: space-between !important; max-width: 1150px !important; margin: 0 auto 5em auto !important; gap: 60px !important; }
-            .colonne-img, .colonne-texte { flex: 1 !important; width: 48% !important; padding: 0 !important; margin: 0 !important; }
-            .colonne-texte { text-align: left !important; }
-            .colonne-img img { width: 100% !important; height: auto !important; aspect-ratio: 4/3 !important; object-fit: cover !important; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important; display: block !important; }
-            .custom-check-list { list-style: none !important; padding-left: 0 !important; margin: 0 !important; }
-            .custom-check-list li { color: #2b3138 !important; font-weight: 500 !important; margin-bottom: 1em !important; display: flex !important; align-items: flex-start !important; font-size: 1.15em !important; }
-            .custom-check-list li i { margin-top: 3px !important; color: #27ae60 !important; font-size: 1.4em !important; margin-right: 15px !important; }
-            .stat-boxes { display: flex !important; gap: 20px !important; }
+           .ligne-parfaite { display: flex !important; align-items: center !important; justify-content: space-between !important; max-width: 1150px !important; margin: 0 auto 5em auto !important; gap: 60px !important; }
+           .colonne-img, .colonne-texte { flex: 1 !important; width: 48% !important; padding: 0 !important; margin: 0 !important; }
+           .colonne-texte { text-align: left !important; }
+           .colonne-img img { width: 100% !important; height: auto !important; aspect-ratio: 4/3 !important; object-fit: cover !important; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important; display: block !important; }
+           .custom-check-list { list-style: none !important; padding-left: 0 !important; margin: 0 !important; }
+           .custom-check-list li { color: #2b3138 !important; font-weight: 500 !important; margin-bottom: 1em !important; display: flex !important; align-items: flex-start !important; font-size: 1.15em !important; }
+           .custom-check-list li i { margin-top: 3px !important; color: #27ae60 !important; font-size: 1.4em !important; margin-right: 15px !important; }
+           .stat-boxes { display: flex !important; gap: 20px !important; }
             .stat-box { background-color: #e8f7ee !important; border-radius: 12px !important; padding: 25px 20px !important; flex: 1 !important; text-align: center !important; }
             .stat-box h4 { color: #27ae60 !important; font-size: 1.8em !important; font-weight: 800 !important; margin-bottom: 0.3em !important; letter-spacing: -0.5px !important; text-transform: none !important; }
-
+ 
             /* ========================================== */
             /* SECTION MACHINES                           */
             /* ========================================== */
-            .section-machines { background-color: #f9fbfb !important; text-align: center; }
-            .container-machines { max-width: 1150px; margin: 0 auto; }
-            .machines-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-            .machine-card { background: #ffffff; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; text-align: left; padding-top: 20px; }
-            .machine-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-            .machine-img { width: 85%; height: 180px; object-fit: contain; margin: 0 auto; display: block; }
-            .machine-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
-            .machine-content h4 { color: #27ae60 !important; font-size: 1.5em !important; font-weight: 800 !important; margin-bottom: 15px !important; text-transform: none !important; }
-            .machine-specs { list-style: none !important; padding: 0 !important; margin: 0 0 15px 0 !important; flex-grow: 1; }
-            .machine-specs li { font-size: 1.1em !important; color: #555 !important; margin-bottom: 10px !important; display: flex !important; align-items: center !important; }
-            .machine-specs li i { color: #27ae60; width: 25px; font-size: 1.1em; }
-            .machine-btn { text-align: center; margin-top: auto; }
-            .machine-btn a { display: inline-block; width: 100%; padding: 12px 15px; background-color: #e8f7ee; color: #27ae60; border-radius: 8px; text-decoration: none; font-weight: 700; border: none !important; transition: background-color 0.3s ease, color 0.3s ease; font-size: 1em !important; }
-            .machine-btn a:hover { background-color: #27ae60; color: #ffffff; }
-
-            .custom-machines-banner { background-color: #e8f7ee !important; border-radius: 15px !important; padding: 2.5em 3em !important; margin-top: 4em !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 30px !important; box-shadow: 0 5px 20px rgba(0,0,0,0.03) !important; border: 1px solid rgba(39, 174, 96, 0.1) !important; text-align: left; }
-            .custom-machines-icon { font-size: 3.5em !important; color: #27ae60 !important; }
-            .custom-machines-text { flex: 1 !important; }
-            .custom-machines-text h3 { color: #27ae60 !important; font-size: 1.6em !important; font-weight: 800 !important; margin-bottom: 0.3em !important; text-transform: none !important; border: none !important; letter-spacing: -0.5px !important; }
-            .custom-machines-action { flex-shrink: 0 !important; }
-            .custom-machines-action a { background-color: #27ae60 !important; color: #ffffff !important; font-weight: 700 !important; padding: 1em 2.5em !important; border-radius: 50px !important; box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2) !important; transition: all 0.3s ease !important; border: none !important; display: inline-block !important; text-decoration: none !important; }
-            .custom-machines-action a:hover { background-color: #219653 !important; transform: translateY(-3px) !important; box-shadow: 0 8px 20px rgba(39, 174, 96, 0.3) !important; }
-
+           .section-machines { background-color: #f9fbfb !important; text-align: center; }
+           .container-machines { max-width: 1150px; margin: 0 auto; }
+           .machines-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+           .machine-card { background: #ffffff; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; text-align: left; padding-top: 20px; }
+           .machine-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+           .machine-img { width: 85%; height: 180px; object-fit: contain; margin: 0 auto; display: block; }
+           .machine-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+           .machine-content h4 { color: #27ae60 !important; font-size: 1.5em !important; font-weight: 800 !important; margin-bottom: 15px !important; text-transform: none !important; }
+           .machine-specs { list-style: none !important; padding: 0 !important; margin: 0 0 15px 0 !important; flex-grow: 1; }
+           .machine-specs li { font-size: 1.1em !important; color: #555 !important; margin-bottom: 10px !important; display: flex !important; align-items: center !important; }
+           .machine-specs li i { color: #27ae60; width: 25px; font-size: 1.1em; }
+           .machine-btn { text-align: center; margin-top: auto; }
+           .machine-btn a { display: inline-block; width: 100%; padding: 12px 15px; background-color: #e8f7ee; color: #27ae60; border-radius: 8px; text-decoration: none; font-weight: 700; border: none !important; transition: background-color 0.3s ease, color 0.3s ease; font-size: 1em !important; }
+           .machine-btn a:hover { background-color: #27ae60; color: #ffffff; }
+ 
+           .custom-machines-banner { background-color: #e8f7ee !important; border-radius: 15px !important; padding: 2.5em 3em !important; margin-top: 2em !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 30px !important; box-shadow: 0 5px 20px rgba(0,0,0,0.03) !important; border: 1px solid rgba(39, 174, 96, 0.1) !important; text-align: left; }
+           .custom-machines-icon { font-size: 3.5em !important; color: #27ae60 !important; }
+           .custom-machines-text { flex: 1 !important; }
+           .custom-machines-text h3 { color: #27ae60 !important; font-size: 1.6em !important; font-weight: 800 !important; margin-bottom: 0.3em !important; text-transform: none !important; border: none !important; letter-spacing: -0.5px !important; }
+           .custom-machines-action { flex-shrink: 0 !important; }
+           .custom-machines-action a { background-color: #27ae60 !important; color: #ffffff !important; font-weight: 700 !important; padding: 1em 2.5em !important; border-radius: 50px !important; box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2) !important; transition: all 0.3s ease !important; border: none !important; display: inline-block !important; text-decoration: none !important; }
+           .custom-machines-action a:hover { background-color: #219653 !important; transform: translateY(-3px) !important; box-shadow: 0 8px 20px rgba(39, 174, 96, 0.3) !important; }
+ 
             @media (max-width: 980px) { .machines-grid { grid-template-columns: repeat(2, 1fr); } }
             @media (max-width: 840px) { .machines-grid { grid-template-columns: 1fr; } }
-
+ 
             /* ========================================== */
-            /* 4. SECTION BÉNÉFICES                       */
+            /* 4. SECTION BÉNÉFICES                        */
             /* ========================================== */
-            .section-benefices { background-color: #f4f7f6 !important; }
-            .container-benefices { max-width: 1150px; margin: 0 auto; }
-            .benefices-intro { display: flex !important; align-items: stretch !important; gap: 60px !important; }
-            .benefices-texte { flex: 1 !important; text-align: left !important; display: flex !important; flex-direction: column !important; justify-content: center !important; }
+           .section-benefices { background-color: #f4f7f6 !important; }
+           .container-benefices { max-width: 1150px; margin: 0 auto; }
+           .benefices-intro { display: flex !important; align-items: stretch !important; gap: 60px !important; }
+           .benefices-texte { flex: 1 !important; text-align: left !important; display: flex !important; flex-direction: column !important; justify-content: center !important; }
             
-            .benefices-img { flex: 1 !important; display: flex !important; }
-            .benefices-img img { width: 100% !important; height: 100% !important; min-height: 300px !important; object-fit: cover !important; object-position: center !important; border-radius: 20px !important; box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important; display: block !important; }
-
-            .benefices-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-            .benefice-card { background: #ffffff; border-radius: 15px; padding: 25px 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.04); text-align: left; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-            .benefice-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+           .benefices-img { flex: 1 !important; display: flex !important; }
+           .benefices-img img { width: 100% !important; height: 100% !important; min-height: 300px !important; object-fit: cover !important; object-position: center !important; border-radius: 20px !important; box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important; display: block !important; }
+ 
+           .benefices-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+           .benefice-card { background: #ffffff; border-radius: 15px; padding: 25px 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.04); text-align: left; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+           .benefice-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
             .icon-box { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background-color: #e8f7ee; border-radius: 10px; margin-bottom: 15px; }
             .icon-box i { font-size: 1.3em; color: #27ae60; }
-
+ 
             /* ========================================== */
-            /* 5. SECTIONS LÉGISLATION ET ZONES           */
+            /* 5. SECTIONS LÉGISLATION ET ZONES            */
             /* ========================================== */
-            .section-legislation, .section-standard { background-color: #ffffff !important; text-align: center; }
-            .container-legislation, .container-partenaires { max-width: 1150px; margin: 0 auto; }
-            .legis-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 4em; }
-            .legis-card { background: #ffffff; border-radius: 15px; padding: 40px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
-            .legis-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-            .legis-icon { font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block; }
-            .legis-banner { background-color: #d1efe0 !important; border-radius: 15px !important; padding: 2em 3em !important; text-align: center !important; }
-            .legis-banner h3 { margin-bottom: 0.2em !important; }
-            .legis-banner .legis-subtitle { color: #27ae60 !important; font-size: 1.05em !important; font-weight: 600 !important; margin-bottom: 0.8em !important; text-transform: none !important; }
+           .section-legislation, .section-standard { background-color: #ffffff !important; text-align: center; }
+           .container-legislation, .container-partenaires { max-width: 1150px; margin: 0 auto; }
+           .legis-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 4em; }
+           .legis-card { background: #ffffff; border-radius: 15px; padding: 40px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
+           .legis-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+           .legis-icon { font-size: 2.5em; color: #27ae60; margin-bottom: 15px; display: block; }
+           .legis-banner { background-color: #d1efe0 !important; border-radius: 15px !important; padding: 2em 3em !important; text-align: center !important; }
+           .legis-banner h3 { margin-bottom: 0.2em !important; }
+           .legis-banner .legis-subtitle { color: #27ae60 !important; font-size: 1.05em !important; font-weight: 600 !important; margin-bottom: 0.8em !important; text-transform: none !important; }
             
             /* NOUVELLE GRILLE ZONES PARTENAIRES & BANDEAU AUTRES */
-            .section-partenaires { background-color: #f4f7f6 !important; text-align: center; }
-            .zones-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
+           .section-partenaires { background-color: #f4f7f6 !important; text-align: center; }
+           .zones-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
             
-            .partenaire-card { 
-                position: relative; 
-                background-color: #27ae60; 
-                border-radius: 15px; 
-                padding: 3.5em 2em !important; 
-                box-shadow: 0 5px 20px rgba(0,0,0,0.06); 
-                border: none; 
-                overflow: hidden;
-                transition: transform 0.3s ease, box-shadow 0.3s ease; 
-                text-align: center; 
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                min-height: 220px;
+           .partenaire-card { 
+               position: relative; 
+               background-color: #27ae60; 
+               border-radius: 15px; 
+               padding: 3.5em 2em !important; 
+               box-shadow: 0 5px 20px rgba(0,0,0,0.06); 
+               border: none; 
+               overflow: hidden;
+               transition: transform 0.3s ease, box-shadow 0.3s ease; 
+               text-align: center; 
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               min-height: 220px;
             }
-            .partenaire-card::before {
-                content: '';
-                position: absolute;
+           .partenaire-card::before {
+               content: '';
+               position: absolute;
                 top: 0; left: 0; right: 0; bottom: 0;
-                background-size: cover;
-                background-position: center;
-                opacity: 0.40; 
-                filter: grayscale(100%) contrast(120%); 
-                transition: transform 0.6s ease, opacity 0.3s ease;
-                z-index: 0;
+               background-size: cover;
+               background-position: center;
+               opacity: 0.40; 
+               filter: grayscale(100%) contrast(120%); 
+               transition: transform 0.6s ease, opacity 0.3s ease;
+               z-index: 0;
             }
-            .partenaire-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(39, 174, 96, 0.3); }
-            .partenaire-card:hover::before { transform: scale(1.15); opacity: 0.5; } 
+           .partenaire-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(39, 174, 96, 0.3); }
+           .partenaire-card:hover::before { transform: scale(1.15); opacity: 0.5; }
             
-            .partenaire-card > * { position: relative; z-index: 1; }
-            .partenaire-card h4 { font-size: 1.5em !important; font-weight: 800 !important; color: #ffffff !important; margin-bottom: 0 !important; text-transform: none !important; line-height: 1.3 !important; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
-            .partenaire-card i { font-size: 2.5em; color: #ffffff !important; margin-bottom: 15px; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+           .partenaire-card > * { position: relative; z-index: 1; }
+           .partenaire-card h4 { font-size: 1.5em !important; font-weight: 800 !important; color: #ffffff !important; margin-bottom: 0 !important; text-transform: none !important; line-height: 1.3 !important; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+           .partenaire-card i { font-size: 2.5em; color: #ffffff !important; margin-bottom: 15px; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
             
-            .bg-caraibes::before { background-image: url('images/map-caraibes.jpg'); }
-            .bg-ocean-indien::before { background-image: url('images/map-ocean-indien.jpg'); } 
-            .bg-moyen-orient::before { background-image: url('images/map-moyen-orient.jpg'); }
-            .bg-afrique::before { background-image: url('images/map-afrique.jpg'); }
-
-            .autres-zones-banner { 
-                background-color: #e8f7ee !important; 
-                border-radius: 15px !important; 
-                padding: 1.5em 2em !important; 
-                margin: 2em auto 0 auto !important; 
-                max-width: 1000px !important; 
-                display: flex !important; 
-                flex-direction: row !important;
-                text-align: center !important;
-                align-items: center !important; 
-                justify-content: center !important; 
+           .bg-caraibes::before { background-image: url('images/map-caraibes.jpg'); }
+           .bg-ocean-indien::before { background-image: url('images/map-ocean-indien.jpg'); } 
+           .bg-moyen-orient::before { background-image: url('images/map-moyen-orient.jpg'); }
+           .bg-afrique::before { background-image: url('images/map-afrique.jpg'); }
+ 
+           .autres-zones-banner { 
+               background-color: #e8f7ee !important; 
+               border-radius: 15px !important; 
+               padding: 1.5em 2em !important; 
+               margin: 2em auto 0 auto !important; 
+               max-width: 1000px !important; 
+               display: flex !important; 
+               flex-direction: row !important;
+               text-align: center !important;
+               align-items: center !important; 
+               justify-content: center !important; 
                 gap: 15px !important; 
-                box-shadow: 0 5px 20px rgba(0,0,0,0.02) !important; 
-                border: 1px dashed rgba(39, 174, 96, 0.4) !important; 
+               box-shadow: 0 5px 20px rgba(0,0,0,0.02) !important; 
+               border: 1px dashed rgba(39, 174, 96, 0.4) !important; 
             }
-            .autres-zones-banner i { font-size: 1.8em !important; color: #27ae60 !important; }
-
+           .autres-zones-banner i { font-size: 1.8em !important; color: #27ae60 !important; }
+ 
             /* ========================================== */
             /* 6. DESIGN DU WIDGET ACTUALITÉS             */
             /* ========================================== */
-            .mock-widget-container { max-width: 1000px; margin: 0 auto; background: #ffffff; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.05); border: 1px solid #eaeaea; overflow: hidden; text-align: left; }
-            .mock-widget-header { padding: 20px; border-bottom: 1px solid #eaeaea; display: flex; align-items: center; justify-content: space-between; background-color: #fcfcfc; }
-            .mock-widget-title { display: flex; align-items: center; gap: 10px; font-weight: 700; color: #0a66c2; font-size: 1.1em; }
-
+           .mock-widget-container { max-width: 1000px; margin: 0 auto; background: #ffffff; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.05); border: 1px solid #eaeaea; overflow: hidden; text-align: left; }
+           .mock-widget-header { padding: 20px; border-bottom: 1px solid #eaeaea; display: flex; align-items: center; justify-content: space-between; background-color: #fcfcfc; }
+           .mock-widget-title { display: flex; align-items: center; gap: 10px; font-weight: 700; color: #0a66c2; font-size: 1.1em; }
+ 
             /* ========================================== */
             /* 7. CTA CONTACT                             */
             /* ========================================== */
-            #cta-contact { background-color: #27ae60 !important; text-align: center; margin: 0 !important; }
-            #cta-contact .custom-btn { background-color: #ffffff !important; color: #27ae60 !important; border: none !important; border-radius: 50px !important; font-weight: 700 !important; display: inline-block !important; padding: 1em 2.5em !important; font-size: 1.1em !important; text-transform: none !important; text-decoration: none !important; box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important; transition: all 0.3s ease !important; }
-            #cta-contact .custom-btn:hover { transform: translateY(-3px) !important; box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important; background-color: #f8f8f8 !important; }
-
+           #cta-contact { background-color: #27ae60 !important; text-align: center; margin: 0 !important; }
+           #cta-contact .custom-btn { background-color: #ffffff !important; color: #27ae60 !important; border: none !important; border-radius: 50px !important; font-weight: 700 !important; display: inline-block !important; padding: 1em 2.5em !important; font-size: 1.1em !important; text-transform: none !important; text-decoration: none !important; box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important; transition: all 0.3s ease !important; }
+           #cta-contact .custom-btn:hover { transform: translateY(-3px) !important; box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important; background-color: #f8f8f8 !important; }
+ 
             /* ========================================== */
             /* 8. FOOTER SUR-MESURE RÉORGANISÉ ET CENTRÉ  */
             /* ========================================== */
@@ -326,218 +323,218 @@
             #footer a { color: #ffffff !important; text-decoration: none !important; border-bottom: none !important; }
             #footer a:hover { color: #d1efe0 !important; }
             
-            .footer-container { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; max-width: 1200px !important; margin: 0 auto !important; gap: 20px !important; }
-            .footer-col { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
-            .footer-col h4 { color: #ffffff !important; font-size: 1.2em !important; font-weight: 700 !important; margin-bottom: 1.5em !important; border: none !important; text-transform: none !important; }
+           .footer-container { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; max-width: 1200px !important; margin: 0 auto !important; gap: 20px !important; }
+           .footer-col { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
+           .footer-col h4 { color: #ffffff !important; font-size: 1.2em !important; font-weight: 700 !important; margin-bottom: 1.5em !important; border: none !important; text-transform: none !important; }
             
             .links-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
             .links-col li { margin-bottom: 0.8em !important; padding: 0 !important; border: none !important; }
             
-            .footer-logo-brand-block { display: flex !important; align-items: center !important; justify-content: center !important; gap: 15px !important; margin-bottom: 2em !important; }
-            .footer-logo-icon { font-size: 2em !important; color: #ffffff !important; }
-            .footer-brand-text-container { text-align: left !important; }
-            .footer-brand-text-container h3 { color: #ffffff !important; font-size: 1.4em !important; font-weight: 800 !important; margin: 0 !important; border: none !important; text-transform: none !important; line-height: 1.1 !important; }
-
-            .social-icons { list-style: none !important; padding: 0 !important; margin: 0 !important; display: flex !important; gap: 15px !important; }
-            .social-icons li { padding: 0 !important; border: none !important; }
-            .social-icons li a { display: flex !important; align-items: center !important; justify-content: center !important; width: 40px !important; height: 40px !important; background-color: rgba(255,255,255,0.1) !important; border-radius: 50% !important; transition: all 0.3s ease !important; }
-            .social-icons li a:hover { background-color: #ffffff !important; color: #27ae60 !important; }
+           .footer-logo-brand-block { display: flex !important; align-items: center !important; justify-content: center !important; gap: 15px !important; margin-bottom: 2em !important; }
+           .footer-logo-icon { font-size: 2em !important; color: #ffffff !important; }
+           .footer-brand-text-container { text-align: left !important; }
+           .footer-brand-text-container h3 { color: #ffffff !important; font-size: 1.4em !important; font-weight: 800 !important; margin: 0 !important; border: none !important; text-transform: none !important; line-height: 1.1 !important; }
+ 
+           .social-icons { list-style: none !important; padding: 0 !important; margin: 0 !important; display: flex !important; gap: 15px !important; }
+           .social-icons li { padding: 0 !important; border: none !important; }
+           .social-icons li a { display: flex !important; align-items: center !important; justify-content: center !important; width: 40px !important; height: 40px !important; background-color: rgba(255,255,255,0.1) !important; border-radius: 50% !important; transition: all 0.3s ease !important; }
+           .social-icons li a:hover { background-color: #ffffff !important; color: #27ae60 !important; }
             
-            .contact-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; text-align: left !important; display: inline-block !important; }
-            .contact-col li { margin-bottom: 0.8em !important; display: flex !important; align-items: center !important; font-size: 0.95em !important; padding: 0 !important; border: none !important; }
-            .contact-col li i { width: 30px !important; font-size: 1.1em !important; color: #d1efe0 !important; margin-right: 10px !important; display: flex !important; justify-content: center !important; }
+           .contact-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; text-align: left !important; display: inline-block !important; }
+           .contact-col li { margin-bottom: 0.8em !important; display: flex !important; align-items: center !important; font-size: 0.95em !important; padding: 0 !important; border: none !important; }
+           .contact-col li i { width: 30px !important; font-size: 1.1em !important; color: #d1efe0 !important; margin-right: 10px !important; display: flex !important; justify-content: center !important; }
             
-            .footer-bottom { text-align: center !important; margin-top: 3em !important; padding-top: 2em !important; border-top: 1px solid rgba(255,255,255,0.2) !important; font-size: 0.85em !important; color: #d1efe0 !important; }
-
+           .footer-bottom { text-align: center !important; margin-top: 3em !important; padding-top: 2em !important; border-top: 1px solid rgba(255,255,255,0.2) !important; font-size: 0.85em !important; color: #d1efe0 !important; }
+ 
             @media (max-width: 840px) {
-                .footer-container { grid-template-columns: 1fr !important; gap: 50px !important; }
-                .footer-logo-brand-block { flex-direction: column !important; gap: 10px !important; }
-                .footer-brand-text-container { align-items: center !important; text-align: center !important; }
-                .contact-col ul { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
-                .contact-col li { flex-direction: column !important; text-align: center !important; justify-content: center !important; }
-                .contact-col li i { margin-right: 0 !important; margin-bottom: 5px !important; }
+               .footer-container { grid-template-columns: 1fr !important; gap: 50px !important; }
+               .footer-logo-brand-block { flex-direction: column !important; gap: 10px !important; }
+               .footer-brand-text-container { align-items: center !important; text-align: center !important; }
+               .contact-col ul { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
+               .contact-col li { flex-direction: column !important; text-align: center !important; justify-content: center !important; }
+               .contact-col li i { margin-right: 0 !important; margin-bottom: 5px !important; }
             }
             
             /* ========================================== */
             /* 9. RÉGLAGES GLOBAUX POUR LE RESPONSIVE     */
             /* ========================================== */
             @media (max-width: 768px) {
-
+ 
                 /* === RÈGLE MAÎTRESSE : tout est centré sur mobile par défaut === */
-                #comment-ca-marche,
-                .section-machines,
-                .section-benefices,
-                .section-legislation,
-                .section-standard,
-                .section-partenaires,
-                #cta-contact {
-                    padding: 4em 1.2em !important;
-                    text-align: center !important;
+               #comment-ca-marche,
+               .section-machines,
+               .section-benefices,
+               .section-legislation,
+               .section-standard,
+               .section-partenaires,
+               #cta-contact {
+                   padding: 4em 1.2em !important;
+                   text-align: center !important;
                 }
-
+ 
                 /* === EXCEPTION : les paragraphes longs de lecture restent à gauche === */
-                .colonne-texte p,
-                .benefices-texte p,
-                .legis-banner p {
-                    text-align: left !important;
-                    hyphens: auto;
+               .colonne-texte p,
+               .benefices-texte p,
+               .legis-banner p {
+                   text-align: left !important;
+                   hyphens: auto;
                 }
-
+ 
                 /* === TOUS les titres h2, h3 centrés === */
-                .titre-parfait h2,
-                .benefices-texte h2,
-                .legis-header h2,
-                #partenaires h2,
-                #cta-contact h2 {
-                    font-size: 2.1em !important;
-                    text-align: center !important;
+               .titre-parfait h2,
+               .benefices-texte h2,
+               .legis-header h2,
+               #partenaires h2,
+               #cta-contact h2 {
+                   font-size: 2.1em !important;
+                   text-align: center !important;
                 }
-
-                .colonne-texte h3,
-                .legis-banner h3,
-                .custom-machines-text h3 {
-                    text-align: center !important;
+ 
+               .colonne-texte h3,
+               .legis-banner h3,
+               .custom-machines-text h3 {
+                   text-align: center !important;
                 }
-
+ 
                 /* === Tailles de police uniformes === */
                 #main p,
-                .colonne-texte p,
-                .benefices-texte p,
-                .legis-banner p,
-                .benefice-card p,
-                .legis-card p,
-                .partenaire-card p,
-                .stat-box p { text-align: center !important; }
-                .custom-machines-text p,
-                .autres-zones-banner p { text-align: center !important; width: 100% !important; }
-                #cta-contact p,
-                .titre-parfait p,
-                .legis-header p {
-                    font-size: 1.05em !important;
-                    word-spacing: normal !important;
-                    letter-spacing: normal !important;
+               .colonne-texte p,
+               .benefices-texte p,
+               .legis-banner p,
+               .benefice-card p,
+               .legis-card p,
+               .partenaire-card p,
+               .stat-box p { text-align: center !important; }
+               .custom-machines-text p,
+               .autres-zones-banner p { text-align: center !important; width: 100% !important; }
+               #cta-contact p,
+               .titre-parfait p,
+               .legis-header p {
+                   font-size: 1.05em !important;
+                   word-spacing: normal !important;
+                   letter-spacing: normal !important;
                 }
-
+ 
                 /* === BANNER PRINCIPALE === */
-                #banner {
-                    padding-top: 7em !important;
-                    padding-bottom: 5em !important;
+               #banner {
+                   padding-top: 7em !important;
+                   padding-bottom: 5em !important;
                 }
-                #banner .inner {
-                    padding-left: 15px !important;
-                    padding-right: 15px !important;
-                    box-sizing: border-box !important;
+               #banner .inner {
+                   padding-left: 15px !important;
+                   padding-right: 15px !important;
+                   box-sizing: border-box !important;
                 }
-                #banner .inner header h2 {
-                    text-align: center !important;
+               #banner .inner header h2 {
+                   text-align: center !important;
                 }
-                #banner .inner header h2 br { display: block !important; }
-                #banner .inner header h2 span.accent { display: block !important; margin-top: 10px; }
-
+               #banner .inner header h2 br { display: block !important; }
+               #banner .inner header h2 span.accent { display: block !important; margin-top: 10px; }
+ 
                 /* === SECTION COMMENT ÇA MARCHE === */
-                .ligne-parfaite {
-                    flex-direction: column !important;
-                    gap: 30px !important;
-                    margin-bottom: 3em !important;
+               .ligne-parfaite {
+                   flex-direction: column !important;
+                   gap: 30px !important;
+                   margin-bottom: 3em !important;
                 }
-                .colonne-img,
-                .colonne-texte {
-                    width: 100% !important;
-                    text-align: center !important;
+               .colonne-img,
+               .colonne-texte {
+                   width: 100% !important;
+                   text-align: center !important;
                 }
                 /* Mais les <p> dans colonne-texte restent à gauche (cf. exception ci-dessus) */
-                .colonne-texte ul {
-                    text-align: left !important;
+               .colonne-texte ul {
+                   text-align: left !important;
                 }
-                .stat-boxes {
-                    flex-direction: column !important;
+               .stat-boxes {
+                   flex-direction: column !important;
                 }
-                .stat-box {
-                    text-align: center !important;
+               .stat-box {
+                   text-align: center !important;
                 }
-
+ 
                 /* === SECTION BÉNÉFICES === */
-                .benefices-intro {
-                    flex-direction: column !important;
-                    gap: 30px !important;
+               .benefices-intro {
+                   flex-direction: column !important;
+                   gap: 30px !important;
                 }
-                .benefices-texte {
-                    text-align: center !important;
+               .benefices-texte {
+                   text-align: center !important;
                 }
                 /* Exception : les paragraphes de .benefices-texte restent à gauche */
-                .benefices-grid {
-                    grid-template-columns: 1fr !important;
+               .benefices-grid {
+                   grid-template-columns: 1fr !important;
                 }
-                .benefices-img img {
-                    height: 250px !important;
+               .benefices-img img {
+                   height: 250px !important;
                 }
-
+ 
                 /* === SECTION LÉGISLATION === */
-                .legis-grid {
-                    grid-template-columns: repeat(2, 1fr) !important;
+               .legis-grid {
+                   grid-template-columns: repeat(2, 1fr) !important;
                 }
-                .legis-banner {
-                    padding: 1.5em !important;
-                    text-align: left !important; /* bloc entier à gauche, logique lecture */
+               .legis-banner {
+                   padding: 1.5em !important;
+                   text-align: left !important; /* bloc entier à gauche, logique lecture */
                 }
-                .legis-banner h3 {
-                    text-align: left !important;
+               .legis-banner h3 {
+                   text-align: left !important;
                 }
-
+ 
                 /* === SECTION ZONES === */
-                .zones-grid {
-                    grid-template-columns: repeat(2, 1fr) !important;
-                    gap: 15px !important;
+               .zones-grid {
+                   grid-template-columns: repeat(2, 1fr) !important;
+                   gap: 15px !important;
                 }
-                .autres-zones-banner {
-                    flex-direction: column !important;
-                    text-align: center !important;
-                    padding: 1.5em !important;
+               .autres-zones-banner {
+                   flex-direction: column !important;
+                   text-align: center !important;
+                   padding: 1.5em !important;
                 }
-                .autres-zones-banner p {
-                    text-align: center !important;
+               .autres-zones-banner p {
+                   text-align: center !important;
                 }
-
+ 
                 /* === BANNIÈRE MACHINES SUR MESURE === */
-                .custom-machines-banner {
-                    flex-direction: column !important;
-                    text-align: center !important;
-                    padding: 2em 1.5em !important;
-                    align-items: center !important;
+               .custom-machines-banner {
+                   flex-direction: column !important;
+                   text-align: center !important;
+                   padding: 2em 1.5em !important;
+                   align-items: center !important;
                 }
-                .custom-machines-text {
-                    text-align: center !important;
+               .custom-machines-text {
+                   text-align: center !important;
                 }
-                .custom-machines-action {
-                    width: 100% !important;
-                    text-align: center !important;
+               .custom-machines-action {
+                   width: 100% !important;
+                   text-align: center !important;
                 }
             }
-
+ 
             @media (max-width: 480px) {
-                #comment-ca-marche,
-                .section-machines,
-                .section-benefices,
-                .section-legislation,
-                .section-standard,
-                .section-partenaires,
-                #cta-contact {
-                    padding: 3.5em 1em !important;
+               #comment-ca-marche,
+               .section-machines,
+               .section-benefices,
+               .section-legislation,
+               .section-standard,
+               .section-partenaires,
+               #cta-contact {
+                   padding: 3.5em 1em !important;
                 }
-
-                .legis-grid { grid-template-columns: 1fr !important; }
-                .zones-grid { grid-template-columns: 1fr !important; }
-
-                .titre-parfait h2,
-                .benefices-texte h2,
-                .legis-header h2,
-                #partenaires h2,
-                #cta-contact h2 {
-                    font-size: 1.7em !important;
+ 
+               .legis-grid { grid-template-columns: 1fr !important; }
+               .zones-grid { grid-template-columns: 1fr !important; }
+ 
+               .titre-parfait h2,
+               .benefices-texte h2,
+               .legis-header h2,
+               #partenaires h2,
+               #cta-contact h2 {
+                   font-size: 1.7em !important;
                 }
-                #banner .inner header h2 { font-size: 1.9em !important; }
+               #banner .inner header h2 { font-size: 1.9em !important; }
             }
-
+ 
             /* ========================================== */
             /* 10. DESIGN DES ARGUMENTS BANNER (BADGES)   */
             /* ========================================== */
@@ -545,592 +542,708 @@
             
             /* CORRECTION: TEXTE D'INTRO SUR LA VIDEO EN BLANC */
             #banner .banner-intro { 
-                font-size: 1.25em !important; 
-                margin-bottom: 1.5em !important; 
-                font-weight: 500; 
+               font-size: 1.25em !important; 
+               margin-bottom: 1.5em !important; 
+               font-weight: 500; 
                 color: #ffffff !important;
-                text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-                text-align: center !important; 
+               text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+               text-align: center !important; 
             }
             
-            .banner-arguments { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 2em; max-width: 1000px; margin-left: auto; margin-right: auto; }
+           .banner-arguments { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 2em; max-width: 1000px; margin-left: auto; margin-right: auto; }
             .arg-item { background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 50px; padding: 12px 25px; display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: 1.05em; backdrop-filter: blur(5px); transition: transform 0.3s ease, background-color 0.3s ease; }
-            .arg-item:hover { background-color: rgba(255, 255, 255, 0.25); transform: translateY(-3px); }
+           .arg-item:hover { background-color: rgba(255, 255, 255, 0.25); transform: translateY(-3px); }
             .arg-item i { color: #A8E6CF; font-size: 1.3em; margin-top: 2px; }
             .arg-item span { line-height: 1.2; text-align: left !important; }
             .arg-item strong { color: #ffffff; font-weight: 800; text-shadow: 0 2px 5px rgba(0,0,0,0.3); }
-
+ 
             @media (max-width: 840px) {
-                .banner-arguments { flex-direction: column; align-items: center; gap: 10px; }
-                .arg-item { width: 100%; justify-content: flex-start; padding: 10px 20px; font-size: 0.95em; }
+               .banner-arguments { flex-direction: column; align-items: center; gap: 10px; }
+               .arg-item { width: 100%; justify-content: flex-start; padding: 10px 20px; font-size: 0.95em; }
             }
-
+ 
             /* ========================================== */
             /* 12. ANIMATIONS DE DEFILEMENT (SCROLL REVEAL)*/
             /* ========================================== */
-            .scroll-reveal {
-                opacity: 0;
-                transform: translateY(25px);
-                transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+           .scroll-reveal {
+               opacity: 0;
+               transform: translateY(25px);
+               transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
             }
-            .scroll-reveal.revealed {
-                opacity: 1;
-                transform: translateY(0);
+           .scroll-reveal.revealed {
+               opacity: 1;
+               transform: translateY(0);
             }
             .delay-1 { transition-delay: 0.15s; }
             .delay-2 { transition-delay: 0.3s; }
             .delay-3 { transition-delay: 0.45s; }
             .delay-4 { transition-delay: 0.6s; }
-
+ 
             .stat-box,
             .stat-box h4,
             .stat-box p,
-            .benefice-card,
-            .benefice-card h4,
-            .benefice-card p,
-            .legis-card,
-            .legis-card h4,
-            .legis-card p,
-            .legis-banner,
-            .legis-banner h3,
-            .legis-banner p,
-            .custom-machines-banner,
-            .custom-machines-text h3,
-            .custom-machines-text p {
-                text-align: center !important;
+           .benefice-card,
+           .benefice-card h4,
+           .benefice-card p,
+           .legis-card,
+           .legis-card h4,
+           .legis-card p,
+           .legis-banner,
+           .legis-banner h3,
+           .legis-banner p,
+           .custom-machines-banner,
+           .custom-machines-text h3,
+           .custom-machines-text p {
+               text-align: center !important;
             }
-
+ 
             /* ========================================== */
-            /* SECTION MACHINES REDESIGNÉE - CATÉGORIES  */
+            /* SECTION MACHINES REDESIGNÉE - CATÉGORIES   */
             /* ========================================== */
             .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 2em; }
             .cat-card { position: relative; border-radius: 20px; overflow: hidden; cursor: pointer; min-height: 330px; display: flex; align-items: flex-end; box-shadow: 0 10px 30px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-            .cat-card:hover { transform: translateY(-6px); box-shadow: 0 20px 45px rgba(0,0,0,0.25); }
-            .cat-card::before { content: ''; position: absolute; inset: 0; background-image: var(--cat-img); background-size: cover; background-position: center; transition: transform 0.7s ease; z-index: 0; }
-            .cat-card:hover::before { transform: scale(1.07); }
-            .cat-overlay { 
-                position: absolute; 
+           .cat-card:hover { transform: translateY(-6px); box-shadow: 0 20px 45px rgba(0,0,0,0.25); }
+           .cat-card::before { content: ''; position: absolute; inset: 0; background-image: var(--cat-img); background-size: cover; background-position: center; transition: transform 0.7s ease; z-index: 0; }
+           .cat-card:hover::before { transform: scale(1.07); }
+           .cat-overlay { 
+               position: absolute; 
                 inset: 0; 
-                /* Dégradé sombre plus fort pour faire ressortir le texte blanc */
-                background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.45) 100%) !important; 
-                z-index: 1; 
-                transition: background 0.3s ease; 
+               /* Dégradé sombre plus fort pour faire ressortir le texte blanc */
+               background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.45) 100%) !important; 
+               z-index: 1; 
+               transition: background 0.3s ease; 
             }
-            .cat-card.active .cat-overlay { background: linear-gradient(to top, rgba(5,30,15,0.97) 0%, rgba(39,174,96,0.65) 60%, rgba(0,0,0,0.2) 100%); }
-            .cat-content { position: relative; z-index: 2; padding: 2em; width: 100%; color: #fff; }
+           .cat-card.active .cat-overlay { background: linear-gradient(to top, rgba(5,30,15,0.97) 0%, rgba(39,174,96,0.65) 60%, rgba(0,0,0,0.2) 100%); }
+           .cat-content { position: relative; z-index: 2; padding: 2em; width: 100%; color: #fff; }
             .cat-icon { display: none !important; }
-            .cat-content h3 { color: #ffffff !important; font-size: 1.5em !important; font-weight: 800 !important; margin: 0 0 1.2em 0 !important; text-transform: none !important; letter-spacing: -0.5px !important; border: none !important; text-shadow: 0 2px 8px rgba(0,0,0,0.5); text-align: center !important; }
+           .cat-content h3 { color: #ffffff !important; font-size: 1.5em !important; font-weight: 800 !important; margin: 0 0 1.2em 0 !important; text-transform: none !important; letter-spacing: -0.5px !important; border: none !important; text-shadow: 0 2px 8px rgba(0,0,0,0.5); text-align: center !important; }
             .cat-range { 
-                display: block !important; 
+               display: block !important; 
                 width: max-content !important; /* Le badge s'ajuste pile à la taille du texte */
-                text-align: center !important; 
-                margin: 0 auto 1em auto !important; 
-                background: rgba(0, 0, 0, 0.5) !important; /* Fond sombre translucide */
-                border: 1px solid rgba(255, 255, 255, 0.25) !important; /* Bordure blanche très fine et élégante */
-                border-radius: 50px !important; 
-                padding: 8px 22px !important; 
-                font-size: 0.9em !important; 
-                font-weight: 700 !important; 
+               text-align: center !important; 
+               margin: 0 auto 1em auto !important; 
+               background: rgba(0, 0, 0, 0.5) !important; /* Fond sombre translucide */
+               border: 1px solid rgba(255, 255, 255, 0.25) !important; /* Bordure blanche très fine et élégante */
+               border-radius: 50px !important; 
+               padding: 8px 22px !important; 
+               font-size: 0.9em !important; 
+               font-weight: 700 !important; 
                 color: #ffffff !important; 
-                backdrop-filter: blur(5px) !important; /* Effet de flou derrière le badge */
-                line-height: 1.4 !important; 
+               backdrop-filter: blur(5px) !important; /* Effet de flou derrière le badge */
+               line-height: 1.4 !important; 
             }
             #main .cat-content p.cat-clients { 
                 color: #ffffff !important; 
-                font-size: 1.05em !important; 
-                margin-bottom: 0.8em !important; 
-                line-height: 1.5 !important; 
-                text-shadow: 0 2px 6px rgba(0,0,0,0.8) !important; 
-                text-align: center !important;
-                font-weight: 700 !important; 
+               font-size: 1.05em !important; 
+               margin-bottom: 0.8em !important; 
+               line-height: 1.5 !important; 
+               text-shadow: 0 2px 6px rgba(0,0,0,0.8) !important; 
+               text-align: center !important;
+               font-weight: 700 !important; 
             }
             #main .cat-content .cat-models { 
                 color: #27ae60 !important; 
-                font-size: 0.88em !important; 
-                font-weight: 700 !important; 
-                letter-spacing: 0.5px !important; 
-                margin-bottom: 1.3em !important; 
-                text-shadow: 0 2px 6px rgba(0,0,0,0.8) !important;
+               font-size: 0.88em !important; 
+               font-weight: 700 !important; 
+               letter-spacing: 0.5px !important; 
+               margin-bottom: 1.3em !important; 
+               text-shadow: 0 2px 6px rgba(0,0,0,0.8) !important;
             }
             .cat-btn { display: inline-flex; align-items: center; gap: 8px; background: #27ae60; color: #fff; padding: 10px 22px; border-radius: 50px; font-size: 0.9em; font-weight: 700; transition: all 0.3s ease; }
             .cat-btn i { transition: transform 0.3s ease; }
-            .cat-card:hover .cat-btn { background: #219653; }
-            .cat-card.active .cat-btn { background: #ffffff; color: #27ae60; }
-            .cat-card.active .cat-btn i { transform: rotate(180deg); }
-
-            .cat-machines-panel { max-height: 0; overflow: hidden; transition: max-height 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease; opacity: 0; }
-            .cat-machines-panel.open { max-height: 2000px; opacity: 1; }
-            .cat-machines-panel-inner { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; padding: 2em 0 0.5em 0; }
+           .cat-card:hover .cat-btn { background: #219653; }
+           .cat-card.active .cat-btn { background: #ffffff; color: #27ae60; }
+           .cat-card.active .cat-btn i { transform: rotate(180deg); }
+ 
+           .cat-machines-panel { max-height: 0; overflow: hidden; transition: max-height 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease; opacity: 0; }
+           .cat-machines-panel.open { max-height: 2000px; opacity: 1; }
+           .cat-machines-panel-inner { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; padding: 2em 0 0.5em 0; }
             .cat-label { display: flex; align-items: center; gap: 12px; padding: 1em 1.5em; background: linear-gradient(135deg, #e8f7ee, #f4fbf7); border-radius: 12px; border-left: 4px solid #27ae60; margin-bottom: 1.5em; }
             .cat-label i { font-size: 1.5em; color: #27ae60; }
             .cat-label span { font-weight: 800; color: #1a6b3b; font-size: 1.05em; }
-
+ 
             @media (max-width: 980px) { .cat-grid { grid-template-columns: repeat(2, 1fr) !important; } .cat-card { min-height: 320px !important; } }
             @media (max-width: 600px) { .cat-grid { grid-template-columns: 1fr !important; } .cat-machines-panel-inner { grid-template-columns: 1fr !important; } }
         
+            /* ========================================== */
+            /* BOUTON GLOBAL DES PANNEAUX MACHINES        */
+            /* ========================================== */
+           .panel-global-btn { 
+               text-align: center !important; 
+               margin-top: 20px !important; 
+               padding-bottom: 30px !important; 
+               grid-column: 1 / -1 !important; /* L'astuce magique : force le bloc à traverser toutes les colonnes */
+                width: 100% !important;
+            }
+           .panel-global-btn a {
+                display: inline-block;
+               background-color: #27ae60 !important;
+                color: #ffffff !important;
+                padding: 15px 35px !important;
+               border-radius: 50px !important;
+                font-size: 1.05em !important;
+               font-weight: 700 !important;
+               text-decoration: none !important;
+                border: none !important;
+               box-shadow: 0 5px 15px rgba(39, 174, 96, 0.2) !important;
+               transition: all 0.3s ease !important;
+            }
+           .panel-global-btn a:hover {
+               background-color: #219653 !important;
+                transform: translateY(-3px) !important;
+               box-shadow: 0 10px 25px rgba(39, 174, 96, 0.3) !important;
+            }
+           .panel-global-btn i {
+               margin-right: 8px;
+            }
+            
+            /* ========================================== */
+            /* ALIGNEMENT DES DEUX BOUTONS DU BANNER      */
+            /* ========================================== */
+            #banner .banner-buttons {
+               display: flex !important;
+               flex-direction: row !important; 
+               justify-content: center !important;
+               align-items: stretch !important;
+                gap: 20px !important;
+               flex-wrap: nowrap !important;
+               margin: 0 auto !important;
+               padding: 0 !important;
+                width: 100%;
+               max-width: 850px; /* Légèrement réduit pour un rendu plus élégant */
+            }
+ 
+            #banner .banner-buttons li {
+               display: flex !important;
+                flex: 1 1 50% !important; /* Force CHAQUE bouton à prendre strictement 50% de l'espace, réglant le souci de centrage */
+                width: 50% !important;
+               padding: 0 !important;
+               margin: 0 !important;
+            }
+ 
+            #banner .banner-buttons li a.button {
+                width: 100% !important;
+               display: flex !important;
+               justify-content: center !important;
+               align-items: center !important;
+               text-align: center !important; /* Assure que le texte soit bien centré à l'intérieur */
+               padding: 0.5em 1em !important; /* C'est ICI qu'on réduit considérablement l'épaisseur (avant c'était 1em) */
+               white-space: normal !important; 
+               height: auto !important;
+               min-height: 3.2em !important; /* Garde une épaisseur minimale homogène entre les deux */
+               line-height: 1.3 !important; /* Rapproche un peu les deux lignes de texte du bouton de gauche */
+            }
+ 
+            /* On garde l'empilement uniquement pour les petits écrans de smartphones */
+            @media (max-width: 840px) {
+               #banner .banner-buttons {
+                   flex-direction: column !important;
+                }
+               #banner .banner-buttons li {
+                   width: 100% !important;
+                   flex: 1 1 100% !important;
+                }
+            }
+ 
+            /* ========================================== */
+            /* MARGES UNIFORMES ENTRE TOUTES LES SECTIONS */
+            /* ========================================== */
+            @media (min-width: 769px) {
+                #comment-ca-marche,
+                .section-machines,
+                .section-benefices,
+                .section-legislation,
+                .section-standard,
+                .section-partenaires,
+                #cta-contact {
+                    padding-top: 5em !important;
+                    padding-right: 2em !important;
+                    padding-bottom: 5em !important;
+                    padding-left: 2em !important;
+                }
+            }
+
         </style>
     </head>
     <body class="index is-preload">
         <div id="cookie-banner" class="cookie-banner">
             <div class="cookie-content">
                 <i class="icon solid fa-cookie-bite"></i>
-                <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site et analyser notre trafic. <br>En continuant à naviguer, vous acceptez notre politique de cookies.</p>
-            </div>
+               <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site et analyser notre trafic. <br>En continuant à naviguer, vous acceptez notre politique de cookies.</p>
+           </div>
             <div class="cookie-buttons">
-                <button id="accept-cookies" class="button primary small">Tout Accepter</button>
-                <button id="decline-cookies" class="button alt small">Refuser</button>
-            </div>
+               <button id="accept-cookies" class="button primary small">Tout Accepter</button>
+               <button id="decline-cookies" class="button alt small">Refuser</button>
+           </div>
         </div>
         <div id="page-wrapper">
-
+ 
             <header id="header" class="alt">
                 <h1 id="logo"><a href="#page-wrapper" class="scrolly"><span class="icon solid fa-leaf"></span> GREEN 3D SOLUTIONS</a></h1>
-                <nav id="nav">
-                    <ul>
-                        <li class="current"><a href="#page-wrapper" class="scrolly">Accueil</a></li>
-                        <li class="submenu">
-                            <a href="#">En savoir plus</a>
-                            <ul>
+               <nav id="nav">
+                   <ul>
+                       <li class="current"><a href="#page-wrapper" class="scrolly">Accueil</a></li>
+                       <li class="submenu">
+                           <a href="#">En savoir plus</a>
+                           <ul>
                                 <li><a href="#comment-ca-marche">Comment ça marche ?</a></li>
                                 <li><a href="#nos-machines">Nos Machines</a></li>
                                 <li><a href="#benefices">Bénéfices</a></li>
                                 <li><a href="#legislation">Législation</a></li>
                                 <li><a href="#partenaires">Zones d'intervention</a></li>
                                 <li><a href="#actualites">Actualités</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#cta-contact" class="button primary scrolly">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-
-            <section id="banner">
-                <video autoplay loop muted playsinline id="bg-video">
-                    <source src="images/background.mp4" type="video/mp4">
-                </video>
-                <div class="video-overlay"></div>
-                <div class="inner">
-                    <header>
-                        <h2>Déshydratation de biodéchets<br><span class="accent">Solution écologique</span></h2>
-                    </header>
+                           </ul>
+                       </li>
+                       <li><a href="#cta-contact" class="button primary scrolly">Contact</a></li>
+                   </ul>
+               </nav>
+           </header>
+ 
+           <section id="banner">
+               <video autoplay loop muted playsinline id="bg-video">
+                   <source src="images/background.mp4" type="video/mp4">
+               </video>
+               <div class="video-overlay"></div>
+               <div class="inner">
+                   <header>
+                       <h2>Déshydratation de biodéchets<br><span class="accent">Solution écologique</span></h2>
+                   </header>
                     
-                    <p class="banner-intro">Transformez vos déchets organiques en ressources valorisables en éliminant définitivement l'humidité de vos poubelles.</p>
+                   <p class="banner-intro">Transformez vos déchets organiques en ressources valorisables en éliminant définitivement l'humidité de vos poubelles.</p>
                     
-                    <div class="banner-arguments">
-                        <div class="arg-item">
-                            <i class="icon solid fa-chart-line" style="transform: scaleY(-1);"></i> 
-                            <span>Réduisez drastiquement <strong>vos coûts</strong></span>
-                        </div>
-                        <div class="arg-item">
-                            <i class="icon solid fa-shield-alt"></i> 
-                            <span>Anticipez les <strong>réglementations environnementales</strong></span>
-                        </div>
-                        <div class="arg-item">
-                            <i class="icon solid fa-bug"></i> 
-                            <span>Éradiquez les <strong>nuisibles et maladies</strong> (<strong>Hantavirus</strong>, rats, insectes...)</span>
-                        </div>
-                    </div>
+                   <div class="banner-arguments">
+                       <div class="arg-item">
+                           <i class="icon solid fa-chart-line" style="transform: scaleY(-1);"></i> 
+                           <span>Réduisez drastiquement <strong>vos coûts</strong></span>
+                       </div>
+                       <div class="arg-item">
+                           <i class="icon solid fa-shield-alt"></i> 
+                           <span>Anticipez les <strong>réglementations environnementales</strong></span>
+                       </div>
+                       <div class="arg-item">
+                           <i class="icon solid fa-bug"></i> 
+                           <span>Éradiquez les <strong>nuisibles et maladies</strong> (<strong>Hantavirus</strong>, rats, insectes...)</span>
+                       </div>
+                   </div>
                     
-                    <footer>
-                        <ul class="buttons stacked">
-                            <li><a href="#nos-machines" class="button fit scrolly">Découvrez nos déshydratateurs professionnels de 15 kg à 1400 kg</a></li>
-                        </ul>
-                    </footer>
-                </div>
-            </section>
-
-            <article id="main">
-
-                <section id="comment-ca-marche">
-                    <div class="titre-parfait scroll-reveal">
-                        <h2>Comment ça marche?</h2>
-                        <p>Notre processus de déshydratation innovant transforme vos biodéchets en matière sèche valorisable, réduisant drastiquement leur volume et leur poids tout en préservant leurs propriétés nutritives.</p>
-                    </div>
-                    <div class="ligne-parfaite">
-                        <div class="colonne-img scroll-reveal">
-                            <img src="images/image_2.jpg" alt="Biodéchets avant traitement" />
-                        </div>
-                        <div class="colonne-texte scroll-reveal delay-1">
-                            <h3>Un processus simple et efficace</h3>
-                            <p>Notre technologie utilise un processus thermique contrôlé qui élimine l'eau contenue dans les biodéchets sans altérer leur composition organique. Le résultat : une réduction de volume jusqu'à 80 à 90% et une matière stabilisée, facile à stocker et à transporter.</p>
-                            <ul class="custom-check-list">
+                   <footer>
+                       <ul class="buttons banner-buttons">
+                           <li><a href="#nos-machines" class="button scrolly">Découvrez nos déshydrateurs professionnels de 15 kg à 1400 kg</a></li>
+                           <li><a href="#machines-particuliers" class="button scrolly">Découvrez nos déshydrateurs pour particuliers</a></li>
+                       </ul>
+                   </footer>
+               </div>
+           </section>
+ 
+           <article id="main">
+ 
+               <section id="comment-ca-marche">
+                   <div class="titre-parfait scroll-reveal">
+                       <h2>Comment ça marche?</h2>
+                       <p>Notre processus de déshydratation innovant transforme vos biodéchets en matière sèche valorisable, réduisant drastiquement leur volume et leur poids tout en préservant leurs propriétés nutritives.</p>
+                   </div>
+                   <div class="ligne-parfaite">
+                       <div class="colonne-img scroll-reveal">
+                           <img src="images/image_2.jpg" alt="Biodéchets avant traitement" />
+                       </div>
+                       <div class="colonne-texte scroll-reveal delay-1">
+                           <h3>Un processus simple et efficace</h3>
+                           <p>Notre technologie utilise un processus thermique contrôlé qui élimine l'eau contenue dans les biodéchets sans altérer leur composition organique. Le résultat : une réduction de volume jusqu'à 80 à 90% et une matière stabilisée, facile à stocker et à transporter.</p>
+                           <ul class="custom-check-list">
                                 <li><i class="icon regular fa-check-circle"></i> Collecte et tri automatisé des biodéchets</li>
                                 <li><i class="icon regular fa-check-circle"></i> Déshydratation thermique à basse température</li>
                                 <li><i class="icon regular fa-check-circle"></i> Récupération de la matière sèche valorisable</li>
                                 <li><i class="icon regular fa-check-circle"></i> Traitement des effluents et recyclage de l'énergie</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="ligne-parfaite" style="margin-bottom: 0 !important;">
-                        <div class="colonne-texte scroll-reveal">
-                            <h3>Technologie éco-responsable</h3>
-                            <p>Notre système intègre des technologies de pointe pour minimiser la consommation énergétique et maximiser l'efficacité du processus. La chaleur générée est récupérée et réutilisée, créant un cycle vertueux qui réduit l'impact environnemental.</p>
-                            <div class="stat-boxes">
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="ligne-parfaite" style="margin-bottom: 0 !important;">
+                       <div class="colonne-texte scroll-reveal">
+                           <h3>Technologie éco-responsable</h3>
+                           <p>Notre système intègre des technologies de pointe pour minimiser la consommation énergétique et maximiser l'efficacité du processus. La chaleur générée est récupérée et réutilisée, créant un cycle vertueux qui réduit l'impact environnemental.</p>
+                           <div class="stat-boxes">
                                 <div class="stat-box">
-                                    <h4>80 à 90%</h4>
-                                    <p>Réduction de volume</p>
+                                   <h4>80 à 90%</h4>
+                                   <p>Réduction de volume</p>
                                 </div>
                                 <div class="stat-box">
-                                    <h4>70 à 80%</h4>
-                                    <p>Récupération d'eau hygiénisée</p>
+                                   <h4>70 à 80%</h4>
+                                   <p>Récupération d'eau hygiénisée</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="colonne-img scroll-reveal delay-1">
-                            <img src="images/image_3.jpg" alt="Matière sèche obtenue" />
-                        </div>
-                    </div>
-                </section>
-
-                <section id="nos-machines" class="section-machines">
-                    <div class="container-machines">
-                        <div class="titre-parfait scroll-reveal">
-                            <h2>Notre Gamme de Déshydratateurs</h2>
-                            <p>Sélectionnez votre secteur d'activité pour découvrir les machines adaptées à vos volumes.</p>
-                        </div>
-
-                        <div class="cat-grid">
-
-                            <div class="cat-card scroll-reveal delay-1" onclick="toggleCat('petite', this)" style="--cat-img: url('images/cat-petite.jpg')">
+                           </div>
+                       </div>
+                       <div class="colonne-img scroll-reveal delay-1">
+                           <img src="images/image_3.jpg" alt="Matière sèche obtenue" />
+                       </div>
+                   </div>
+               </section>
+ 
+               <section id="nos-machines" class="section-machines">
+                   <div class="container-machines">
+                       <div class="titre-parfait scroll-reveal">
+                           <h2>Notre Gamme de déshydrateurs professionnels</h2>
+                           <p>Sélectionnez votre secteur d'activité pour découvrir les machines adaptées à vos volumes.</p>
+                       </div>
+ 
+                       <div class="cat-grid">
+ 
+                           <div class="cat-card scroll-reveal delay-1" onclick="toggleCat('petite', this)" style="--cat-img: url('images/cat-petite.jpg')">
                                 <div class="cat-overlay"></div>
                                 <div class="cat-content">
                                     <i class="icon solid fa-school cat-icon"></i>
-                                    <h3>Petite Capacité</h3>
+                                   <h3>Petite Capacité</h3>
                                     <div class="cat-range">15 à 100 kg / jour</div>
                                     <p class="cat-clients">Restauration, écoles, petits supermarchés</p>
                                     <span class="cat-btn">Voir les machines <i class="icon solid fa-chevron-down"></i></span>
                                 </div>
-                            </div>
-
-                            <div class="cat-card scroll-reveal delay-2" onclick="toggleCat('moyenne', this)" style="--cat-img: url('images/cat-moyenne.jpg')">
+                           </div>
+ 
+                           <div class="cat-card scroll-reveal delay-2" onclick="toggleCat('moyenne', this)" style="--cat-img: url('images/cat-moyenne.jpg')">
                                 <div class="cat-overlay"></div>
                                 <div class="cat-content">
                                     <i class="icon solid fa-hotel cat-icon"></i>
-                                    <h3>Moyenne Capacité</h3>
+                                   <h3>Moyenne Capacité</h3>
                                     <div class="cat-range">150 à 500 kg / jour</div>
                                     <p class="cat-clients">Hôtellerie, restauration collective, grands supermarchés</p>
                                     <span class="cat-btn">Voir les machines <i class="icon solid fa-chevron-down"></i></span>
                                 </div>
-                            </div>
-
-                            <div class="cat-card scroll-reveal delay-3" onclick="toggleCat('grande', this)" style="--cat-img: url('images/cat-grande.jpg')">
+                           </div>
+ 
+                           <div class="cat-card scroll-reveal delay-3" onclick="toggleCat('grande', this)" style="--cat-img: url('images/cat-grande.jpg')">
                                 <div class="cat-overlay"></div>
                                 <div class="cat-content">
                                     <i class="icon solid fa-industry cat-icon"></i>
-                                    <h3>Grande Capacité</h3>
+                                   <h3>Grande Capacité</h3>
                                     <div class="cat-range">500 à 1400 kg / jour</div>
                                     <p class="cat-clients">Agroalimentaire, traitement industriel centralisé</p>
                                     <span class="cat-btn">Voir les machines <i class="icon solid fa-chevron-down"></i></span>
                                 </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Panel Petite Capacité -->
-                        <div id="panel-petite" class="cat-machines-panel">
-                            <div class="cat-label"><span>Petite Capacité — Restauration, écoles, petits supermarchés</span></div>
-                            <div class="cat-machines-panel-inner">
+                           </div>
+ 
+                       </div>
+ 
+                       <!-- Panel Petite Capacité -->
+                       <div id="panel-petite" class="cat-machines-panel">
+                           <div class="cat-label"><span>Petite Capacité — Restauration, écoles, petits supermarchés</span></div>
+                           <div class="cat-machines-panel-inner">
                                 <div class="machine-card">
                                     <img src="images/G30F.png" alt="Déshydratateur G 30 F" class="machine-img" />
                                     <div class="machine-content">
-                                        <h4>G 30 F</h4>
+                                       <h4>G 30 F</h4>
                                         <ul class="machine-specs">
-                                            <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 15 à 30 kg / jour</li>
-                                            <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 80 x 80 x 120 cm</li>
-                                            <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 1,5 Kw (Mono)</li>
-                                        </ul>
-                                        <div class="machine-btn"><a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Recevoir les détails techniques</a></div>
-                                    </div>
+                                           <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 15 à 30 kg / jour</li>
+                                           <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 80 x 80 x 120 cm</li>
+                                           <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 1,5 Kw (Mono)</li>
+                                       </ul>
+                                   </div>
                                 </div>
                                 <div class="machine-card">
                                     <img src="images/G100F.png" alt="Déshydratateur G 100 F" class="machine-img" />
                                     <div class="machine-content">
-                                        <h4>G 100 F</h4>
+                                       <h4>G 100 F</h4>
                                         <ul class="machine-specs">
-                                            <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 50 à 100 kg / jour</li>
-                                            <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 115 x 100 x 125 cm</li>
-                                            <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 3 Kw (Triphasé)</li>
-                                        </ul>
-                                        <div class="machine-btn"><a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Recevoir les détails techniques</a></div>
-                                    </div>
+                                           <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 50 à 100 kg / jour</li>
+                                           <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 115 x 100 x 125 cm</li>
+                                           <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 3 Kw (Triphasé)</li>
+                                       </ul>
+                                   </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Panel Moyenne Capacité -->
-                        <div id="panel-moyenne" class="cat-machines-panel">
-                            <div class="cat-label"><span>Moyenne Capacité — Hôtellerie, restauration collective, grands supermarchés</span></div>
-                            <div class="cat-machines-panel-inner">
+                           </div>
+                           <div class="panel-global-btn">
+                               <a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Demander les fiches techniques détaillées</a>
+                           </div>
+                       </div>
+ 
+                       <!-- Panel Moyenne Capacité -->
+                       <div id="panel-moyenne" class="cat-machines-panel">
+                           <div class="cat-label"><span>Moyenne Capacité — Hôtellerie, restauration collective, grands supermarchés</span></div>
+                           <div class="cat-machines-panel-inner">
                                 <div class="machine-card">
                                     <img src="images/G300F.png" alt="Déshydratateur G 300 F" class="machine-img" />
                                     <div class="machine-content">
-                                        <h4>G 300 F</h4>
+                                       <h4>G 300 F</h4>
                                         <ul class="machine-specs">
-                                            <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 150 à 300 kg / jour</li>
-                                            <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 160 x 140 x 165 cm</li>
-                                            <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 9 Kw (Triphasé)</li>
-                                        </ul>
-                                        <div class="machine-btn"><a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Recevoir les détails techniques</a></div>
-                                    </div>
+                                           <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 150 à 300 kg / jour</li>
+                                           <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 160 x 140 x 165 cm</li>
+                                           <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 9 Kw (Triphasé)</li>
+                                       </ul>
+                                   </div>
                                 </div>
                                 <div class="machine-card">
                                     <img src="images/G500F.png" alt="Déshydratateur G 500 F" class="machine-img" />
                                     <div class="machine-content">
-                                        <h4>G 500 F</h4>
+                                       <h4>G 500 F</h4>
                                         <ul class="machine-specs">
-                                            <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 300 à 500 kg / jour</li>
-                                            <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 220 x 145 x 175 cm</li>
-                                            <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 11 Kw (Triphasé)</li>
-                                        </ul>
-                                        <div class="machine-btn"><a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Recevoir les détails techniques</a></div>
-                                    </div>
+                                           <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 300 à 500 kg / jour</li>
+                                           <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 220 x 145 x 175 cm</li>
+                                           <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 11 Kw (Triphasé)</li>
+                                       </ul>
+                                   </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Panel Grande Capacité -->
-                        <div id="panel-grande" class="cat-machines-panel">
-                            <div class="cat-label"><span>Grande Capacité — Agroalimentaire, traitement industriel centralisé</span></div>
-                            <div class="cat-machines-panel-inner">
+                           </div>
+                           <div class="panel-global-btn">
+                               <a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Demander les fiches techniques détaillées</a>
+                           </div>
+                       </div>
+ 
+                       <!-- Panel Grande Capacité -->
+                       <div id="panel-grande" class="cat-machines-panel">
+                           <div class="cat-label"><span>Grande Capacité — Agroalimentaire, traitement industriel centralisé</span></div>
+                           <div class="cat-machines-panel-inner">
                                 <div class="machine-card">
                                     <img src="images/G1000F.png" alt="Déshydratateur G 1000 F" class="machine-img" />
                                     <div class="machine-content">
-                                        <h4>G 1000 F</h4>
+                                       <h4>G 1000 F</h4>
                                         <ul class="machine-specs">
-                                            <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 500 à 1000 kg / jour</li>
-                                            <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 280 x 180 x 190 cm</li>
-                                            <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 38 Kw (Triphasé)</li>
-                                        </ul>
-                                        <div class="machine-btn"><a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Recevoir les détails techniques</a></div>
-                                    </div>
+                                           <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 500 à 1000 kg / jour</li>
+                                           <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 280 x 180 x 190 cm</li>
+                                           <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 38 Kw (Triphasé)</li>
+                                       </ul>
+                                   </div>
                                 </div>
                                 <div class="machine-card">
                                     <img src="images/G1300F.png" alt="Déshydratateur G 1300 F" class="machine-img" />
                                     <div class="machine-content">
-                                        <h4>G 1300 F</h4>
+                                       <h4>G 1300 F</h4>
                                         <ul class="machine-specs">
-                                            <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 700 à 1400 kg / jour</li>
-                                            <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 300 x 190 x 210 cm</li>
-                                            <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 42 Kw (Triphasé)</li>
-                                        </ul>
-                                        <div class="machine-btn"><a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Recevoir les détails techniques</a></div>
-                                    </div>
+                                           <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 700 à 1400 kg / jour</li>
+                                           <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 300 x 190 x 210 cm</li>
+                                           <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 42 Kw (Triphasé)</li>
+                                       </ul>
+                                   </div>
                                 </div>
-                            </div>
-                        </div>
+                           </div>
+                           <div class="panel-global-btn">
+                               <a href="#cta-contact" class="scrolly"><i class="icon solid fa-envelope"></i> Demander les fiches techniques détaillées</a>
+                           </div>
+                       </div>
+ 
+                       <!-- SECTION : GAMME PARTICULIERS (STYLE CARTE) -->
+                       <div id="machines-particuliers" style="margin-top: 3em; margin-bottom: 2em; background-color: transparent !important; width: 100%;">
+                           
+                           <div class="titre-parfait scroll-reveal">
+                                <h2>Notre Gamme de déshydrateurs pour particuliers</h2>
+                               <p>Découvrez notre solution parfaitement adaptée à un usage domestique au quotidien.</p>
+                           </div>
+ 
+                           <!-- Conteneur flex pour centrer l'unique carte -->
+                           <div style="display: flex; justify-content: center; margin-bottom: 2em;">
+                                
+                                <!-- LA CARTE PARTICULIER -->
+                                <div class="cat-card scroll-reveal" onclick="toggleCat('particulier', this)" style="--cat-img: url('images/cat-particulier.jpeg'); width: 100%; max-width: 360px;">
+                                    <div class="cat-overlay"></div>
+                                    <div class="cat-content">
+                                       <h3>Modèle Domestique</h3>
+                                        <div class="cat-range">2 à 5 kg / jour</div>
+                                        <p class="cat-clients">Maisons, appartements, <br>garages</p>
+                                       <span class="cat-btn">Voir la machine <i class="icon solid fa-chevron-down"></i></span>
+                                   </div>
+                                </div>
+ 
+                           </div>
+ 
+                           <!-- LE PANNEAU DÉROULANT (qui s'ouvre au clic) -->
+                           <div id="panel-particulier" class="cat-machines-panel">
+                                <div class="cat-label" style="justify-content: center;"><span>Gamme Particuliers — Idéal pour la maison</span></div>
+                                
+                                <!-- Conteneur pour centrer la fiche de la machine -->
+                                <div class="cat-machines-panel-inner" style="display: flex; justify-content: center;">
+                                    <div class="machine-card" style="width: 100%; max-width: 360px;">
+                                        <img src="images/machine-particulier.png" alt="Déshydrateur domestique" class="machine-img" />
+                                        <div class="machine-content">
+                                            <h4>G 5,2 F (Modèle Particulier)</h4>
+                                            <ul class="machine-specs">
+                                                <li><i class="icon solid fa-weight-hanging"></i> <strong>Capacité :</strong> 3 à 5 kg / jour</li>
+                                                <li><i class="icon solid fa-ruler-combined"></i> <strong>Dimensions :</strong> 31,4 x 31,4 x 36 cm</li>
+                                                <li><i class="icon solid fa-bolt"></i> <strong>Puissance :</strong> 100 W (Mono)</li>
+                                            </ul>
+                                        </div>
+                                   </div>
+                                </div>
+                                
+                                <div class="panel-global-btn">
+                                    <a href="#cta-contact" class="scrolly"><i class="icon solid fa-bell"></i>Demander les fiches techniques détaillées</a>
+                                </div>
+                           </div>
+ 
+                       </div>
+                       <!-- ========================================== -->
 
-                        <div class="custom-machines-banner scroll-reveal">
-                            <div class="custom-machines-icon"><i class="icon solid fa-cogs"></i></div>
-                            <div class="custom-machines-text">
-                                <h3>Articles intermédiaires possibles sur demande</h3>
-                                <p>Vous avez un besoin spécifique ou des volumes particuliers ? Nous concevons également des déshydratateurs de capacités intermédiaires pour nous adapter parfaitement à votre configuration.</p>
-                            </div>
-                            <div class="custom-machines-action">
-                                <a href="#cta-contact" class="button primary scrolly">Nous consulter</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-
-                <section id="benefices" class="section-benefices">
-                    <div class="container-benefices">
-                        <div class="benefices-intro">
-                            <div class="benefices-texte scroll-reveal">
-                                <h2>Des bénéfices concrets pour votre entreprise</h2>
-                                <p>Au-delà de la mise en conformité avec les nouvelles <strong>réglementations environnementales</strong>, la déshydratation assainit vos espaces de travail en <strong>combattant radicalement les odeurs, les nuisibles et les maladies</strong> (<strong>Hantavirus</strong>, rats, insectes...). Un investissement stratégique qui transforme une contrainte en opportunité économique.</p>
-                                <p>En réduisant drastiquement le volume de vos déchets organiques, vous diminuez vos coûts de collecte, de transport et de traitement. La matière déshydratée peut être valorisée comme amendement agricole ou source d'énergie, créant ainsi de nouvelles sources de revenus.</p>
-                                <p>Notre solution vous permet également de vous conformer aux normes de plus en plus BIEN strictes, tout en améliorant votre image de marque auprès de vos clients et partenaires sensibles aux enjeux écologiques et d'hygiène.</p>
-                            </div>
-                            <div class="benefices-img scroll-reveal delay-1">
-                                <img src="images/image_4.jpg" alt="Bénéfices écologiques et économiques" />
-                            </div>
-                        </div>
-                        <div class="benefices-grid">
-                            <div class="benefice-card scroll-reveal delay-1">
-                                <div class="icon-box"><i class="icon solid fa-chart-line" style="transform: scaleY(-1);"></i></div>
-                                <h4>Réduction du Volume</h4>
-                                <p>Diminuez jusqu'à 80 à 90% le volume de vos biodéchets grâce à notre technologie de déshydratation avancée, optimisant ainsi vos coûts de transport et de stockage.</p>
-                            </div>
-                            <div class="benefice-card scroll-reveal delay-2">
-                                <div class="icon-box"><i class="icon solid fa-tint"></i></div>
-                                <h4>Récupération d'eau hygiénisée</h4>
-                                <p>Notre processus récupère 70 à 80 % de l'eau hygiénisée, permettant sa réutilisation et réduisant la consommation d'eau douce tout en minimisant les rejets environnementaux.</p>
-                            </div>
-                            <div class="benefice-card scroll-reveal delay-3">
-                                <div class="icon-box"><i class="icon solid fa-leaf"></i></div>
-                                <h4>Impact Écologique</h4>
-                                <p>Transformez vos déchets organiques en ressources valorisables tout en respectant l'environnement et en contribuant à l'économie circulaire.</p>
-                            </div>
-                            <div class="benefice-card scroll-reveal delay-4">
-                                <div class="icon-box"><i class="icon solid fa-bolt"></i></div>
-                                <h4>Efficacité Opérationnelle</h4>
-                                <p>Système automatisé et facile à intégrer dans vos processus existants, avec un retour sur investissement rapide et mesurable.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="legislation" class="section-legislation">
-                    <div class="container-legislation">
-                        <div class="legis-header scroll-reveal">
-                            <h2>Législation et Normes</h2>
-                            <p>Nos solutions respectent l'ensemble des réglementations européennes et françaises en matière de gestion des biodéchets et sont certifiées selon les normes les plus exigeantes.</p>
-                        </div>
-                        <div class="legis-grid">
-                            <div class="legis-card scroll-reveal delay-1">
+                       <!-- LA BANNIÈRE VERTE "ARTICLES INTERMÉDIAIRES" -->
+                       <div class="custom-machines-banner scroll-reveal">
+                           <div class="custom-machines-icon"><i class="icon solid fa-cogs"></i></div>
+                           <div class="custom-machines-text">
+                               <h3>Articles intermédiaires possibles sur demande</h3>
+                               <p>Vous avez un besoin spécifique ou des volumes particuliers ? Nous concevons également des déshydrateurs de capacités intermédiaires pour nous adapter parfaitement à votre configuration.</p>
+                           </div>
+                           <div class="custom-machines-action">
+                               <a href="#cta-contact" class="button primary scrolly">Nous consulter</a>
+                           </div>
+                       </div>
+                       
+                   </div> <!-- FIN DE container-machines -->
+               </section> <!-- FIN DE section-machines -->
+                
+               <section id="legislation" class="section-legislation">
+                   <div class="container-legislation">
+                       <div class="legis-header scroll-reveal">
+                           <h2>Législation et Normes</h2>
+                           <p>Nos solutions respectent l'ensemble des réglementations européennes et françaises en matière de gestion des biodéchets et sont certifiées selon les normes les plus exigeantes.</p>
+                       </div>
+                       <div class="legis-grid">
+                           <div class="legis-card scroll-reveal delay-1">
                                 <i class="icon solid fa-award legis-icon"></i>
-                                <h4>ISO</h4>
-                                <p>Management environnemental</p>
-                            </div>
-                            <div class="legis-card scroll-reveal delay-2">
+                               <h4>ISO</h4>
+                               <p>Management environnemental</p>
+                           </div>
+                           <div class="legis-card scroll-reveal delay-2">
                                 <i class="icon solid fa-shield-alt legis-icon"></i>
-                                <h4>CE</h4>
-                                <p>Conformité européenne</p>
-                            </div>
-                            <div class="legis-card scroll-reveal delay-3">
+                               <h4>CE</h4>
+                               <p>Conformité européenne</p>
+                           </div>
+                           <div class="legis-card scroll-reveal delay-3">
                                 <i class="icon solid fa-file-contract legis-icon"></i>
-                                <h4>Directive 2008/98/CE</h4>
-                                <p>Gestion des déchets</p>
-                            </div>
-                            <div class="legis-card scroll-reveal delay-4">
+                               <h4>Directive 2008/98/CE</h4>
+                               <p>Gestion des déchets</p>
+                           </div>
+                           <div class="legis-card scroll-reveal delay-4">
                                 <i class="icon solid fa-check-circle legis-icon"></i>
                                 <h4>Loi AGEC</h4>
-                                <p>Anti-gaspillage France</p>
-                            </div>
-                        </div>
-                        <div class="legis-banner scroll-reveal">
-                            <h3>Conformité réglementaire garantie</h3>
-                            <div class="legis-subtitle">Une sécurité juridique et environnementale</div>
-                            <p>La directive européenne 2008/98/CE sur les déchets encourage la valorisation des biodéchets et fixe des objectifs ambitieux de recyclage. En choisissant GREEN 3D SOLUTIONS, vous anticipez les futures réglementations et positionnez votre entreprise comme un acteur responsable de l'économie circulaire.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="partenaires" class="section-partenaires">
-                    <div class="container-partenaires">
-                        <div class="titre-parfait scroll-reveal">
-                            <h2>Zones d'intervention</h2>
-                            <p>Nous déployons nos solutions de déshydratation à travers le monde grâce à notre réseau de distributeurs et partenaires agréés, présents dans des zones stratégiques pour être au plus proche de vos besoins.</p>
-                        </div>
-                        <div class="zones-grid">
-                            <div class="partenaire-card bg-caraibes scroll-reveal delay-1">
+                               <p>Anti-gaspillage France</p>
+                           </div>
+                       </div>
+                       <div class="legis-banner scroll-reveal">
+                           <h3>Conformité réglementaire garantie</h3>
+                           <div class="legis-subtitle">Une sécurité juridique et environnementale</div>
+                           <p>La directive européenne 2008/98/CE sur les déchets encourage la valorisation des biodéchets et fixe des objectifs ambitieux de recyclage. En choisissant GREEN 3D SOLUTIONS, vous anticipez les futures réglementations et positionnez votre entreprise comme un acteur responsable de l'économie circulaire.</p>
+                       </div>
+                   </div>
+               </section>
+ 
+               <section id="partenaires" class="section-partenaires">
+                   <div class="container-partenaires">
+                       <div class="titre-parfait scroll-reveal">
+                           <h2>Zones d'intervention</h2>
+                           <p>Nous déployons nos solutions de déshydratation à travers le monde grâce à notre réseau de distributeurs et partenaires agréés, présents dans des zones stratégiques pour être au plus proche de vos besoins.</p>
+                       </div>
+                       <div class="zones-grid">
+                           <div class="partenaire-card bg-caraibes scroll-reveal delay-1">
                                 <i class="icon solid fa-map-marker-alt"></i>
-                                <h4>Caraïbes</h4>
-                            </div>
-                            <div class="partenaire-card bg-ocean-indien scroll-reveal delay-2">
+                               <h4>Caraïbes</h4>
+                           </div>
+                           <div class="partenaire-card bg-ocean-indien scroll-reveal delay-2">
                                 <i class="icon solid fa-map-marker-alt"></i>
                                 <h4>Océan Indien</h4>
-                            </div>
-                            <div class="partenaire-card bg-moyen-orient scroll-reveal delay-3">
+                           </div>
+                           <div class="partenaire-card bg-moyen-orient scroll-reveal delay-3">
                                 <i class="icon solid fa-map-marker-alt"></i>
-                                <h4>Moyen-Orient</h4>
-                            </div>
-                            <div class="partenaire-card bg-afrique scroll-reveal delay-4">
+                               <h4>Moyen-Orient</h4>
+                           </div>
+                           <div class="partenaire-card bg-afrique scroll-reveal delay-4">
                                 <i class="icon solid fa-map-marker-alt"></i>
-                                <h4>Afrique</h4>
-                            </div>
-                        </div>
-                        <div class="autres-zones-banner scroll-reveal">
-                            <i class="icon solid fa-globe"></i>
-                            <span>Et de nombreux autres partenaires à travers le monde pour vous accompagner...</span>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="actualites" class="section-standard">
-                    <div class="titre-parfait scroll-reveal">
-                        <h2>Actualités</h2>
-                        <p>Suivez nos dernières publications en temps réel directement depuis notre page LinkedIn.</p>
-                    </div>
+                               <h4>Afrique</h4>
+                           </div>
+                       </div>
+                       <div class="autres-zones-banner scroll-reveal">
+                           <i class="icon solid fa-globe"></i>
+                           <span>Et de nombreux autres partenaires à travers le monde pour vous accompagner...</span>
+                       </div>
+                   </div>
+               </section>
+ 
+               <section id="actualites" class="section-standard">
+                   <div class="titre-parfait scroll-reveal">
+                       <h2>Actualités</h2>
+                       <p>Suivez nos dernières publications en temps réel directement depuis notre page LinkedIn.</p>
+                   </div>
                     
-                    <div class="mock-widget-container scroll-reveal">
-                        <div class="mock-widget-header">
-                            <div class="mock-widget-title">
+                   <div class="mock-widget-container scroll-reveal">
+                       <div class="mock-widget-header">
+                           <div class="mock-widget-title">
                                 <i class="icon brands fa-linkedin" style="font-size:1.5em;"></i> Green 3D Solutions sur LinkedIn
-                            </div>
-                            <a href="https://www.linkedin.com/in/green-3d-solutions-b3155040a/" target="_blank" style="color: #0a66c2; text-decoration: none; font-size: 0.9em; font-weight: 600;">S'abonner +</a>
-                        </div>
-                        
-                        <div style="text-align: center; padding: 5em 2em; background-color: #fafafa;">
-                            <i class="icon solid fa-newspaper" style="font-size: 3.5em; color: #d1efe0; margin-bottom: 0.5em; display: block;"></i>
-                            <h3 style="color: #27ae60; font-weight: 800; font-size: 1.6em; margin-bottom: 0.5em; border: none; text-transform: none;">Nos actualités arrivent bientôt</h3>
-                            <p>Abonnez-vous à notre page LinkedIn pour ne rien manquer de nos prochaines annonces, de nos nouvelles installations et de l'évolution de notre gamme.</p>
-                            <a href="https://www.linkedin.com/in/green-3d-solutions-b3155040a/" target="_blank" class="button primary" style="background-color: #0a66c2 !important; box-shadow: none !important;">Voir notre page LinkedIn</a>
-                        </div>
-                    </div>
-                </section>
-
-            </article>
-
-            <section id="cta-contact">
-                <h2>Prêt à transformer vos biodéchets en opportunité ?</h2>
-                <p>Contactez-nous dès aujourd'hui pour découvrir comment notre solution peut réduire vos coûts et votre impact environnemental.</p>
+                           </div>
+                           <a href="https://www.linkedin.com/in/green-3d-solutions-b3155040a/" target="_blank" style="color: #0a66c2; text-decoration: none; font-size: 0.9em; font-weight: 600;">S'abonner +</a>
+                       </div>
+                       
+                       <div style="text-align: center; padding: 5em 2em; background-color: #fafafa;">
+                           <i class="icon solid fa-newspaper" style="font-size: 3.5em; color: #d1efe0; margin-bottom: 0.5em; display: block;"></i>
+                           <h3 style="color: #27ae60; font-weight: 800; font-size: 1.6em; margin-bottom: 0.5em; border: none; text-transform: none;">Nos actualités arrivent bientôt</h3>
+                           <p>Abonnez-vous à notre page LinkedIn pour ne rien manquer de nos prochaines annonces, de nos nouvelles installations et de l'évolution de notre gamme.</p>
+                           <a href="https://www.linkedin.com/in/green-3d-solutions-b3155040a/" target="_blank" class="button primary" style="background-color: #0a66c2 !important; box-shadow: none !important;">Voir notre page LinkedIn</a>
+                       </div>
+                   </div>
+               </section>
+ 
+           </article>
+ 
+           <section id="cta-contact">
+               <h2>Prêt à transformer vos biodéchets en opportunité ?</h2>
+               <p>Contactez-nous dès aujourd'hui pour découvrir comment notre solution peut réduire vos coûts et votre impact environnemental.</p>
                 <a href="mailto:contact@green3dsolutions.com?subject=Demande de devis" class="button custom-btn">Demander un devis</a>
-            </section>
-
+           </section>
+ 
             <footer id="footer" class="custom-footer">
-                <div class="footer-container">
+               <div class="footer-container">
                     
-                    <div class="footer-col links-col">
-                        <h4>Liens rapides</h4>
-                        <ul>
-                            <li><a href="#page-wrapper" class="scrolly">Accueil</a></li>
-                            <li><a href="#comment-ca-marche" class="scrolly">Comment ça marche ?</a></li>
-                            <li><a href="#nos-machines" class="scrolly">Nos Machines</a></li>
-                            <li><a href="#benefices" class="scrolly">Bénéfices</a></li>
-                            <li><a href="#legislation" class="scrolly">Législation</a></li>
-                            <li><a href="#partenaires" class="scrolly">Zones d'intervention</a></li>
-                            <li><a href="#actualites" class="scrolly">Actualités</a></li>
-                        </ul>
-                    </div>
+                   <div class="footer-col links-col">
+                       <h4>Liens rapides</h4>
+                       <ul>
+                           <li><a href="#page-wrapper" class="scrolly">Accueil</a></li>
+                           <li><a href="#comment-ca-marche" class="scrolly">Comment ça marche ?</a></li>
+                           <li><a href="#nos-machines" class="scrolly">Nos Machines</a></li>
+                           <li><a href="#benefices" class="scrolly">Bénéfices</a></li>
+                           <li><a href="#legislation" class="scrolly">Législation</a></li>
+                           <li><a href="#partenaires" class="scrolly">Zones d'intervention</a></li>
+                           <li><a href="#actualites" class="scrolly">Actualités</a></li>
+                       </ul>
+                   </div>
                     
-                    <div class="footer-col center-col">
-                        <div class="footer-logo-brand-block">
-                            <span class="icon solid fa-leaf footer-logo-icon"></span>
-                            <div class="footer-brand-text-container">
+                   <div class="footer-col center-col">
+                       <div class="footer-logo-brand-block">
+                           <span class="icon solid fa-leaf footer-logo-icon"></span>
+                           <div class="footer-brand-text-container">
                                 <h3>GREEN 3D SOLUTIONS</h3>
-                                <p>Solutions écologiques innovantes</p>
-                            </div>
-                        </div>
-                        <h4>Suivez-nous</h4>
-                        <ul class="social-icons">
-                            <li><a href="https://www.linkedin.com/in/green-3d-solutions-b3155040a/" target="_blank" class="icon brands fa-linkedin-in" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
-                            <li><a href="#" class="icon brands fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
-                            <li><a href="#" class="icon brands fa-facebook-f" title="Facebook"><span class="label">Facebook</span></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-col contact-col">
-                        <h4>Commercial</h4>
-                        <ul>
-                            <li><i class="icon solid fa-envelope"></i> <span>contact@green3dsolutions.com</span></li>
-                            <li><i class="icon solid fa-phone"></i> <span>+33 (0)4 74 05 96 68</span></li>
-                            <li><i class="icon solid fa-mobile-alt"></i> <span>+33 (0)6 84 50 59 85</span></li>
-                            <li><i class="icon solid fa-map-marker-alt"></i> <span>42360 Panissières</span></li>
-                        </ul>
-                        
-                        <h4 style="margin-top: 1.5em;">Contact Technique</h4>
-                        <ul>
-                            <li><i class="icon solid fa-envelope"></i> <span>infotech@green3dsolutions.com</span></li>
-                        </ul>
-                        
-                        <h4 style="margin-top: 1.5em;">Zone Moyen-Orient</h4>
-                        <ul>
-                            <li><i class="icon solid fa-envelope"></i> <span>contactmo@green3dsolutions.com</span></li>
-                            <li><i class="icon solid fa-phone"></i> <span>+90 (534) 329 85 39</span></li>
-                            <li><i class="icon solid fa-mobile-alt"></i> <span>+33 (0)6 95 21 04 33</span></li>
-                        </ul>
-                    </div>
-                </div>
+                               <p>Solutions écologiques innovantes</p>
+                           </div>
+                       </div>
+                       <h4>Suivez-nous</h4>
+                       <ul class="social-icons">
+                           <li><a href="https://www.linkedin.com/in/green-3d-solutions-b3155040a/" target="_blank" class="icon brands fa-linkedin-in" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+                           <li><a href="#" class="icon brands fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
+                           <li><a href="#" class="icon brands fa-facebook-f" title="Facebook"><span class="label">Facebook</span></a></li>
+                       </ul>
+                   </div>
+ 
+                   <div class="footer-col contact-col">
+                       <h4>Commercial</h4>
+                       <ul>
+                           <li><i class="icon solid fa-envelope"></i> <span>contact@green3dsolutions.com</span></li>
+                           <li><i class="icon solid fa-phone"></i> <span>+33 (0)4 74 05 96 68</span></li>
+                           <li><i class="icon solid fa-mobile-alt"></i> <span>+33 (0)6 84 50 59 85</span></li>
+                           <li><i class="icon solid fa-map-marker-alt"></i> <span>42360 Panissières</span></li>
+                       </ul>
+                       
+                       <h4 style="margin-top: 1.5em;">Contact Technique</h4>
+                       <ul>
+                           <li><i class="icon solid fa-envelope"></i> <span>infotech@green3dsolutions.com</span></li>
+                       </ul>
+                       
+                       <h4 style="margin-top: 1.5em;">Zone Moyen-Orient</h4>
+                       <ul>
+                           <li><i class="icon solid fa-envelope"></i> <span>contactmo@green3dsolutions.com</span></li>
+                           <li><i class="icon solid fa-phone"></i> <span>+90 (534) 329 85 39</span></li>
+                           <li><i class="icon solid fa-mobile-alt"></i> <span>+33 (0)6 95 21 04 33</span></li>
+                       </ul>
+                   </div>
+               </div>
                 
-                <div class="footer-bottom">
-                    &copy; Green 3D Solutions. Tous droits réservés.
-                </div>
-            </footer>
-
+               <div class="footer-bottom">
+                   &copy; Green 3D Solutions. Tous droits réservés.
+               </div>
+           </footer>
+ 
         </div>
-
+ 
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.dropotron.min.js"></script>
         <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -1139,78 +1252,73 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
+ 
         <script>
             // LOGIQUE DE LA BANNIÈRE DE COOKIES
-            document.addEventListener("DOMContentLoaded", function() {
+           document.addEventListener("DOMContentLoaded", function() {
                 const cookieBanner = document.getElementById("cookie-banner");
                 const acceptBtn = document.getElementById("accept-cookies");
                 const declineBtn = document.getElementById("decline-cookies");
-
+ 
                 if (!localStorage.getItem("cookieConsent")) {
-                    setTimeout(() => {
-                        cookieBanner.classList.add("show");
+                   setTimeout(() => {
+                       cookieBanner.classList.add("show");
                     }, 1500);
                 }
-
-                acceptBtn.addEventListener("click", function() {
-                    localStorage.setItem("cookieConsent", "accepted"); 
-                    cookieBanner.classList.remove("show"); 
+ 
+               acceptBtn.addEventListener("click", function() {
+                   localStorage.setItem("cookieConsent", "accepted"); 
+                   cookieBanner.classList.remove("show"); 
                 });
-
-                document.getElementById("decline-cookies").addEventListener("click", function() {
-                    localStorage.setItem("cookieConsent", "declined"); 
-                    cookieBanner.classList.remove("show"); 
+ 
+               document.getElementById("decline-cookies").addEventListener("click", function() {
+                   localStorage.setItem("cookieConsent", "declined"); 
+                   cookieBanner.classList.remove("show"); 
                 });
-
+ 
                 // LOGIQUE DE SCROLL REVEAL (ANIMATIONS AU DEFILEMENT)
                 const revealElements = document.querySelectorAll('.scroll-reveal');
                 const revealObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('revealed');
-                            observer.unobserve(entry.target); 
-                        }
-                    });
+                   entries.forEach(entry => {
+                       if (entry.isIntersecting) {
+                           entry.target.classList.add('revealed');
+                           observer.unobserve(entry.target); 
+                       }
+                   });
                 }, {
-                    threshold: 0.12,
-                    rootMargin: "0px 0px -40px 0px"
+                   threshold: 0.12,
+                   rootMargin: "0px 0px -40px 0px"
                 });
-
-                revealElements.forEach(element => {
-                    revealObserver.observe(element);
+ 
+               revealElements.forEach(element => {
+                   revealObserver.observe(element);
                 });
             });
         
-            function toggleCat(id, card) {
-            const panel = document.getElementById('panel-' + id);
-            const allPanels = document.querySelectorAll('.cat-machines-panel');
-            const allCards = document.querySelectorAll('.cat-card');
-            const isOpen = panel.classList.contains('open');
-
-            // Ferme tout
-            allPanels.forEach(p => p.classList.remove('open'));
-            allCards.forEach(c => c.classList.remove('active'));
-
-            // Ouvre si c'était fermé
-            if (!isOpen) {
-                panel.classList.add('open');
-                card.classList.add('active');
-                
-                // On laisse juste 150ms pour que l'animation d'ouverture démarre
-                setTimeout(() => {
-                    const grid = document.querySelector('.cat-grid');
-                    
-                    // L'astuce : on cible le BAS (.bottom) de la grille des cartes !
-                    // On retire environ 80px pour que ton menu d'en-tête ne cache pas le titre
-                    const yPosition = grid.getBoundingClientRect().bottom + window.scrollY - 80;
-                    
-                    window.scrollTo({ top: yPosition, behavior: 'smooth' });
-                    
-                }, 150);
+            function toggleCat(id, clickedCard) {
+                const panel = document.getElementById('panel-' + id);
+                const allPanels = document.querySelectorAll('.cat-machines-panel');
+                const allCards = document.querySelectorAll('.cat-card');
+                const isOpen = panel.classList.contains('open');
+ 
+                // Ferme tout
+               allPanels.forEach(p => p.classList.remove('open'));
+               allCards.forEach(c => c.classList.remove('active'));
+ 
+                // Ouvre si c'était fermé
+                if (!isOpen) {
+                   panel.classList.add('open');
+                   clickedCard.classList.add('active');
+                   
+                    // Laisse le temps à l'animation de démarrer
+                   setTimeout(() => {
+                       // Le calcul ciblé sur la carte cliquée
+                       const yPosition = clickedCard.getBoundingClientRect().bottom + window.scrollY - 80;
+                       window.scrollTo({ top: yPosition, behavior: 'smooth' });
+                    }, 150);
+                }
             }
-        }
         
-        </script>
+       </script>
     </body>
 </html>
