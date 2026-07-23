@@ -738,11 +738,19 @@
             /* On garde l'empilement uniquement pour les petits écrans de smartphones */
             @media (max-width: 840px) {
                #banner .banner-buttons {
-                   flex-direction: column !important;
+                  flex-direction: column !important;
+                  align-items: center !important; /* Force le centrage horizontal */
+                  gap: 15px !important; /* Ajoute un espacement vertical propre */
                 }
                #banner .banner-buttons li {
-                   width: 100% !important;
-                   flex: 1 1 100% !important;
+                  width: 90% !important; /* Laisse une marge respirante sur les bords de l'écran */
+                  max-width: 400px !important; /* Limite la largeur pour l'esthétique */
+                  flex: none !important; /* Corrige le bug de débordement du flex en colonne */
+                  margin: 0 auto !important; /* Assure le centrage parfait */
+                }
+               #banner .banner-buttons li a.button {
+                  width: 100% !important;
+                  margin: 0 auto !important;
                 }
             }
  
